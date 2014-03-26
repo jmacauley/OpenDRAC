@@ -1,0 +1,150 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>AutomationTool</artifactId>
+  <name>Clients/AutomationTool - AutomationTool</name>
+  <description>AutomationTool: Webservice Client</description>
+  <packaging>jar</packaging>
+
+  <parent>
+    <groupId>org.opendrac</groupId>
+    <artifactId>Clients</artifactId>
+    <version>4.6.1-SNAPSHOT</version>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.yahoo.platform.yui</groupId>
+      <artifactId>yuicompressor</artifactId>
+      <version>2.4.7</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-httpclient</groupId>
+      <artifactId>commons-httpclient</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.opendrac</groupId>
+      <artifactId>ResourceAllocationAndSchedulingService</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>appassembler-maven-plugin</artifactId>
+        <version>1.2.2</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>assemble</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <repositoryLayout>flat</repositoryLayout>
+          <repositoryName>lib</repositoryName>
+          <extraJvmArguments>
+            -Djavax.net.ssl.trustStore=$BASEDIR/config/jssecacerts
+          </extraJvmArguments>
+          <configurationDirectory>config</configurationDirectory>
+          <platforms>
+            <platform>unix</platform>
+            <platform>windows</platform>
+          </platforms>
+          <binFileExtensions>
+            <unix>.sh</unix>
+          </binFileExtensions>
+          <programs>
+            <program>
+              <mainClass>org.opendrac.automationtool.Main</mainClass>
+              <name>automationtool</name>
+            </program>
+          </programs>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>opendrac-prepare-package</id>
+            <phase>package</phase>
+            <configuration>
+              <tasks>
+                <property name="staging.dir" location="target/staging/automationtool" />
+                <property name="client.zip"
+                  location="target/OpenDRAC-${project.artifactId}.zip" />
+                <mkdir dir="${staging.dir}" />
+                <copy todir="${staging.dir}/config">
+                  <fileset dir="src/main/config" />
+                </copy>
+                <copy todir="${staging.dir}/contrib/microsoft">
+                  <fileset dir="src/main/contrib/microsoft" />
+                </copy>
+                <copy todir="${staging.dir}/docs">
+                  <fileset dir="src/main/docs">
+                    <exclude name="QUICKSTART.txt" />
+                  </fileset>
+                </copy>
+                <copy file="src/main/docs/QUICKSTART.txt" todir="${staging.dir}" />
+                <copy todir="${staging.dir}/bin">
+                  <fileset dir="target/appassembler/bin"
+                    includes="*" />
+                </copy>
+                <copy todir="${staging.dir}/contrib">
+                  <fileset dir="src/main/contrib" includes="*" />
+                </copy>
+                <copy todir="${staging.dir}/lib">
+                  <fileset dir="target/appassembler/lib"
+                    includes="*.jar" />
+                </copy>
+                <chmod file="${staging.dir}/bin/automationtool.sh"
+                  perm="ugo+rx" />
+                <mkdir dir="${staging.dir}/lib" />
+                <copy
+                  file="target/${project.artifactId}-${project.version}.jar"
+                  todir="${staging.dir}/lib" />
+                <zip destfile="${client.zip}" basedir="target/staging" />
+              </tasks>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.2.1</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>java</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <mainClass>org.opendrac.automationtool.Main</mainClass>
+          <arguments>
+            <argument>-f</argument>
+            <argument>src/main/config/DRAC_config.properties</argument>
+            <argument>-n</argument>
+          </arguments>
+          <systemProperties>
+            <systemProperty>
+              <key>javax.net.ssl.trustStore</key>
+              <value>src/main/config/jssecacerts</value>
+            </systemProperty>
+          </systemProperties>
+        </configuration>
+      </plugin>
+    </plugins>
+
+  </build>
+
+</project>

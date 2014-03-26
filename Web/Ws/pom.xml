@@ -1,0 +1,184 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <!-- <pre> The owner of the original code is Ciena Corporation. Portions 
+    created by the original owner are Copyright (C) 2004-2010 the original owner. 
+    All Rights Reserved. Portions created by other contributors are Copyright 
+    (C) the contributor. All Rights Reserved. Contributor(s): (Contributors insert 
+    name & email here) This file is part of DRAC (Dynamic Resource Allocation 
+    Controller). DRAC is free software: you can redistribute it and/or modify 
+    it under the terms of the GNU General Public License as published by the 
+    Free Software Foundation; either version 3 of the License, or (at your option) 
+    any later version. DRAC is distributed in the hope that it will be useful, 
+    but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY 
+    or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for 
+    more details. You should have received a copy of the GNU General Public License 
+    along with this program. If not, see <http://www.gnu.org/licenses />. </pre> -->
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.opendrac</groupId>
+  <artifactId>Ws</artifactId>
+  <version>4.6.1-SNAPSHOT</version>
+  <name>Web/Ws - OpenDRAC web service</name>
+  <description>WS: OpenDRAC web service</description>
+  <packaging>jar</packaging>
+
+  <parent>
+    <groupId>org.opendrac</groupId>
+    <artifactId>Web</artifactId>
+    <version>4.6.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <properties>
+    <wsdl.file>${basedir}/src/main/resources/ext/vers.wsdl</wsdl.file>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.opendrac</groupId>
+      <artifactId>RequestHandler</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.opendrac</groupId>
+      <artifactId>Common</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.axis2</groupId>
+      <artifactId>addressing</artifactId>
+      <type>mar</type>
+    </dependency>
+
+
+    <dependency>
+      <groupId>org.apache.ws.commons.axiom</groupId>
+      <artifactId>axiom-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.ws.commons.axiom</groupId>
+      <artifactId>axiom-impl</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.axis2</groupId>
+      <artifactId>axis2-kernel</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.axis2</groupId>
+      <artifactId>axis2-transport-http</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.axis2</groupId>
+      <artifactId>axis2-transport-local</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.axis2</groupId>
+      <artifactId>axis2</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>wsdl4j</groupId>
+      <artifactId>wsdl4j</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.ws.security</groupId>
+      <artifactId>wss4j</artifactId>
+      <version>1.5.8</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.xmlbeans</groupId>
+      <artifactId>xmlbeans</artifactId>
+      <version>2.4.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>stax</groupId>
+      <artifactId>stax-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jdom</groupId>
+      <artifactId>saxpath</artifactId>
+    </dependency>
+
+
+    <dependency>
+      <groupId>jaxen</groupId>
+      <artifactId>jaxen</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.opendrac</groupId>
+      <artifactId>wsdlJar</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <defaultGoal>install</defaultGoal>
+    <directory>${basedir}/target</directory>
+    <finalName>${project.artifactId}-${project.version}</finalName>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.axis2</groupId>
+        <artifactId>axis2-wsdl2code-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>wsdl2code</goal>
+            </goals>
+            <configuration>
+              <packageName>org.opendrac.www.ws.vers</packageName>
+              <wsdlFile>${wsdl.file}</wsdlFile>
+              <databindingName>xmlbeans</databindingName>
+              <serviceName>SURFnet-er</serviceName>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.axis2</groupId>
+        <artifactId>axis2-aar-maven-plugin</artifactId>
+        <dependencies>
+          <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.0.1</version>
+          </dependency>
+        </dependencies>
+        <executions>
+          <execution>
+            <id>make-axis2-aar file</id>
+            <phase>package</phase>
+            <goals>
+              <goal>aar</goal>
+            </goals>
+            <configuration>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+    <extensions>
+    </extensions>
+    <resources>
+      <resource>
+        <directory>target/generated-sources/axis2/wsdl2code/resources</directory>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+    </resources>
+  </build>
+</project>

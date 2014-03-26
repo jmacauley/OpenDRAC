@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <!-- Set Spring bean configuration. -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:/spring/opendrac-nsi.xml, classpath:/spring/opendrac-nsi-database.xml</param-value>
+    </context-param>
+    <!-- Spring listener -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <!-- JAX-WS listener -->
+    <listener>
+        <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+    </listener>
+    <!-- Spring dispatcher for web GUI components. -->
+    <servlet>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <!-- Set the JAX-WS servlet for our web services. -->
+    <servlet>
+        <servlet-name>ConnectionServiceProvider</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>ConnectionServiceRequester</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <!-- Pattern match for our web services. -->
+    <servlet-mapping>
+        <servlet-name>ConnectionServiceProvider</servlet-name>
+        <url-pattern>/ConnectionServiceProvider</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConnectionServiceRequester</servlet-name>
+        <url-pattern>/ConnectionServiceRequester</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>*.html</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>redirect.jsp</welcome-file>
+    </welcome-file-list>
+    <!-- Set the JAAS security for this application. -->
+    <security-constraint>
+        <display-name>NSI Web Service</display-name>
+        <web-resource-collection>
+            <web-resource-name>nsi</web-resource-name>
+            <description>The NSI web services URL</description>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description>The OpenDRAC NSA role</description>
+            <role-name>NsiUserGroup</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>nsi.opendrac.org</realm-name>
+    </login-config>
+    <security-role>
+        <description>The role required to access the OpenDRAC NSI web service.</description>
+        <role-name>NsiUserGroup</role-name>
+    </security-role>
+    <context-param>
+        <description>Enable debugging for the application</description>
+        <param-name>debug</param-name>
+        <param-value>true</param-value>
+    </context-param>
+</web-app>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Server port="8007" shutdown="_-_-SHUTDOWN_-_-">
+
+  <Listener className="org.apache.catalina.core.AprLifecycleListener"
+    SSLEngine="on" />
+  <Listener className="org.apache.catalina.core.JasperListener" />
+  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" />
+  <Listener
+    className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
+  <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener" />
+
+  <Service name="Catalina">
+    <Connector port="${org.opendrac.webui.https}" protocol="HTTP/1.1"
+      SSLEnabled="true"
+      ciphers="SSL_RSA_WITH_RC4_128_MD5, SSL_RSA_WITH_RC4_128_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA"
+      scheme="https" secure="true" clientAuth="false" sslProtocol="TLS"
+      maxThreads="512" compression="on" URIEncoding="UTF-8" />
+
+    <Connector port="${org.opendrac.webui.http}" protocol="HTTP/1.1"
+      SSLEnabled="false" maxThreads="512" compression="on" URIEncoding="UTF-8" />
+
+    <Engine name="Catalina" defaultHost="localhost" jvmRoute="opendracJvm01">
+      <Realm className="org.apache.catalina.realm.LockOutRealm">
+        <Realm className="org.apache.catalina.realm.JAASRealm"
+          appName="DracLoginModule" userClassNames="org.opendrac.web.security.jaas.DracUserPrincipal"
+          roleClassNames="org.opendrac.web.security.jaas.DracRolePrincipal" />
+      </Realm>
+
+      <Host name="localhost" appBase="webapps" unpackWARs="false"
+        autoDeploy="false" workDir="${java.io.tmpdir}" createDirs="false"
+        deployXML="false">
+
+        <!-- -->
+        <!-- Web apps context mappings -->
+        <!-- -->
+        <Context docBase="${catalina.home}/webapps/ROOT" path=""
+          processTlds="false" />
+
+        <Context docBase="${catalina.home}/webapps/axis2"
+          path="/axis2" processTlds="false" />
+
+        <!-- <Context docBase="${catalina.home}/webapps/feniusWS"
+          path="/feniusWS" processTlds="false" /> -->
+
+        <Context docBase="${catalina.home}/webapps/nsi-v1" path="/nsi-v1"
+          processTlds="false" />
+
+        <!-- <Context docBase="${catalina.home}/webapps/opendrac-rest"
+          path="/opendrac-rest" processTlds="false" /> -->
+      </Host>
+    </Engine>
+  </Service>
+</Server>

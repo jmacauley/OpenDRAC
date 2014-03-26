@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+
+    <pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>
+
+-->
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<!--
+    This is a blank Struts configuration file with an example
+    welcome action/page and other commented sample elements.
+    
+    Tiles and the Struts Validator are configured using the factory defaults
+    and are ready-to-use.
+    
+    NOTE: If you have a generator tool to create the corresponding Java classes
+    for you, you could include the details in the "form-bean" declarations.
+    Otherwise, you would only define the "form-bean" element itself, with the
+    corresponding "name" and "type" attributes, as shown here.
+-->
+
+
+<struts-config>
+
+    <!-- ============================================ Data Source Configuration -->
+    <!--
+        <data-sources>
+        <data-source type="org.apache.commons.dbcp.BasicDataSource">
+        <set-property
+        property="driverClassName"
+        value="org.postgresql.Driver" />
+        <set-property
+        property="url"
+        value="jdbc:postgresql://localhost/mydatabase" />
+        <set-property
+        property="username"
+        value="me" />
+        <set-property
+        property="password"
+        value="test" />
+        <set-property
+        property="maxActive"
+        value="10" />
+        <set-property
+        property="maxWait"
+        value="5000" />ReportingsForm
+        <set-property
+        property="defaultAutoCommit"
+        value="false" />
+        <set-property
+        property="defaultReadOnly"
+        value="false" />
+        <set-property
+        property="validationQuery"
+        value="SELECT COUNT(*) FROM market" />
+        </data-source>
+        </data-sources>
+    -->
+
+    <!-- ================================================ Form Bean Definitions -->
+
+    <form-beans>
+        <!-- sample form bean descriptor for an ActionForm
+            <form-bean
+            name="inputForm"
+            type="app.InputForm"/>
+            end sample -->
+
+        <!-- sample form bean descriptor for a DynaActionForm
+            <form-bean
+            name="logonForm"
+            type="org.apache.struts.action.DynaActionForm">
+            <form-property
+            name="username"
+            type="java.lang.String"/>
+            <form-property
+            name="password"
+            type="java.lang.String"/>
+            </form-bean>
+            end sample -->
+
+        <form-bean name="LoginForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.general.form.LoginForm" />
+            
+        <form-bean name="ServerInfoForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.general.form.ServerInfoForm" />
+            
+        <form-bean name="ServerSettingsForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.general.form.ServerSettingsForm" />
+
+        <form-bean name="CreateScheduleForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.form.CreateScheduleForm" />
+            
+        <form-bean name="CreateSchedEndpointForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.form.CreateSchedEndpointForm" />
+
+        <form-bean name="ListSchedulesForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.form.ListSchedulesForm" />
+
+        <form-bean name="ScheduleForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.form.ScheduleForm" />
+
+        <form-bean name="TaskForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.form.TaskForm" />
+            
+        <form-bean name="FindTimeForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.form.FindTimeForm" />
+            
+        <form-bean name="EndpointForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.network.form.EndpointForm" />
+
+        <form-bean name="CreateUserForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userManagement.form.CreateUserForm" />
+
+        <form-bean name="ListUsersForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userManagement.form.ListUsersForm" />
+
+        <form-bean name="UserForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userManagement.form.UserForm" />
+            
+        <form-bean name="EditUserForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userManagement.form.EditUserForm" />
+
+        <form-bean name="CreateUserGroupForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userGroupManagement.form.CreateUserGroupForm" />
+
+        <form-bean name="ListUserGroupsForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userGroupManagement.form.ListUserGroupsForm" />
+
+        <form-bean name="UserGroupForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userGroupManagement.form.UserGroupForm" />
+
+        <form-bean name="CreateResourceGroupForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.resourceGroupManagement.form.CreateResourceGroupForm" />
+
+        <form-bean name="ListResourceGroupsForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.resourceGroupManagement.form.ListResourceGroupsForm" />
+
+        <form-bean name="ResourceGroupForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.resourceGroupManagement.form.ResourceGroupForm" />
+
+        <form-bean name="ResourceForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.resourceGroupManagement.form.ResourceForm" />
+
+        <form-bean name="QueryUtilForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.network.form.QueryUtilForm" />
+
+        <form-bean name="UtilListForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.network.form.UtilListForm" />
+
+        <form-bean name="QuerySecAuditForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.auditlogging.form.QuerySecAuditForm" />
+
+        <form-bean name="ServiceForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.service.form.ServiceForm" />
+            
+        <form-bean name="ListServicesForm" 
+            type="com.nortel.appcore.app.drac.server.webserver.struts.service.form.ListServicesForm" />
+            
+ 		<form-bean name="GenerateReportForm" 
+            type="org.opendrac.webserver.struts.reporting.form.GenerateReportForm" />
+            
+                   
+        <form-bean name="AddServiceForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.service.form.AddServiceForm" />
+            
+        <form-bean name="ServiceAlarmForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.service.form.ServiceAlarmForm" />
+
+            
+        <form-bean name="QueryAuditLogForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.auditlogging.form.QueryAuditLogForm" />
+            
+            
+        <form-bean name="GlobalPolicyForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.form.GlobalPolicyForm" />
+            
+        <form-bean name="ChangePasswordForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.form.ChangePasswordForm" />
+           
+        <form-bean name="MessageItemForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.messages.MessageItemForm"/>
+        
+        <form-bean name="MailboxForm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.messages.MailboxForm"/>
+    </form-beans>
+
+
+    <!-- ========================================= Global Exception Definitions -->
+
+    <global-exceptions>
+        <exception key="error.general" 
+              type="java.lang.Exception"
+              path="/common/dracError.jsp"/>    
+    </global-exceptions>
+
+
+    <!-- =========================================== Global Forward Definitions -->
+
+    <global-forwards>
+        <!-- Default forward to "Welcome" action -->
+        <!-- Demonstrates using index.jsp to forward -->
+        <forward name="welcome" path="/welcome.do" />
+        <forward name="language" path="/language.do" redirect="true" />
+        <forward name="checkBrowser" path="/checkBrowser.do" redirect="true" />
+        <forward name="browserConfiguration" path="/browserConfiguration.do" redirect="true" />
+        <forward name="login" path="/login.do" redirect="true" />
+        <forward name="password" path="/password.do" redirect="true"/>
+        <forward name="passwordExpired" path="/management/changePassword.do" redirect="true"/>
+
+        <!--  DRAC Global Error Page Used By Struts based and non Struts based JSP files -->
+
+        <forward name="ErrorPage" path="/common/dracError.jsp" />
+        
+        <forward name="RHErrorPage" path="/common/dracAppError.jsp"/>
+        
+        <forward name="NoPermissionPage" path="/common/dracPermission.jsp" />
+        
+        <forward name="RedundancySwitchPage" path="/common/dracRedundancySwitch.jsp" />
+
+    </global-forwards>
+
+
+    <!-- =========================================== Action Mapping Definitions -->
+
+    <action-mappings>
+        <!-- Default "Welcome" action -->
+        <!-- Forwards to welcome.jsp -->
+
+        <!-- sample input and input submit actions
+            
+            <action
+            path="/Input"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="/pages/Input.jsp"/>
+            
+            <action
+            path="/InputSubmit"
+            type="app.InputAction"
+            name="inputForm"
+            scope="request"
+            validate="true"
+            input="/pages/Input.jsp"/>
+            
+            <action
+            path="/edit*"
+            type="app.Edit{1}Action"
+            name="inputForm"
+            scope="request"
+            validate="true"
+            input="/pages/Edit{1}.jsp"/>
+            
+            end samples -->
+
+        <action path="/notImplemented" type="com.nortel.appcore.app.drac.server.webserver.struts.general.action.GeneralMappingDispatchAction"
+            parameter="forwardNotImplementedPage">
+            <forward name="NotImplementedPage" path="/common/notImplemented.jsp"/>
+        </action>
+
+        <action path="/login" type="com.nortel.appcore.app.drac.server.webserver.struts.general.action.GeneralMappingDispatchAction"
+            parameter="forwardLoginPage">
+            <forward name="LoginPage" path="/general/login.jsp"/>
+        </action>
+        
+         <action path="/password" type="com.nortel.appcore.app.drac.server.webserver.struts.general.action.GeneralMappingDispatchAction"
+            parameter="forwardPasswordPage">
+            <forward name="PasswordPage" path="/general/password.jsp" />
+        </action>
+        
+        <action path="/performLogin"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.general.action.GeneralMappingDispatchAction"
+            name="LoginForm" scope="request" validate="false" parameter="doLogin">
+            <forward name="welcome" path="/welcome.do" redirect="true"/>
+            <forward name="LoginPage" path="/login.do" redirect="true"/>
+            <forward name="PasswordPage" path="/password.do" />
+        </action>
+        
+
+        <action path="/welcome" name="LoginForm" type="com.nortel.appcore.app.drac.server.webserver.struts.general.action.GeneralMappingDispatchAction"
+            parameter="forwardWelcomePage" validate="false">
+            <forward name="welcome" path="/general/welcome.jsp"/>
+        </action>
+
+        <action path="/logout" type="com.nortel.appcore.app.drac.server.webserver.struts.general.action.GeneralMappingDispatchAction"
+            parameter="forwardLogoutPage">
+            <forward name="LogoutPage" path="/general/logout.jsp"/>
+        </action>
+        
+        <action path="/performLogout" type="com.nortel.appcore.app.drac.server.webserver.struts.general.action.GeneralMappingDispatchAction"
+            parameter="doLogout">
+        </action>
+
+        <action path="/serverStatus" name="ServerInfoForm" 
+            type="com.nortel.appcore.app.drac.server.webserver.struts.general.action.GeneralMappingDispatchAction"
+            parameter="getServerStatus" validate="false">
+            <forward name="ServerStatusPage" path="/general/serverStatus.jsp"/>
+        </action>
+        
+        <action path="/serverSettings" 
+            type="com.nortel.appcore.app.drac.server.webserver.struts.general.action.GeneralMappingDispatchAction"
+            name="ServerSettingsForm" scope="request" validate="false"
+            parameter="forwardSettingsPage">
+            <forward name="SettingsPage" path="/general/serverSettings.jsp"/>
+        </action>
+        <action path="/editServerSettings" 
+            type="com.nortel.appcore.app.drac.server.webserver.struts.general.action.GeneralMappingDispatchAction"
+            name="ServerSettingsForm" scope="request"  validate="true" parameter="editSettings" 
+            input="/serverSettings.do">
+            <forward name="SettingsPage" path="/general/serverSettings.jsp"/>
+        </action>
+      
+        <action path="/viewLogs"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.auditlogging.action.QueryLogDispatchAction"
+            name="QueryAuditLogForm" scope="request" validate="false" 
+            parameter="forwardQueryLogPage">
+            <forward name="QueryAuditLogPage" path="/general/queryAuditLogs.jsp" />
+        </action>
+         <action path="/queryAuditLogs"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.auditlogging.action.QueryLogDispatchAction"
+            name="QueryAuditLogForm" scope="request" validate="true" parameter="getLogList" 
+            input="/viewLogs.do">
+            <forward name="QueryAuditLogPage" path="/general/queryAuditLogs.jsp" />
+        </action>
+             
+ 		<action path="/reportingOverview"
+            type="org.opendrac.webserver.struts.reporting.action.ReportingOverviewDispatchAction"
+            name="GenerateReportForm" scope="request" validate="false" parameter="getReportsList">
+            <forward name="ReportingOverviewPage" path="/reporting/reportingOverview.jsp" />
+        </action>
+ 		<action path="/reports"
+            type="org.opendrac.webserver.struts.reporting.action.ReportingOverviewDispatchAction"
+            name="GenerateReportForm" scope="request" validate="true" parameter="showList"
+            input="/reportingOverview.do">
+            
+            <forward name="ReportsOverviewPage" path="/reporting/reports.jsp" />
+        </action>
+        <action path="/downloadReport" 
+        	type="org.opendrac.webserver.struts.reporting.action.DownloadReportAction" 
+        	scope="request" 
+        	name="GenerateReportForm" 
+        	parameter="getStreamInfo" 
+        	validate="true" input="/reportingOverview.do">
+       		<!--  <controller contentType="text/html;charset=UTF-8" locale="true" nocache="false" />  -->
+       		 <forward name="ReportingOverviewPage" path="/reporting/reportingOverview.jsp" />
+        </action>
+        
+ 		
+        
+                
+        <action path="/generateReport"
+        	type="org.opendrac.webserver.struts.reporting.action.DownloadReportAction"
+        	name="GenerateReportForm" scope="request" parameter="getStreamInfo">
+         <forward name="ReportingOverviewPage" path="/reporting/reportingOverview.jsp" />
+        </action>
+        
+        <action path="/language" forward="/language/language.jsp"/>
+
+        <!-- HELP START -->
+        <action path="/help/popupHelp" forward="/help/popupHelp.jsp"/>
+
+        <action path="/help/help"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.general.action.GeneralMappingDispatchAction"
+            scope="request" validate="false"
+            parameter="forwardHelpPage">
+            <forward name="helpPage" path="/help/help.jsp"/>                
+        </action>
+ 
+        <action path="/help/release"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.general.action.GeneralMappingDispatchAction"
+            scope="request" validate="false"
+            parameter="forwardReleasePage">
+            <forward name="releasePage" path="/help/release.jsp"/>              
+        </action>
+        
+        <action path="/help/download"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.general.action.GeneralMappingDispatchAction"
+            scope="request" validate="false"
+            parameter="forwardDownloadPage">
+            <forward name="downloadPage" path="/help/download.jsp"/>                
+        </action>
+        
+        <action path="/help/browser"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.general.action.GeneralMappingDispatchAction"
+            scope="request" validate="false"
+            parameter="forwardBrowserPage">
+            <forward name="browserPage" path="/help/browser.jsp"/>              
+        </action>
+        
+        <action path="/help/about"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.general.action.GeneralMappingDispatchAction"
+            scope="request" validate="false"
+            parameter="forwardAboutPage">
+            <forward name="aboutPage" path="/help/about.jsp"/>              
+        </action>                       
+
+        <action path="/checkBrowser"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.general.action.GeneralMappingDispatchAction"
+            scope="request" validate="false"
+            parameter="checkBrowser">
+            <forward name="language" path="/language/language.jsp"/>
+        </action>
+
+        <action path="/browserConfiguration" forward="/common/browserConfiguration.jsp"/>
+        
+        <!-- HELP END -->
+        
+        
+        <!--  SCHEDULE START -->
+        <action path="/schedule/listSchedules"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.action.ScheduleMappingDispatchAction"
+            name="ListSchedulesForm" scope="request" validate="false"
+            parameter="forwardListSchedulesPage">
+            <forward name="listSchedules" path="/schedule/listSchedules.jsp"/>
+        </action>
+        
+        <action path="/schedule/createAdvancedSchedule"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.action.ScheduleMappingDispatchAction"
+            name="CreateScheduleForm" scope="request" validate="false"
+            parameter="setupCreateAdvancedSchedule">
+            <forward name="CreateSchedulePage"
+                path="/schedule/createAdvancedSchedule.jsp" />
+        </action>
+
+		<action path="/schedule/handleCreateAdvancedSchedule"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.action.ScheduleMappingDispatchAction"
+            name="CreateScheduleForm" scope="request" parameter="handleCreateAdvancedSchedule" 
+            validate="true" input="/schedule/createAdvancedSchedule.do">
+            <forward name="CreateScheduleProgress" path="/schedule/createProgress.do"/>
+            <forward name="HandleCreateScheduleFailed" 
+                path="/schedule/createScheduleFailResult.jsp"/>              
+            <forward name="CreateScheduleAction" path="/schedule/createAdvancedSchedule.do"/>
+        </action>
+        
+		<action path="/schedule/listSchedulesResult"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.action.ScheduleMappingDispatchAction"
+            name="ListSchedulesForm" 
+            scope="request" 
+            validate="true"
+            input="/schedule/listSchedules.do" parameter="listSchedules">
+            <forward name="listSchedulesResultPage" path="/schedule/listSchedulesResult.jsp" />
+            <forward name="listSchedules" path="/schedule/listSchedules.do"/>
+        </action>
+        
+        <action path="/schedule/createSchedule"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.action.ScheduleMappingDispatchAction"
+            name="CreateScheduleForm" scope="request" validate="false"
+            parameter="setupCreateSchedule">
+            <forward name="CreateScheduleSimplePage"
+                path="/schedule/createSchedule.jsp" />
+        </action>
+        
+        <action path="/schedule/handleCreateSchedule"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.action.ScheduleMappingDispatchAction"
+            name="CreateScheduleForm" scope="request" parameter="handleCreateSchedule" 
+            validate="true" input="/schedule/createSchedule.do">
+            <forward name="CreateScheduleProgress" path="/schedule/createProgress.do"/>
+            <forward name="HandleCreateScheduleFailed" 
+                path="/schedule/createScheduleFailResult.jsp"/>              
+            <forward name="CreateScheduleAction" path="/schedule/createSchedule.do"/>
+        </action>
+
+        <action path="/schedule/createScheduleResult"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.action.ScheduleMappingDispatchAction"
+            name="ScheduleForm" scope="request" validate="false"
+            parameter="createScheduleResult">
+            <forward name="CreateScheduleResult"
+                path="/schedule/createScheduleResult.jsp" />
+        </action>
+
+       
+        
+        <action path="/schedule/querySchedule"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.action.ScheduleMappingDispatchAction"
+            name="ScheduleForm" scope="request" parameter="querySchedule" validate="false">
+            <forward name="scheduleDetails"
+                path="/schedule/scheduleDetails.jsp" />
+            <forward name="listSchedules"
+                path="/schedule/listSchedules.do" />
+        </action>
+        
+        <action path="/schedule/queryScheduleAction"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.action.ScheduleMappingDispatchAction"
+            name="ListSchedulesForm" validate="false" parameter="processSchedule">
+            <forward name="scheduleDetails"
+                path="/schedule/scheduleDetails.jsp" />
+            <forward name="listSchedules"
+                path="/schedule/listSchedules.do" />
+            <forward name="querySchedule"
+                path="/schedule/querySchedule.do" />
+        </action>
+
+        <action path="/schedule/deleteSchedule"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.action.ScheduleMappingDispatchAction"
+            name="ScheduleForm" scope="request" parameter="deleteSchedule">
+            <forward name="deleteScheduleResult"
+                path="/schedule/deleteSchedule.jsp" />
+            <forward name="listSchedules"
+                path="/schedule/listSchedules.do" />
+        </action>
+        
+        <action path="/schedule/confirmSchedule"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.action.ScheduleMappingDispatchAction"
+            name="ScheduleForm" scope="request" parameter="confirmSchedule">
+            <forward name="confirmScheduleResult"
+                path="/schedule/confirmSchedule.jsp" />
+            <forward name="listSchedules"
+                path="/schedule/listSchedules.do" />
+        </action>
+        
+        <action path="/schedule/cancelCreate"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.action.ScheduleMappingDispatchAction"
+            scope="request" validate="false" parameter="cancelCreate">
+            <forward name="cancelCreateResult"
+                path="/schedule/cancelProgress.jsp" />
+        </action>
+        
+        <action path="/schedule/listCreateProgress"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.action.ScheduleMappingDispatchAction"
+            name="TaskForm" scope="request" validate="false" parameter="listCreateProgress">
+            <forward name="listProgressResult" path="/schedule/listProgressResult.jsp" />
+        </action>
+        
+        <action path="/schedule/clearCreateProgress"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.action.ScheduleMappingDispatchAction"
+            name="TaskForm" scope="request" validate="false" parameter="clearCreateProgress">
+            <forward name="listProgressResult"
+                path="/schedule/listProgressResult.jsp" />
+        </action>
+        
+        <action path="/schedule/createProgress" forward="/schedule/createProgress.jsp" />
+        
+        <action path="/schedule/advancedSearch"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.action.ScheduleMappingDispatchAction"
+            name="FindTimeForm" scope="request" validate="false"
+            parameter="forwardAdvancedSearch">
+            <forward name="schAdvancedSearch" path="/schedule/advancedSearch.jsp"/>              
+        </action>
+        
+        <action path="/schedule/advancedSearchResults"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.schedule.action.ScheduleMappingDispatchAction"
+            name="FindTimeForm" scope="request" validate="true" parameter="findAvailableTime" 
+            input="/schedule/advancedSearch.do">
+            <forward name="srcAdvancedSearchResults" path="/schedule/advancedSearch.jsp" />
+            <forward name="schAdvancedSearch" path="/schedule/advancedSearch.jsp"/>
+        </action>
+
+
+
+            
+<!--  SCHEDULE END -->
+
+<!--  SERVICE START -->
+
+        <action path="/service/listServices"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.service.action.ServiceMappingDispatchAction"
+            name="ListServicesForm" scope="request" validate="false"
+            parameter="forwardListServicesPage">
+            <forward name="ListOfServicesPageRef"
+                path="/service/listServices.jsp" />
+        </action>
+
+        <action path="/service/listServicesResult"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.service.action.ServiceMappingDispatchAction"
+            name="ListServicesForm" scope="request" validate="true"
+            input="/service/listServices.do" parameter="getServiceList">
+            <forward name="QueryServicePage"
+                path="/service/listServices.do" />
+            <forward name="ListOfServicesPageRef"
+                path="/service/listServicesResult.jsp" />
+        </action>
+        
+        <action path="/service/deleteService"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.service.action.ServiceMappingDispatchAction"
+            name="ServiceForm" scope="request" validate="false"
+            parameter="deleteService">
+            <forward name="DeleteServicePageRef"
+                path="/service/deleteService.jsp" />
+        </action>
+        
+        <action path="/service/activateService"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.service.action.ServiceMappingDispatchAction"
+            name="ServiceForm" scope="request" validate="false"
+            parameter="activateService">
+            <forward name="ActivateServicePageRef"
+                path="/service/activateService.jsp" />
+        </action>
+
+        <action path="/service/serviceDetails"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.service.action.ServiceMappingDispatchAction"
+            name="ServiceForm" scope="request" validate="false"
+            parameter="serviceDetails">
+            <forward name="ServiceDetailsPageRef"
+                path="/service/serviceDetails.jsp" />
+            <forward name="QueryServicePage"
+                path="/service/listServices.do" />                
+        </action>
+        
+        <action path="/service/addServiceList"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.service.action.ServiceMappingDispatchAction"
+            name="ScheduleForm" scope="request" validate="false"
+            parameter="addServiceList">
+            <forward name="AddServiceList"
+                path="/service/addServiceList.jsp" />
+        </action>
+        
+        <action path="/service/addService"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.service.action.ServiceMappingDispatchAction"
+            name="AddServiceForm" scope="request" validate="false"
+            parameter="setupAddService">
+            <forward name="AddService" path="/service/addService.jsp" />
+            <forward name="AddServiceList" path="/service/addServiceList.do"/>
+        </action>       
+        
+        <action path="/service/performAddService"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.service.action.ServiceMappingDispatchAction"
+            name="AddServiceForm" scope="request" validate="true" parameter="doAddService"
+            input="/service/addService.jsp">
+            <forward name="AddServiceAction" path="/service/addService.jsp"/>
+            <forward name="AddServiceResultAction" path="/service/addServiceResult.do"/>
+            <forward name="AddServiceResult" path="/service/addServiceResult.jsp"/>
+            <forward name="AddServiceList" path="/service/addServiceList.do"/>
+        </action>
+
+        <action path="/service/addServiceResult"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.service.action.ServiceMappingDispatchAction"
+            name="ServiceForm" scope="request" validate="false"
+            parameter="addServiceResult">
+            <forward name="AddServiceResult" path="/service/addServiceResult.jsp"/>
+        </action>
+        
+        <action path="/service/listAlarms"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.service.action.ServiceMappingDispatchAction"
+            name="ServiceAlarmForm" scope="request" validate="false"
+            parameter="forwardListAlarmsPage">
+            <forward name="listServiceAlarmsPage" path="/service/listAlarms.jsp" />
+        </action>
+        
+        <action path="/service/listAlarmsAction"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.service.action.ServiceMappingDispatchAction"
+            name="ServiceAlarmForm" scope="request" validate="true"
+            parameter="getServiceAlarms" input="/service/listAlarms.do">
+            <forward name="listServiceAlarmsResult" path="/service/listAlarmsResult.jsp"/>
+            <forward name="listServiceAlarmsPage" path="/service/listAlarms.do" />
+        </action>
+        
+        <action path="/service/getAlarm"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.service.action.ServiceMappingDispatchAction"
+            name="ServiceAlarmForm" scope="request" validate="false"
+            parameter="getServiceAlarm">
+            <forward name="listServiceAlarmsResult" path="/service/listAlarmsResult.jsp"/>
+        </action>
+        
+            
+<!-- SERVICE END -->            
+
+
+<!-- NETWORK/ENDPOINT START-->
+        <action path="/network/queryUtilization"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.network.action.QueryUtilDispatchAction"
+            name="QueryUtilForm" scope="request"
+            parameter="getUtilEndPointList" validate="false">
+            <forward name="QueryUtilPage"
+                path="/network/queryUtilPage.jsp" />
+        </action>
+
+        <action path="/network/queryUtilList"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.network.action.QueryUtilDispatchAction"
+            name="QueryUtilForm" scope="request" parameter="getUtilList">
+            <forward name="QueryUtilListPage"
+                path="/network/queryUtilListPage.jsp" />
+            <forward name="ListUtilPage" 
+                path="/network/queryUtilization.do" />              
+        </action>
+
+        <action path="/network/listEndpointsAction"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.network.action.EndpointMappingDispatchAction"
+            name="EndpointForm" scope="request" parameter="listEndpoints">
+            <forward name="listEndpointsResult"
+                path="/network/listEndpointsResult.jsp" />
+            <forward name="listEndpointsPage" path="/network/listEndpoints.do"/>
+        </action>
+
+        <action path="/network/editEndpoint"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.network.action.EndpointMappingDispatchAction"
+            name="EndpointForm" scope="request" parameter="forwardEditEndpointPage">
+            <forward name="editEndpointPage"
+                path="/network/editEndPoint.jsp" />
+            <forward name="listEndpointsPage" path="/network/listEndpoints.do"/>
+        </action>
+        
+        <action path="/network/editEndpointAction"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.network.action.EndpointMappingDispatchAction"
+            name="EndpointForm" scope="request" parameter="editEndpoint">
+            <forward name="editEndpointResult"
+                path="/network/editEndPoint.jsp" />
+            <forward name="listEndpointsPage" path="/network/listEndpoints.do"/>
+        </action>
+        
+        <action path="/network/listEndpoints"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.network.action.EndpointMappingDispatchAction"
+            name="EndpointForm" scope="request" parameter="forwardListEndpointsPage" validate="false">
+            <forward name="listEndpointsPage" path="/network/listEndpoints.jsp"/>
+        </action>
+<!-- NETWORK/ENDPOINT END-->
+    
+<!-- MESSAGES START-->
+        <action path="/messages/inbox"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.messages.MessageMappingDispatchAction"
+            name="MessageItemForm" scope="request" parameter="forwardGetInbox" validate="false">
+            <forward name="InboxPage" path="/messages/inbox.jsp" />
+        </action>
+        
+        <action path="/messages/outbox"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.messages.MessageMappingDispatchAction"
+            name="MessageItemForm" scope="request" parameter="forwardGetOutbox" validate="false">
+            <forward name="OutboxPage" path="/messages/outbox.jsp" />
+        </action>
+
+        <action path="/messages/trash"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.messages.MessageMappingDispatchAction"
+            name="MessageItemForm" scope="request" parameter="forwardGetTrash">
+            <forward name="TrashBinPage" path="/messages/trashBin.jsp" />
+        </action>
+
+        <action path="/messages/compose"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.messages.MessageMappingDispatchAction"
+            name="MessageItemForm" scope="request" validate="false"
+            parameter="forwardComposeMessage">
+            <forward name="ComposePage" path="/messages/compose.jsp" />
+        </action>        
+        <action path="/messages/sendMessage"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.messages.MessageMappingDispatchAction"
+            name="MessageItemForm" scope="request" validate="true" parameter="sendMessage"  
+            input="/messages/compose.do">
+            <forward name="doOutbox" path="/messages/outbox.do"  redirect="true"/>
+            <forward name="doInbox" path="/messages/inbox.do" redirect="true"/>
+            <forward name="ComposePage" path="/messages/compose.jsp" />
+        </action>
+                
+        <action path="/messages/inboxAction"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.messages.MessageMappingDispatchAction"
+            name="MailboxForm" scope="request" parameter="processInboxAction">
+            <forward name="doInbox" path="/messages/inbox.do" redirect="true"/>
+        </action>
+        
+        <action path="/messages/outboxAction"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.messages.MessageMappingDispatchAction"
+            name="MailboxForm" scope="request" parameter="processOutboxAction">
+            <forward name="doOutbox" path="/messages/outbox.do"  redirect="true"/>
+        </action>
+        
+       
+
+        
+        <action path="/messages/show"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.messages.MessageMappingDispatchAction"
+            name="MessageItemForm" scope="request" parameter="getMessage">
+            <forward name="ShowMessagePage" path="/messages/message.jsp" />
+            <forward name="ShowSentMessagePage" path="/messages/sentMessage.jsp" />
+        </action>
+        
+        <action path="/messages/receivedMessageAction"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.messages.MessageMappingDispatchAction"
+            name="MessageItemForm" scope="request" parameter="receivedMessageAction">
+            <forward name="doInbox" path="/messages/inbox.do" redirect="true"/>
+            <forward name="ComposePage" path="/messages/compose.jsp" />
+        </action>
+        
+        <action path="/messages/sentMessageAction"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.messages.MessageMappingDispatchAction"
+            name="MessageItemForm" scope="request" parameter="sentMessageAction">
+            <forward name="doOutbox" path="/messages/outbox.do" redirect="true"/>
+            <forward name="ComposePage" path="/messages/compose.jsp" />
+        </action>
+
+<!-- MESSAGES END-->
+
+<!-- SECURITY START-->
+<!-- USER MANAGEMENT START-->
+        <action path="/management/userManagement/listUsers"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userManagement.action.UserMappingDispatchAction"
+            name="ListUsersForm" scope="request" validate="false"
+            parameter="forwardListUsersPage">
+            <forward name="listUsers" path="/management/userManagement/listUsers.jsp"/>
+        </action>
+
+        <action path="/management/userManagement/listUsersResult"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userManagement.action.UserMappingDispatchAction"
+            name="ListUsersForm" scope="request" validate="false"
+            parameter="listUsers">
+            <forward name="listUsersResultPage"
+                path="/management/userManagement/listUsersResult.jsp" />
+            <forward name="listUsers" path="/management/userManagement/listUsers.do"/>
+        </action>
+        
+        <action path="/management/userManagement/delete"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userManagement.action.UserMappingDispatchAction"
+            name="ListUsersForm" scope="request" validate="false"
+            parameter="deleteUser">
+            <forward name="deleteResult" path="/management/userManagement/deleteResult.jsp" />
+            <forward name="listUsers" path="/management/userManagement/listUsers.do"/>
+        </action>
+
+        <action path="/management/userManagement/queryUser"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userManagement.action.UserMappingDispatchAction"
+            name="UserForm" scope="request" parameter="queryUser">
+            <forward name="userDetails"
+                path="/management/userManagement/userDetails.jsp" />
+            <forward name="listUsers"
+                path="/management/userManagement/listUsers.do" />
+        </action>
+
+        <action path="/management/userManagement/createUser"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userManagement.action.UserMappingDispatchAction"
+            name="CreateUserForm" scope="request" validate="false"
+            parameter="setupCreateUser">
+            <forward name="CreateUserPage"
+                path="/management/userManagement/createUser.jsp" />
+        </action>
+
+        <action path="/management/userManagement/handleCreateUser"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userManagement.action.UserMappingDispatchAction"
+            name="CreateUserForm" scope="request" parameter="handleCreateUser"
+            validate="true" input="/management/userManagement/createUser.do">
+            <forward name="HandleCreateUserSuccess" path="/management/userManagement/createUserResult.do" />
+            <forward name="HandleCreateUserFailed" path="/management/userManagement/createUser.do"/>
+            <forward name="CreateUserAction" path="/management/userManagement/createUser.do"/>
+        </action>
+
+        <action path="/management/userManagement/createUserResult"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userManagement.action.UserMappingDispatchAction"
+            name="UserForm" scope="request" validate="false" parameter="createUserResult">
+            <forward name="CreateUserResult"
+                path="/management/userManagement/createUserResult.jsp" />
+        </action>
+        
+        <action path="/management/userManagement/editUser"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userManagement.action.UserMappingDispatchAction"
+            name="EditUserForm" scope="request" validate="false"
+            parameter="setupEditUser">
+            <forward name="EditUserPage"
+                path="/management/userManagement/editUser.jsp" />
+             <forward name="listUsers"
+                path="/management/userManagement/listUsers.do" />    
+        </action>
+                
+        <action path="/management/userManagement/handleEditUser"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userManagement.action.UserMappingDispatchAction"
+            name="EditUserForm" scope="request" validate="true"
+            input="/management/userManagement/editUser.do" parameter="handleEditUser">
+            <forward name="EditUserPage" path="/management/userManagement/editUser.jsp" />
+            <forward name="SuccessPath" path="/management/userManagement/editUser.do" />
+            <forward name="listUsers" path="/management/userManagement/listUsers.do" />    
+                
+        </action>
+
+<!-- USER MANAGEMENT END-->
+
+<!-- USER GROUP MANAGEMENT START-->
+        <action path="/management/userGroupManagement/createUserGroup"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userGroupManagement.action.UserGroupMappingDispatchAction"
+            name="CreateUserGroupForm" scope="request" validate="false"
+            parameter="setupCreateUserGroup">
+            <forward name="CreateUserGroupPage"
+                path="/management/userGroupManagement/createUserGroup.jsp" />
+        </action>
+
+        <action path="/management/userGroupManagement/handleCreateUserGroup"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userGroupManagement.action.UserGroupMappingDispatchAction"
+            name="CreateUserGroupForm" scope="request" parameter="handleCreateUserGroup"
+            validate="true"
+            input="/management/userGroupManagement/createUserGroup.do">
+            <forward name="HandleCreateUserGroupSuccess"
+                path="/management/userGroupManagement/createUserGroupResult.do" />
+            <forward name="HandleCreateUserGroupFailed"
+                path="/management/userGroupManagement/createUserGroup.do"/>
+            <forward name="CreateUserGroupAction" path="/management/userGroupManagement/createUserGroup.do"/>
+        </action>
+
+        <action path="/management/userGroupManagement/createUserGroupResult"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userGroupManagement.action.UserGroupMappingDispatchAction"
+            name="UserGroupForm" scope="request" validate="false"
+            parameter="createUserGroupResult">
+            <forward name="CreateUserGroupResult"
+                path="/management/userGroupManagement/createUserGroupResult.jsp" />
+        </action>
+
+        <action path="/management/userGroupManagement/listUserGroups"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userGroupManagement.action.UserGroupMappingDispatchAction"
+            name="ListUserGroupsForm" scope="request" validate="false"
+            parameter="forwardListUserGroupsPage">
+            <forward name="listUserGroups" path="/management/userGroupManagement/listUserGroups.jsp"/>
+        </action>
+
+        <action path="/management/userGroupManagement/listUserGroupsResult"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userGroupManagement.action.UserGroupMappingDispatchAction"
+            name="ListUserGroupsForm" scope="request" validate="false"
+            parameter="listUserGroups">
+            <forward name="listUserGroupsResultPage"
+                path="/management/userGroupManagement/listUserGroupsResult.jsp" />
+            <forward name="listUserGroups" path="/management/userGroupManagement/listUserGroups.do"/>
+        </action>
+        
+        <action path="/management/userGroupManagement/delete"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userGroupManagement.action.UserGroupMappingDispatchAction"
+            name="ListUserGroupsForm" scope="request" validate="false"
+            parameter="deleteUserGroup">
+            <forward name="deleteResult" path="/management/userGroupManagement/deleteResult.jsp" />
+            <forward name="listUserGroups" path="/management/userGroupManagement/listUserGroups.do"/>
+        </action>
+
+
+        <action path="/management/userGroupManagement/queryUserGroup"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userGroupManagement.action.UserGroupMappingDispatchAction"
+            name="UserGroupForm" scope="request" parameter="queryUserGroup">
+            <forward name="userGroupDetails"
+                path="/management/userGroupManagement/userGroupDetails.jsp" />
+            <forward name="listUserGroups"
+                path="/management/userGroupManagement/listUserGroups.do" />
+        </action>
+
+        <action path="/management/userGroupManagement/handleEditUserGroup"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.userGroupManagement.action.UserGroupMappingDispatchAction"
+            name="UserGroupForm" scope="request" validate="true"
+            parameter="editUserGroup">
+            <forward name="editUserGroupResultPage"
+                path="/management/userGroupManagement/queryUserGroup.do" />
+        </action>
+
+<!-- USER GROUP MANAGEMENT END-->
+
+<!-- RESOURCE GROUP MANAGEMENT START-->
+        <action path="/management/resourceGroupManagement/createResourceGroup"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.resourceGroupManagement.action.ResourceGroupMappingDispatchAction"
+            name="CreateResourceGroupForm" scope="request" validate="false"
+            parameter="setupCreateResourceGroup">
+            <forward name="CreateResourceGroupPage"
+                path="/management/resourceGroupManagement/createResourceGroup.jsp" />
+        </action>
+
+        <action path="/management/resourceGroupManagement/handleCreateResourceGroup"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.resourceGroupManagement.action.ResourceGroupMappingDispatchAction"
+            name="CreateResourceGroupForm" scope="request" parameter="handleCreateResourceGroup"
+            validate="true"
+            input="/management/resourceGroupManagement/createResourceGroup.do">
+            <forward name="HandleCreateResourceGroupSuccess"
+                path="/management/resourceGroupManagement/createResourceGroupResult.do" />
+            <forward name="HandleCreateResourceGroupFailed"
+                path="/management/resourceGroupManagement/createResourceGroup.do"/>
+            <forward name="CreateResourceGroupAction" path="/management/resourceGroupManagement/createResourceGroup.do"/>
+        </action>
+
+        <action path="/management/resourceGroupManagement/createResourceGroupResult"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.resourceGroupManagement.action.ResourceGroupMappingDispatchAction"
+            name="ResourceGroupForm" scope="request" validate="false"
+            parameter="createResourceGroupResult">
+            <forward name="CreateResourceGroupResult"
+                path="/management/resourceGroupManagement/createResourceGroupResult.jsp" />
+        </action>
+
+        <action path="/management/resourceGroupManagement/listResourceGroups"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.resourceGroupManagement.action.ResourceGroupMappingDispatchAction"
+            name="ListResourceGroupsForm" scope="request" validate="false"
+            parameter="forwardListResourceGroupsPage">
+            <forward name="listResourceGroups" path="/management/resourceGroupManagement/listResourceGroups.jsp"/>
+        </action>
+
+        <action path="/management/resourceGroupManagement/listResourceGroupsResult"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.resourceGroupManagement.action.ResourceGroupMappingDispatchAction"
+            name="ListResourceGroupsForm" scope="request" validate="false"
+            parameter="listResourceGroups">
+            <forward name="listResourceGroupsResultPage"
+                path="/management/resourceGroupManagement/listResourceGroupsResult.jsp" />
+            <forward name="listResourceGroups" path="/management/resourceGroupManagement/listResourceGroups.do"/>
+        </action>
+        
+        <action path="/management/resourceGroupManagement/delete"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.resourceGroupManagement.action.ResourceGroupMappingDispatchAction"
+            name="ListResourceGroupsForm" scope="request" validate="false"
+            parameter="deleteResourceGroup">
+            <forward name="deleteResult"
+                path="/management/resourceGroupManagement/deleteResult.jsp" />
+        </action>
+
+        <action path="/management/resourceGroupManagement/queryResourceGroup"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.resourceGroupManagement.action.ResourceGroupMappingDispatchAction"
+            name="ResourceGroupForm" scope="request" parameter="queryResourceGroup">
+            <forward name="resourceGroupDetails"
+                path="/management/resourceGroupManagement/resourceGroupDetails.jsp" />
+            <forward name="listResourceGroups"
+                path="/management/resourceGroupManagement/listResourceGroups.do" />
+        </action>
+
+        <action path="/management/resourceGroupManagement/queryResource"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.resourceGroupManagement.action.ResourceGroupMappingDispatchAction"
+            name="ResourceForm" scope="request" parameter="queryResource">
+            <forward name="resourceDetails"
+                path="/management/resourceGroupManagement/resourceDetails.jsp" />
+        </action>
+
+        <action path="/management/resourceGroupManagement/handleEditResourceGroup"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.resourceGroupManagement.action.ResourceGroupMappingDispatchAction"
+            name="ResourceGroupForm" scope="request" validate="true"
+            parameter="editResourceGroup">
+            <forward name="editResourceGroupResultPage"
+                path="/management/resourceGroupManagement/queryResourceGroup.do" />
+        </action>
+
+<!-- RESOURCE GROUP MANAGEMENT END-->
+
+        <action path="/management/globalPolicy"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.action.SecurityMappingDispatchAction"
+            name="GlobalPolicyForm" scope="request" parameter="getGlobalPolicy" validate="true">
+            <forward name="GlobalPolicyPage" path="/management/globalPolicy.jsp"/>
+        </action>
+            
+        <action path="/management/editGlobalPolicy"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.action.SecurityMappingDispatchAction"
+            name="GlobalPolicyForm" scope="request" parameter="editGlobalPolicy" 
+            validate="true" input="/management/globalPolicy.do">
+            <forward name="GlobalPolicyAction" path="/management/globalPolicy.do"/>
+            <forward name="GlobalPolicyPage" path="/management/globalPolicy.jsp"/>
+        </action>    
+        
+        <action path="/management/viewUserProfile"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.action.SecurityMappingDispatchAction"
+            name="EditUserForm" scope="request" parameter="viewUserProfile" validate="true">
+            <forward name="EditUserPage" path="/management/userManagement/editUser.jsp" />
+        </action>        
+        
+        <action path="/management/changePassword"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.action.SecurityMappingDispatchAction"
+            parameter="forwardChangePasswordPage">
+            <forward name="ChangePasswordPage" path="/management/changePassword.jsp" />        
+        </action>
+        
+         <action path="/management/changePasswordAction" name="ChangePasswordForm" scope="request"
+            type="com.nortel.appcore.app.drac.server.webserver.struts.security.action.SecurityMappingDispatchAction"
+            parameter="changePassword">
+            <forward name="ChangePasswordPage" path="/management/changePassword.jsp" />        
+        </action>
+    </action-mappings>
+<!-- SECURITY END-->
+
+
+    <!-- ============================================= Controller Configuration -->
+
+    <controller
+        processorClass="org.apache.struts.tiles.TilesRequestProcessor" />
+
+
+    <!-- ======================================== Message Resources Definitions -->
+
+    <message-resources null="false" parameter="DRAC" />
+    <message-resources null="false" parameter="errorDescription" key="ERROR_RESOURCE_KEY"/>
+
+    <!-- =============================================== Plug Ins Configuration -->
+
+    <!-- ======================================================= Tiles plugin -->
+    <!--
+        This plugin initialize Tiles definition factory. This later can takes some
+        parameters explained here after. The plugin first read parameters from
+        web.xml, thenoverload them with parameters defined here. All parameters
+        are optional.
+        The plugin should be declared in each struts-config file.
+        - definitions-config: (optional)
+        Specify configuration file names. There can be several comma
+        separated file names (default: ?? )
+        - moduleAware: (optional - struts1.1)
+        Specify if the Tiles definition factory is module aware. If true
+        (default), there will be one factory for each Struts module.
+        If false, there will be one common factory for all module. In this
+        later case, it is still needed to declare one plugin per module.
+        The factory will be initialized with parameters found in the first
+        initialized plugin (generally the one associated with the default
+        module).
+        true : One factory per module. (default)
+        false : one single shared factory for all modules
+        - definitions-parser-validate: (optional)
+        Specify if xml parser should validate the Tiles configuration file.
+        true : validate. DTD should be specified in file header (default)
+        false : no validation
+        
+        Paths found in Tiles definitions are relative to the main context.
+    -->
+
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+
+        <!--  Path to XML definition file -->
+        <set-property property="definitions-config"
+            value="/WEB-INF/config/tiles-defs.xml" />
+        <!-- Set Module-awareness to true -->
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+
+    <!-- =================================================== Validator plugin -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property property="pathnames"
+            value="/WEB-INF/config/validator-rules.xml, /WEB-INF/config/validation.xml"/>
+    </plug-in>
+
+
+</struts-config>
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <comment>Default reporting settings</comment>
+  <entry key="mail.host">localhost</entry>
+  <entry key="mail.port">25</entry>
+
+  <entry key="vers.user">DLPBeheer</entry>
+  <entry key="vers.password">Testing123!</entry>
+  <entry key="vers.customer_resources">conf/env/opendrac-reporting-test.xml</entry>
+  <entry key="vers.url">https://rapportage-test.surfnet.nl:9001/interface.php</entry>
+  <entry key="vers.quarterly.recipients">andrevanderark@surfnet.nl,hanstrompert@surfnet.nl</entry>
+  <entry key="vers.monthly.recipients">andrevanderark@surfnet.nl,hanstrompert@surfnet.nl</entry>
+  
+  <entry key="opendrac.user">admin</entry>
+  <entry key="opendrac.password">myDrac</entry>
+
+  <entry key="Asd001A_OME1T_ETH-1-1-2">UvA</entry>
+  <entry key="Asd001A_OME3T_ETH-1-12-3">UU</entry>
+  <entry key="Asd001A_OME1T_ETH-1-2-1">CERN</entry>
+</properties>

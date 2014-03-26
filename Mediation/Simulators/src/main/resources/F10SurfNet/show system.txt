@@ -1,0 +1,67 @@
+Stack MAC : 00:01:e8:d6:37:a8
+
+--  Unit 0 --
+Unit Type       : Management Unit
+Status          : online 
+Next Boot       : online 
+Required Type   : S25P - 24-port FE/GE (SB)
+Current Type    : S25P - 24-port FE/GE (SB)
+Master priority : 0 
+Hardware Rev    : 2.0 
+Num Ports       : 28 
+Up Time         : 3 day, 23 hr, 45 min
+FTOS Version    : 8.3.2.0 
+Jumbo Capable   : yes 
+POE Capable     : no 
+Burned In MAC   : 00:01:e8:d6:37:a8 
+No Of MACs      : 3
+
+--  Module 0 --
+Status          : not present
+
+--  Module 1 --
+Status          : online        
+Module Type     : S50-01-10GE-2P    - 2-port 10GE XFP (SB) 
+Num Ports       : 2
+Hot Pluggable   : no
+
+--  Power Supplies  --
+Unit   Bay   Status       Type
+---------------------------------------------------------------------------
+  0     0     up            AC 
+  0     1     up            AC 
+
+--  Fan  Status  --
+Unit   TrayStatus  Speed    Fan0    Fan1    Fan2    Fan3    Fan4    Fan5    
+--------------------------------------------------------------------------------
+ 0     up          low      up      up      up      up      up      up      
+
+--  Unit 1 --
+Unit Type       : Member Unit
+Status          : not present 
+
+--  Unit 2 --
+Unit Type       : Member Unit
+Status          : not present 
+
+--  Unit 3 --
+Unit Type       : Member Unit
+Status          : not present 
+
+--  Unit 4 --
+Unit Type       : Member Unit
+Status          : not present 
+
+--  Unit 5 --
+Unit Type       : Member Unit
+Status          : not present 
+
+--  Unit 6 --
+Unit Type       : Member Unit
+Status          : not present 
+
+--  Unit 7 --
+Unit Type       : Member Unit
+Status          : not present 
+
+Asd001A_F25S1T#

@@ -1,0 +1,25 @@
+Force10 Networks Real Time Operating System Software
+Force10 Operating System Version: 1.0
+Force10 Application Software Version: 8.3.1.1
+Copyright (c) 1999-2009 by Force10 Networks, Inc.
+Build Time: Mon Jan 18 14:13:19 2010
+Build Path: /sites/sjc/work/build/buildSpaces/build02/E8-3-1/SW/SRC
+R1000-S-RFTEC-2 uptime is 6 week(s), 5 day(s), 5 hour(s), 37 minute(s)
+
+System image file is "flash://FTOS-EF-8.3.1.1.bin"
+
+Chassis Type: E1200i 
+Control Processor: IBM PowerPC 750FX (Rev D2.2) with 536870912 bytes of memory.
+Route Processor 1: IBM PowerPC 750FX (Rev D2.2) with 1073741824 bytes of memory.
+Route Processor 2: IBM PowerPC 750FX (Rev D2.2) with 1073741824 bytes of memory.
+
+128K bytes of non-volatile configuration memory.
+
+  2 Route Processor Module
+  9 Switch Fabric Module
+  3 4-port 10GE LAN/WAN PHY line card with XFP optics (EF)
+  1 48-port 10/100/1000Base-T line card with RJ-45 interfaces (EF)
+  2 FastEthernet/IEEE 802.3 interface(s)
+ 12 Ten GigabitEthernet/IEEE 802.3 interface(s)
+ 48 GigabitEthernet/IEEE 802.3 interface(s)
+R1000-S-RFTEC-2#

@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.opendrac</groupId>
+  <artifactId>Jaas</artifactId>
+  <version>4.6.1-SNAPSHOT</version>
+  <name>Web/Jaas - OpenDRAC JAAS Login Modules</name>
+  <description>Jaas: OpenDRAC JAAS plug-in to security system</description>
+  <packaging>jar</packaging>
+
+  <parent>
+    <groupId>org.opendrac</groupId>
+    <artifactId>Web</artifactId>
+    <version>4.6.1-SNAPSHOT</version>
+  </parent>
+
+  <dependencies>
+     <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.opendrac</groupId>
+      <artifactId>RequestHandler</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.opendrac</groupId>
+      <artifactId>Common</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.opendrac</groupId>
+      <artifactId>Nrb</artifactId>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <defaultGoal>install</defaultGoal>
+  </build>
+
+</project>

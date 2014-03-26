@@ -1,0 +1,27 @@
+Force10 Networks Real Time Operating System Software
+Force10 Operating System Version: 1.0
+Force10 Application Software Version: 5.3.1.6
+Copyright (c) 1999-2004 by Force10 Networks, Inc.
+Build Time: Sat Apr 9 20:30:22 PDT 2005
+Build Path: /work/sw/huiyuan/special/Release/5-3-1/SW/SRC
+Force10 uptime is 25 weeks, 1 days, 1 hours, 24 minutes
+
+System image file is "flash://FTOS-ED-5.3.1.6.bin"
+
+Chassis Type: E600 
+Control Processor: IBM PowerPC 405GP (Rev D) with 268435456 bytes of memory.
+Route Processor 1: IBM PowerPC 405GP (Rev D) with 536870912 bytes of memory.
+Route Processor 2: IBM PowerPC 405GP (Rev D) with 536870912 bytes of memory.
+
+128K bytes of non-volatile configuration memory.
+
+  1 Route Processor Module
+  9 Switch Fabric Module
+  2 24-port 100/1000Base-T line card with RJ-45 interfaces (ED)
+  2 2-port 10GE LAN PHY line card with 10Km (1310nm) optics (ED)
+  1 2-port 10GE WAN PHY line card with 10Km (1310nm) optics (EE)
+  1 24-port GE line card with SFP optics (ED)
+  1 FastEthernet/IEEE 802.3 interface(s)
+ 72 GigabitEthernet/IEEE 802.3 interface(s)
+  6 Ten GigabitEthernet/IEEE 802.3 interface(s)
+Force10#

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:nsaConfigurationList
+        xmlns:tns="http://schemas.opendrac.org/nsi/2011/09/nsaConfiguration"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <nsaConfiguration>
+        <nsaIdentifier>urn:ogf:network:surfnet.nl:2012:drac.surfnet.nl</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:surfnet.nl:2012:production</nsNetwork>
+        <authentication>
+            <userId>nsidemo</userId>
+            <password>RioPlug-Fest2011!</password>
+        </authentication>
+    </nsaConfiguration>
+
+    <nsaConfiguration>
+        <nsaIdentifier>urn:ogf:network:nsa:ferb.surfnet.nl</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:nsnetwork:ferb.surfnet.nl</nsNetwork>
+        <connectedTo>urn:ogf:network:nsa:netherlight</connectedTo>
+        <authentication>
+            <userId>nsidemo</userId>
+            <password>RioPlug-Fest2011!</password>
+        </authentication>
+    </nsaConfiguration>
+
+</tns:nsaConfigurationList>

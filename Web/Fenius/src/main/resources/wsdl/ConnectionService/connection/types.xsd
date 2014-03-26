@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema  targetNamespace="http://fenius.glif.is/ws/connection/v1/types"
+            xmlns:t="http://fenius.glif.is/ws/connection/v1/types"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="unqualified"
+            attributeFormDefault="unqualified" >
+
+    <!-- connection parameters -->
+    <xs:complexType name="reservable">
+        <xs:sequence>
+
+        <!-- connection topology -->
+            <xs:element name="topology"             type="t:topology" />
+
+        <!-- scheduling parameters -->
+            <xs:element name="schedule"             type="t:schedule" />
+
+        <!-- machine-readable tag(s): probably persistent across multiple instantiations / services, meant for external tools -->
+            <xs:element name="tag"                  type="xs:string"    minOccurs="0" maxOccurs="unbounded" />
+
+        <!-- human-readable description(s) -->
+            <xs:element name="description"          type="xs:string"    minOccurs="0" maxOccurs="unbounded" />
+
+        <!-- misc / other as needed -->
+            <xs:element name="adhocParams"          type="t:avpSeq"     minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="reservation">
+        <xs:complexContent>
+            <xs:extension base="t:reservable">
+                <xs:sequence>
+                <!-- reservation identifier. typically set by the server -->
+                    <xs:element name="reservationId"        type="xs:string" />
+                <!-- reservation status -->
+                    <xs:element name="reservationStatus"    type="t:reservationStatus" />
+                <!-- overall service status -->
+                    <xs:element name="activationStatus"    type="t:activationStatus" />
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+  <!--  the service topology graph -->
+    <xs:complexType name="topology">
+        <xs:sequence>
+        <!-- a directed graph? if not, edges will be assumed symmetrical -->
+            <xs:element name="directed"             type="xs:boolean" />
+          <!-- define the endpoints to be connected -->
+            <xs:element name="vertices"             type="t:vertex"     minOccurs="0" maxOccurs="unbounded"/>
+      <!-- define how they will be connected -->
+            <xs:element name="edges"                type="t:edge"       minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- parameters for a single endpoint / topology graph vertex -->
+    <xs:complexType name="vertex">
+        <xs:sequence>
+            <!-- external identifier of the network resource represented by this vertex -->
+            <xs:element name="resourceId"           type="xs:string" />
+
+            <!-- internal identifier for this vertex,
+                 used to make it addressable in the context of the reservation -->
+            <xs:element name="vertexId"             type="xs:string" />
+
+            <!-- human-readable description(s) -->
+            <xs:element name="description"          type="xs:string"    minOccurs="0" />
+            <!-- a list of attribute-value pairs for technology parameters  -->
+            <xs:element name="techParams"           type="t:avpSeq"     minOccurs="0" />
+            <!-- a list of attribute-value pairs for ad hoc parameters  -->
+            <xs:element name="adhocParams"          type="t:avpSeq"     minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="edge">
+        <xs:sequence>
+        <!-- a vertexId: the A of the edge -->
+            <xs:element name="a"                    type="xs:string" />
+
+        <!-- a vertexId: the Z of the edge -->
+            <xs:element name="z"                    type="xs:string" />
+
+        <!-- internal identifier for this edge,
+                 used to make it addressable in the context of the reservation -->
+            <xs:element name="edgeId"               type="xs:string"    minOccurs="0" />
+
+        <!-- human-readable description(s) -->
+            <xs:element name="description"          type="xs:string"    minOccurs="0" />
+
+        <!-- bandwidth of the edge, in Mbps -->
+            <xs:element name="bandwidth"            type="xs:int"       minOccurs="0" />
+
+        <!-- activation status of the edge-->
+            <xs:element name="activationStatus"     type="t:activationStatus" />
+
+        <!-- other parameters -->
+            <xs:element name="adhocParams"          type="t:avpSeq"     minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <!-- time parameters -->
+    <xs:complexType name="schedule">
+        <xs:sequence>
+          <!-- when the schedule was created / submitted -->
+          <xs:element name="created"                type="xs:dateTime" />
+        <!--  either an immediate or an advance schedule -->
+        <xs:choice>
+          <xs:element name="immediate"              type="t:immediate" />
+          <xs:element name="advance"                type="t:advance" />
+        </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- immediate schedule -->
+    <xs:complexType name="immediate">
+      <xs:choice>
+            <!-- either the absolute time when the reservation is scheduled to finish -->
+            <xs:element name="end"                  type="xs:dateTime" />
+
+            <!-- or, the duration in seconds, measured from the time the service is instantiated.
+                A negative value means that the schedule is indefinite -->
+            <xs:element name="duration"             type="xs:int" />
+      </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="advance">
+        <xs:sequence>
+          <!-- The time when the reservation is scheduled to start -->
+          <xs:element name="start"                  type="xs:dateTime" />
+        <xs:choice>
+              <!-- either the absolute time when the reservation is scheduled to finish -->
+              <xs:element name="end"                type="xs:dateTime" />
+              <!-- or, the duration in seconds, measured from the time the service is instantiated.
+                  A negative value means that the schedule is indefinite -->
+              <xs:element name="duration"           type="xs:int" />
+        </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <!--
+        a filter for the reservations to be returned by list()
+        all the parameters should be ANDed if set
+        TODO: work on this a bit more
+     -->
+    <xs:complexType name="listFilter">
+        <xs:sequence>
+            <xs:element name="reservationId"        type="xs:string"    minOccurs="0"   maxOccurs="unbounded"/>
+            <xs:element name="descriptor"           type="xs:string"    minOccurs="0"   maxOccurs="unbounded"/>
+            <xs:element name="startsBefore"         type="xs:dateTime"  minOccurs="0" />
+            <xs:element name="startsAfter"          type="xs:dateTime"  minOccurs="0" />
+            <xs:element name="endsBefore"           type="xs:dateTime"  minOccurs="0" />
+            <xs:element name="endsAfter"            type="xs:dateTime"  minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+    <xs:complexType name="credentials">
+        <xs:sequence>
+        <!-- user info -->
+            <xs:element name="username"             type="xs:string" />
+            <xs:element name="group"                type="xs:string"    minOccurs="0" />
+        <!-- other parameters -->
+            <xs:element name="adhocParams"          type="t:avpSeq"     minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- the status of the reservation -->
+    <xs:simpleType name="reservationStatus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="RESERVING"/>
+            <xs:enumeration value="RESERVED"/>
+            <xs:enumeration value="RELEASING"/>
+            <xs:enumeration value="RELEASED"/>
+            <xs:enumeration value="FINISHING"/>
+            <xs:enumeration value="FINISHED"/>
+            <xs:enumeration value="FAILED"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <!-- the activation status for a particular edge or the overall service-->
+    <xs:simpleType name="activationStatus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ACTIVATING"/>
+            <xs:enumeration value="ACTIVE"/>
+            <xs:enumeration value="DEACTIVATING"/>
+            <xs:enumeration value="INACTIVE"/>
+            <xs:enumeration value="FAILED"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <!-- an attribute-value pair sequence -->
+    <xs:complexType name="avpSeq">
+        <xs:sequence>
+            <xs:element name="avp"                  type="t:avp"        minOccurs="0"   maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <!-- an attribute-value pair -->
+    <xs:complexType name="avp">
+        <xs:sequence>
+            <xs:element name="attrName"             type="xs:string" />
+            <xs:element name="attrVal"              type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+
+</xs:schema>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <comment>
+    Test configuration
+  </comment>
+
+  <!-- -->
+  <!-- Database config -->
+  <!-- -->
+  <entry key="jdbc.user">sa</entry>
+  <entry key="jdbc.password"></entry>
+  <entry key="jdbc.driverClass">org.h2.Driver</entry>
+  <entry key="jdbc.jdbcUrl">jdbc:h2:file:${basedir}/var/db/opendrac-nsi-tmp;DB_CLOSE_DELAY=-1;TRACE_LEVEL_SYSTEM_OUT=0;TRACE_LEVEL_FILE=2</entry>
+  <entry key="jdbc.initialPoolSize">1</entry>
+  <entry key="jdbc.maxPoolSize">20</entry>
+  <entry key="jdbc.minPoolSize">1</entry>
+  <entry key="jdbc.acquireIncrement">1</entry>
+  <entry key="jdbc.acquireRetryAttempts">15</entry>
+  <entry key="jdbc.idleConnectionTestPeriod">900</entry>
+  <entry key="jdbc.init">false</entry>
+  <entry key="jdbc.test.table">TEST_TABLE</entry>
+
+</properties>

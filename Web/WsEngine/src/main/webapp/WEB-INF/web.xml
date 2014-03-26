@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+<!--
+
+    <pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>
+
+-->
+    <display-name>Apache-Axis2</display-name>
+    <servlet>
+        <servlet-name>AxisServlet</servlet-name>
+        <servlet-class>org.apache.axis2.transport.http.AxisServlet</servlet-class>
+        <!--<init-param>-->
+        <!--<param-name>axis2.xml.path</param-name>-->
+        <!--<param-value>/WEB-INF/conf/axis2.xml</param-value>-->
+        <!--<param-name>axis2.xml.url</param-name>-->
+        <!--<param-value>http://localhost/myrepo/axis2.xml</param-value>-->
+        <!--<param-name>axis2.repository.path</param-name>-->
+        <!--<param-value>/WEB-INF</param-value>-->
+        <!--<param-name>axis2.repository.url</param-name>-->
+        <!--<param-value>http://localhost/myrepo</param-value>-->
+        <!--</init-param>-->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AxisServlet</servlet-name>
+        <url-pattern>/servlet/AxisServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AxisServlet</servlet-name>
+        <url-pattern>*.jws</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AxisServlet</servlet-name>
+        <url-pattern>/services/*</url-pattern>
+    </servlet-mapping>
+
+    <mime-mapping>
+        <extension>inc</extension>
+        <mime-type>text/plain</mime-type>
+    </mime-mapping>
+
+   <welcome-file-list>
+      <welcome-file>index.jsp</welcome-file>
+      <welcome-file>index.html</welcome-file>
+      <welcome-file>/axis2-web/index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <error-page>
+      <error-code>404</error-code>
+      <location>/axis2-web/Error/error404.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/axis2-web/Error/error500.jsp</location>
+    </error-page>
+</web-app>

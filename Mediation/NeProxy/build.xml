@@ -1,0 +1,151 @@
+<project name="MyProject" default="build">
+	<!--
+
+    <pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>
+
+-->
+	<description>
+        Invoked by maven to generate Java classes that understand how to build and parse a TL1 command. The tl1 commands are stored in a file and processed by the tl1
+		genstub.Gentl1Stub generator.
+    </description>
+
+	<target name="init">
+
+		<path id="maven.plugin.classpath">
+			<path path="${maven.plugin.classpath}" />
+		</path>
+
+		<property name="target.dir" value="target/tl1wrapper" />
+		<uptodate property="ome9Uptodate" srcfile="src/main/resources/tl1wrapper/ome6500_rel9/commandList.txt" targetfile="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME9/TL1Wrapper.java" />
+		<uptodate property="ome8Uptodate" srcfile="src/main/resources/tl1wrapper/ome6500_rel8/commandList.txt" targetfile="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME8/TL1Wrapper.java" />
+		<uptodate property="ome7Uptodate" srcfile="src/main/resources/tl1wrapper/ome6500_rel7/commandList.txt" targetfile="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME7/TL1Wrapper.java" />
+		<uptodate property="ome6Uptodate" srcfile="src/main/resources/tl1wrapper/ome6500_rel6/commandList.txt" targetfile="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME6/TL1Wrapper.java" />
+		<uptodate property="ome5Uptodate" srcfile="src/main/resources/tl1wrapper/ome6500_rel5/commandList.txt" targetfile="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME5/TL1Wrapper.java" />
+		<uptodate property="ome2Uptodate" srcfile="src/main/resources/tl1wrapper/ome6500_rel2/commandList.txt" targetfile="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME/TL1Wrapper.java" />
+		<uptodate property="omebbUptodate" srcfile="src/main/resources/tl1wrapper/ome6500_bb_rel2_5/commandList.txt" targetfile="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OMEBB/TL1Wrapper.java" />
+		<uptodate property="hdxUptodate" srcfile="src/main/resources/tl1wrapper/hdx_rel3_2/commandList.txt" targetfile="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/HDX/TL1Wrapper.java" />
+		<uptodate property="cplUptodate" srcfile="src/main/resources/tl1wrapper/cpl_rel3_0/commandList.txt" targetfile="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/CPL/TL1Wrapper.java" />
+
+		<echo message="ome9Uptodate=${ome9Uptodate} ome8Uptodate=${ome8Uptodate} ome7Uptodate=${ome7Uptodate} ome6Uptodate=${ome6Uptodate} ome5Uptodate=${ome5Uptodate} ome2Uptodate=${ome2Uptodate} omebbUptodate=${omebbUptodate} hdxUptodate=${hdxUptodate} cplUptodate=${cplUptodate}" />
+	</target>
+
+	<target name="ome9" depends="init" unless="ome9Uptodate">
+		<echo message="Processing OME9" />
+		<mkdir dir="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME9" />
+		<java classname="genstub.Gentl1Stub" fork="true" failonerror="true" maxmemory="128m" classpath="${compile.classpath}">
+			<arg value="src/main/resources/tl1wrapper/ome6500_rel9/commandList.txt" />
+			<arg value="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME9" />
+			<arg value="com.nortel.appcore.app.drac.server.neproxy.mediation.tl1wrapper.OME9" />
+		</java>
+	</target>
+
+	<target name="ome8" depends="init" unless="ome8Uptodate">
+		<echo message="Processing OME8" />
+		<mkdir dir="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME8" />
+		<java classname="genstub.Gentl1Stub" fork="true" failonerror="true" maxmemory="128m" classpath="${compile.classpath}">
+			<arg value="src/main/resources/tl1wrapper/ome6500_rel8/commandList.txt" />
+			<arg value="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME8" />
+			<arg value="com.nortel.appcore.app.drac.server.neproxy.mediation.tl1wrapper.OME8" />
+		</java>
+	</target>
+
+	<target name="ome7" depends="init" unless="ome7Uptodate">
+		<echo message="Processing OME7" />
+		<mkdir dir="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME7" />
+		<java classname="genstub.Gentl1Stub" fork="true" failonerror="true" maxmemory="128m" classpath="${compile.classpath}">
+			<arg value="src/main/resources/tl1wrapper/ome6500_rel7/commandList.txt" />
+			<arg value="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME7" />
+			<arg value="com.nortel.appcore.app.drac.server.neproxy.mediation.tl1wrapper.OME7" />
+		</java>
+	</target>
+
+	<target name="ome6" depends="init" unless="ome6Uptodate">
+		<echo message="Processing OME6" />
+		<mkdir dir="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME6" />
+		<java classname="genstub.Gentl1Stub" fork="true" failonerror="true" maxmemory="128m" classpath="${compile.classpath}">
+			<arg value="src/main/resources/tl1wrapper/ome6500_rel6/commandList.txt" />
+			<arg value="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME6" />
+			<arg value="com.nortel.appcore.app.drac.server.neproxy.mediation.tl1wrapper.OME6" />
+		</java>
+	</target>
+
+	<target name="ome5" depends="init" unless="ome5Uptodate">
+		<echo message="Processing OME5" />
+		<mkdir dir="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME5" />
+		<java classname="genstub.Gentl1Stub" fork="true" failonerror="true" maxmemory="128m" classpath="${compile.classpath}">
+			<arg value="src/main/resources/tl1wrapper/ome6500_rel5/commandList.txt" />
+			<arg value="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME5" />
+			<arg value="com.nortel.appcore.app.drac.server.neproxy.mediation.tl1wrapper.OME5" />
+		</java>
+	</target>
+
+	<target name="ome2" depends="init" unless="ome2Uptodate">
+		<mkdir dir="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME" />
+		<echo message="Processing OME" />
+		<java classname="genstub.Gentl1Stub" fork="true" failonerror="true" maxmemory="128m" classpath="${compile.classpath}">
+			<arg value="src/main/resources/tl1wrapper/ome6500_rel2/commandList.txt" />
+			<arg value="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OME" />
+			<arg value="com.nortel.appcore.app.drac.server.neproxy.mediation.tl1wrapper.OME" />
+		</java>
+	</target>
+
+	<target name="omebb" depends="init" unless="omebbUptodate">
+		<mkdir dir="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OMEBB" />
+		<echo message="Processing OMEBB" />
+		<java classname="genstub.Gentl1Stub" fork="true" failonerror="true" maxmemory="128m" classpath="${compile.classpath}">
+			<arg value="src/main/resources/tl1wrapper/ome6500_bb_rel2_5/commandList.txt" />
+			<arg value="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/OMEBB" />
+			<arg value="com.nortel.appcore.app.drac.server.neproxy.mediation.tl1wrapper.OMEBB" />
+		</java>
+	</target>
+
+	<target name="hdx" depends="init" unless="hdxUptodate">
+		<mkdir dir="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/HDX" />
+		<echo message="Processing HDX" />
+		<java classname="genstub.Gentl1Stub" fork="true" failonerror="true" maxmemory="128m" classpath="${compile.classpath}">
+			<arg value="src/main/resources/tl1wrapper/hdx_rel3_2/commandList.txt" />
+			<arg value="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/HDX" />
+			<arg value="com.nortel.appcore.app.drac.server.neproxy.mediation.tl1wrapper.HDX" />
+		</java>
+	</target>
+
+	<target name="cpl" depends="init" unless="cplUptodate">
+		<mkdir dir="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/CPL" />
+		<echo message="Processing CPL" />
+		<java classname="genstub.Gentl1Stub" fork="true" failonerror="true" maxmemory="128m" classpath="${compile.classpath}">
+			<arg value="src/main/resources/tl1wrapper/cpl_rel3_0/commandList.txt" />
+			<arg value="${target.dir}/com/nortel/appcore/app/drac/server/neproxy/mediation/tl1wrapper/CPL" />
+			<arg value="com.nortel.appcore.app.drac.server.neproxy.mediation.tl1wrapper.CPL" />
+		</java>
+	</target>
+
+	<target name="build" depends="init, ome9, ome8, ome7, ome6, ome5, ome2, omebb, hdx, cpl">
+
+	</target>
+</project>

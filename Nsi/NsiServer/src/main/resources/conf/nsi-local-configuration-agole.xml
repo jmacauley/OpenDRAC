@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:configurationList
+        xmlns:tns="http://schemas.opendrac.org/nsi/2012/07/localConfiguration"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <configuration>
+        <nsaIdentifier>urn:ogf:network:nsa:netherlight</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:nsnetwork:netherlight.ets</nsNetwork>
+        <requesterEndpoint>http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceRequester</requesterEndpoint>
+        <providerEndpoint>http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider</providerEndpoint>
+        <nrmConfiguration>
+            <nrmType>OpenDRAC</nrmType>
+            <serviceType>CCAT</serviceType>
+            <stpPrefix>urn:ogf:network:stp:netherlight.ets:</stpPrefix>
+            <portPrefix>urn:ogf:network:</portPrefix>
+            <authorization>
+                <userName>nsidemo</userName>
+                <password>RioPlug-Fest2011!</password>
+                <billingGroup>NsiUserGroup</billingGroup>
+                <userGroup>NsiUserGroup</userGroup>
+                <resourceGroup>NsiResourceGroup</resourceGroup>
+            </authorization>
+        </nrmConfiguration>
+    </configuration>
+
+    <configuration>
+        <nsaIdentifier>urn:ogf:network:nsa:czechlight</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:nsnetwork:czechlight.ets</nsNetwork>
+        <requesterEndpoint>http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceRequester</requesterEndpoint>
+        <providerEndpoint>http://dracproxy01.surfnet.nl:8080/nsi-v1/ConnectionServiceProvider</providerEndpoint>
+        <nrmConfiguration>
+            <nrmType>OpenDRAC</nrmType>
+            <serviceType>CCAT</serviceType>
+            <stpPrefix>urn:ogf:network:stp:czechlight.ets:</stpPrefix>
+            <portPrefix>urn:ogf:network:</portPrefix>
+            <authorization>
+                <userName>nsidemo</userName>
+                <password>RioPlug-Fest2011!</password>
+                <billingGroup>NsiUserGroup</billingGroup>
+                <userGroup>NsiUserGroup</userGroup>
+                <resourceGroup>NsiResourceGroup</resourceGroup>
+            </authorization>
+        </nrmConfiguration>
+    </configuration>
+
+</tns:configurationList>

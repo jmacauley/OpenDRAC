@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+  version="2.5">
+  <!-- <pre> The owner of the original code is Ciena Corporation. Portions 
+    created by the original owner are Copyright (C) 2004-2010 the original owner. 
+    All Rights Reserved. Portions created by other contributors are Copyright 
+    (C) the contributor. All Rights Reserved. Contributor(s): (Contributors insert 
+    name & email here) This file is part of DRAC (Dynamic Resource Allocation 
+    Controller). DRAC is free software: you can redistribute it and/or modify 
+    it under the terms of the GNU General Public License as published by the 
+    Free Software Foundation; either version 3 of the License, or (at your option) 
+    any later version. DRAC is distributed in the hope that it will be useful, 
+    but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY 
+    or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for 
+    more details. You should have received a copy of the GNU General Public License 
+    along with this program. If not, see <http://www.gnu.org/licenses/>. </pre> -->
+  <listener>
+    <listener-class>
+      org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:/spring/opendrac-common.xml,classpath:/spring/opendrac-database.xml, classpath:/spring/opendrac-reporting.xml</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>CewolfServlet</servlet-name>
+    <servlet-class>de.laures.cewolf.CewolfRenderer</servlet-class>
+    <!-- sets storage implementation -->
+    <init-param>
+      <param-name>storage</param-name>
+      <param-value>de.laures.cewolf.storage.TransientSessionStorage</param-value>
+    </init-param>
+    <!-- sets overlib.js location relative to webapp -->
+    <init-param>
+      <param-name>overliburl</param-name>
+      <param-value>etc/overlib.js</param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>DRACServlet</servlet-name>
+    <servlet-class>com.nortel.appcore.app.drac.server.webserver.ajax.DracServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/config/struts-config.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <init-param>
+      <param-name>detail</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CewolfServlet</servlet-name>
+    <url-pattern>/network/cewolf/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DRACServlet</servlet-name>
+    <url-pattern>/drac</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>no_access</web-resource-name>
+      <url-pattern>*.jsp</url-pattern>
+    </web-resource-collection>
+    <auth-constraint />
+  </security-constraint>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/common/dracError.jsp</location>
+  </error-page>
+
+  <filter>
+    <filter-name>CharsetFilter</filter-name>
+    <filter-class>org.opendrac.webserver.filter.CharsetFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>CharsetFilter</filter-name>
+    <url-pattern>*.do</url-pattern>
+    <url-pattern>*.html</url-pattern>
+  </filter-mapping>
+
+</web-app>

@@ -1,0 +1,178 @@
+
+--  Manufacturing Info --
+Chassis Type  : E600      
+Chassis Mode  : 1.5/Jumbo 
+Chassis Epoch : 10.4 micro-seconds
+Serial Number : 0007045      
+Part Number   : 7490024509
+Vendor Id     : 01        
+Date Code     : 01072003  
+Country Code  : 01        
+Product Rev   : B         
+
+--  Line card 0 --
+Status        : card problem - no response to enable backplane msg
+Next Boot     : online 
+Required Type : E24TD - 24-port 100/1000Base-T line card with RJ-45 interfaces (ED)
+Current Type  : E24TD - 24-port 100/1000Base-T line card with RJ-45 interfaces (ED)
+Hardware Rev  : Base  - 1.0  PP0 - 1.1  PP1 - 1.1
+Num Ports     : 24 
+Up Time       : 0 sec
+FTOS Version  : 5.3.1.6 
+Jumbo Capable : yes 
+
+--  Line card 1 --
+Status        : online 
+Next Boot     : online 
+Required Type : E24TD - 24-port 100/1000Base-T line card with RJ-45 interfaces (ED)
+Current Type  : E24TD - 24-port 100/1000Base-T line card with RJ-45 interfaces (ED)
+Hardware Rev  : Base  - 1.0  PP0 - 1.1  PP1 - 1.1
+Num Ports     : 24 
+Up Time       : 25 wk, 1 day, 1 hr, 20 min
+FTOS Version  : 5.3.1.6 
+Jumbo Capable : yes 
+
+--  Line card 2 --
+Status        : not present 
+
+--  Line card 3 --
+Status        : online 
+Next Boot     : online 
+Required Type : EX2YD - 2-port 10GE LAN PHY line card with 10Km (1310nm) optics (ED)
+Current Type  : EX2YD - 2-port 10GE LAN PHY line card with 10Km (1310nm) optics (ED)
+Hardware Rev  : Base  - 1.1  PP0 - n/a  PP1 - n/a
+Num Ports     : 2 
+Up Time       : 25 wk, 1 day, 1 hr, 20 min
+FTOS Version  : 5.3.1.6 
+Jumbo Capable : yes 
+
+--  Line card 4 --
+Status        : online 
+Next Boot     : online 
+Required Type : EW2YE - 2-port 10GE WAN PHY line card with 10Km (1310nm) optics (EE)
+Current Type  : EW2YE - 2-port 10GE WAN PHY line card with 10Km (1310nm) optics (EE)
+Hardware Rev  : Base  - 1.0  PP0 - n/a  PP1 - n/a
+Num Ports     : 2 
+Up Time       : 25 wk, 1 day, 1 hr, 20 min
+FTOS Version  : 5.3.1.6 
+Jumbo Capable : yes 
+
+--  Line card 5 --
+Status        : online 
+Next Boot     : online 
+Required Type : E24PD - 24-port GE line card with SFP optics (ED)
+Current Type  : E24PD - 24-port GE line card with SFP optics (ED)
+Hardware Rev  : Base  - 1.0  PP0 - n/a  PP1 - n/a
+Num Ports     : 24 
+Up Time       : 25 wk, 1 day, 1 hr, 20 min
+FTOS Version  : 5.3.1.6 
+Jumbo Capable : yes 
+
+--  Line card 6 --
+Status        : online 
+Next Boot     : online 
+Required Type : EX2YD - 2-port 10GE LAN PHY line card with 10Km (1310nm) optics (ED)
+Current Type  : EX2YD - 2-port 10GE LAN PHY line card with 10Km (1310nm) optics (ED)
+Hardware Rev  : Base  - 1.0  PP0 - n/a  PP1 - n/a
+Num Ports     : 2 
+Up Time       : 25 wk, 1 day, 1 hr, 20 min
+FTOS Version  : 5.3.1.6 
+Jumbo Capable : yes 
+
+-- RPM card 0 --
+Status        : active 
+Next Boot     : online 
+Card Type     : RPM - Route Processor Module (LC-ED-RPM)
+Hardware Rev  : 1.5 
+Num Ports     : 1 
+Up Time       : 25 wk, 1 day, 1 hr, 22 min
+Last Restart  : reset 
+FTOS Version  : 5.3.1.6 
+Jumbo Capable : yes  
+
+-- RPM card 1 --
+Status        : not present 
+
+Switch Fabric State:  up
+        
+-- SFM card 0 --
+Status        : active 
+Card Type     : SFM - Switch Fabric Module
+Up Time       : 25 wk, 1 day, 1 hr, 22 min
+
+-- SFM card 1 --
+Status        : active 
+Card Type     : SFM - Switch Fabric Module
+Up Time       : 25 wk, 1 day, 1 hr, 22 min
+
+-- SFM card 2 --
+Status        : active 
+Card Type     : SFM - Switch Fabric Module
+Up Time       : 25 wk, 1 day, 1 hr, 22 min
+
+-- SFM card 3 --
+Status        : active 
+Card Type     : SFM - Switch Fabric Module
+Up Time       : 25 wk, 1 day, 1 hr, 21 min
+
+-- SFM card 4 --
+Status        : active 
+Card Type     : SFM - Switch Fabric Module
+Up Time       : 25 wk, 1 day, 1 hr, 21 min
+
+-- SFM card 5 --
+Status        : active 
+Card Type     : SFM - Switch Fabric Module
+Up Time       : 25 wk, 1 day, 1 hr, 21 min
+
+-- SFM card 6 --
+Status        : active 
+Card Type     : SFM - Switch Fabric Module
+Up Time       : 25 wk, 1 day, 1 hr, 21 min
+
+-- SFM card 7 --
+Status        : active 
+Card Type     : SFM - Switch Fabric Module
+Up Time       : 25 wk, 1 day, 1 hr, 21 min
+
+-- SFM card 8 --
+Status        : standby 
+Card Type     : SFM - Switch Fabric Module
+Up Time       : 25 wk, 1 day, 1 hr, 21 min
+
+--  Power Supply 0  --
+Status        : up
+Model Number  : FNP1100-S107
+Serial Number : RV1433
+Revision      : B1
+Mfg Date      : 12182002
+Mfg Name      : POWER-ONE
+High line     : False
+
+--  Power Supply 1  --
+Status        : up
+Model Number  : FNP1100-S107
+Serial Number : UR7440
+Revision      : B1
+Mfg Date      : 01072003
+Mfg Name      : POWER-ONE
+High line     : False
+
+--  Power Supply 2  --
+Status        : up
+Model Number  : FNP1100-S107
+Serial Number : QG8235
+Revision      : B1
+Mfg Date      : 01072003
+Mfg Name      : POWER-ONE
+High line     : False
+        
+--  Power Supply 3  --
+Status        : absent
+
+--  Fan Status  --
+Status  Temp   Fan1      Fan2      Fan3     Serial Num    Version   
+---------------------------------------------------------------------------
+  up    28C   7500 RPM  6000 RPM  6000 RPM                 0.0 
+
+Force10#

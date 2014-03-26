@@ -1,0 +1,117 @@
+/**
+ * <pre>
+ * The owner of the original code is Ciena Corporation.
+ *
+ * Portions created by the original owner are Copyright (C) 2004-2010
+ * the original owner. All Rights Reserved.
+ *
+ * Portions created by other contributors are Copyright (C) the contributor.
+ * All Rights Reserved.
+ *
+ * Contributor(s):
+ *   (Contributors insert name & email here)
+ *
+ * This file is part of DRAC (Dynamic Resource Allocation Controller).
+ *
+ * DRAC is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * DRAC is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+ * Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * </pre>
+ */
+
+.ddmx {
+    font: 12px tahoma;
+}
+
+.ddmx .item1 {
+    padding: 6px 15px 3px 10px;
+    font: 12px arial;
+    color: #445588;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    position: relative;
+}
+
+.ddmx .item1:hover,
+.ddmx .item1-active,
+.ddmx .item1-active:hover {
+    padding: 6px 15px 3px 10px;
+    font: 12px arial;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    position: relative;
+    background: #003399;
+    color: #FFFFFF;
+}
+
+.ddmx .item2,
+.ddmx .item2:hover,
+.ddmx .item2-active,
+.ddmx .item2-active:hover {
+    padding: 3px 8px 4px 33px;
+    font: 11px tahoma;
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    position: relative;
+    z-index: 500;
+}
+
+.ddmx .item2 {
+    background: #e5e1da;
+    background-image: url(/images/menu_background.gif);
+    background-position: top left;
+}
+
+.ddmx .item2:hover,
+.ddmx .item2-active,
+.ddmx .item2-active:hover {
+    background: #003399;
+    color: #FFFFFF;
+}
+
+.ddmx .arrow,
+.ddmx .arrow:hover {
+    padding: 3px 16px 4px 33px;
+}
+
+.ddmx .item1 img,
+.ddmx .item1-active img{
+    position: absolute;
+    top: 8px;
+    right: 1px;
+    border: 0;
+}
+
+.ddmx .item2 img,
+.ddmx .item2-active img{
+    position: absolute;
+    top: 4px;
+    right: 1px;
+    border: 0;
+}
+
+.ddmx .section {
+    border: 1px solid #b8b4ae;
+    position: absolute;
+    visibility: hidden;
+    white-space: nowrap;
+    z-index: -1;
+    background: #e5e1da;
+}
+
+* html .ddmx td { position: relative; } /* ie 5.0 fix */

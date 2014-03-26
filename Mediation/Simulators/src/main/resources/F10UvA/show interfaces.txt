@@ -1,0 +1,2947 @@
+GigabitEthernet 0/0 is down, line protocol is not present
+Description: autogole1
+Hardware is Force10Eth, address is 00:01:e8:02:e0:8f
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 13w1d6h
+
+        
+GigabitEthernet 0/1 is down, line protocol is not present
+Description: autogole2
+Hardware is Force10Eth, address is 00:01:e8:02:e0:90
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+        
+
+GigabitEthernet 0/2 is up, line protocol is not present
+Description: SARA host
+Hardware is Force10Eth, address is 00:01:e8:02:e0:91
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/3 is up, line protocol is not present
+Description: "Sage connection to StarLight"
+Hardware is Force10Eth, address is 00:01:e8:02:e0:92
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/4 is down, line protocol is not present
+Description: SC08
+Hardware is Force10Eth, address is 00:01:e8:02:e0:93
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/5 is down, line protocol is not present
+Description: SC08
+Hardware is Force10Eth, address is 00:01:e8:02:e0:94
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/6 is up, line protocol is not present
+Description: SC08
+Hardware is Force10Eth, address is 00:01:e8:02:e0:95
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/7 is up, line protocol is not present
+Description: SC08
+Hardware is Force10Eth, address is 00:01:e8:02:e0:96
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/8 is up, line protocol is not present
+Description: SC08
+Hardware is Force10Eth, address is 00:01:e8:02:e0:97
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/9 is up, line protocol is not present
+Description: SC08
+Hardware is Force10Eth, address is 00:01:e8:02:e0:98
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/10 is down, line protocol is not present
+Description: SC08
+Hardware is Force10Eth, address is 00:01:e8:02:e0:99
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/11 is down, line protocol is not present
+Description: SC08
+Hardware is Force10Eth, address is 00:01:e8:02:e0:9a
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/12 is up, line protocol is not present
+Description: "Interpret uplink"
+Hardware is Force10Eth, address is 00:01:e8:02:e0:9b
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 23w3d5h
+
+
+GigabitEthernet 0/13 is up, line protocol is not present
+Description: SARA host
+Hardware is Force10Eth, address is 00:01:e8:02:e0:9c
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/14 is up, line protocol is not present
+Description: SARA host
+Hardware is Force10Eth, address is 00:01:e8:02:e0:9d
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/15 is up, line protocol is not present
+Description: Rb3
+Hardware is Force10Eth, address is 00:01:e8:02:e0:9e
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/16 is up, line protocol is not present
+Description: Rb7
+Hardware is Force10Eth, address is 00:01:e8:02:e0:9f
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/17 is up, line protocol is not present
+Description: Rb0
+Hardware is Force10Eth, address is 00:01:e8:02:e0:a0
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/18 is up, line protocol is not present
+Description: Rb1
+Hardware is Force10Eth, address is 00:01:e8:02:e0:a1
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/19 is up, line protocol is not present
+Description: Rb6
+Hardware is Force10Eth, address is 00:01:e8:02:e0:a2
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/20 is up, line protocol is not present
+Description: Rb2
+Hardware is Force10Eth, address is 00:01:e8:02:e0:a3
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/21 is up, line protocol is not present
+Description: Rb5
+Hardware is Force10Eth, address is 00:01:e8:02:e0:a4
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 0/22 is up, line protocol is not present
+Description: "HPDMnet SC10"
+Hardware is Force10Eth, address is 00:01:e8:02:e0:a5
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 23w3d5h
+
+
+GigabitEthernet 0/23 is up, line protocol is not present
+Description: Rb4
+Hardware is Force10Eth, address is 00:01:e8:02:e0:a6
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/0 is up, line protocol is down
+Description: Rembrandt0
+Hardware is Force10Eth, address is 00:01:e8:02:e0:a7
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+        
+GigabitEthernet 1/1 is up, line protocol is down
+Description: unused
+Hardware is Force10Eth, address is 00:01:e8:02:e0:a8
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+        
+
+GigabitEthernet 1/2 is up, line protocol is down
+Description: unused
+Hardware is Force10Eth, address is 00:01:e8:02:e0:a9
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/3 is up, line protocol is down
+Description: unused
+Hardware is Force10Eth, address is 00:01:e8:02:e0:aa
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/4 is up, line protocol is down
+Description: unused
+Hardware is Force10Eth, address is 00:01:e8:02:e0:ab
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/5 is up, line protocol is down
+Description: unused
+Hardware is Force10Eth, address is 00:01:e8:02:e0:ac
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/6 is up, line protocol is down
+Description: unused
+Hardware is Force10Eth, address is 00:01:e8:02:e0:ad
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/7 is up, line protocol is down
+Description: unused
+Hardware is Force10Eth, address is 00:01:e8:02:e0:ae
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/8 is up, line protocol is down
+Description: rembrandt9
+Hardware is Force10Eth, address is 00:01:e8:02:e0:af
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/9 is up, line protocol is down
+Description: Rb4-macmini
+Hardware is Force10Eth, address is 00:01:e8:02:e0:b0
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/10 is down, line protocol is down
+Description: rb42eggs
+Hardware is Force10Eth, address is 00:01:e8:02:e0:b1
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/11 is up, line protocol is down
+Description: eggs2internet
+Hardware is Force10Eth, address is 00:01:e8:02:e0:b2
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/12 is up, line protocol is down
+Description: "SC08 - TouchTable"
+Hardware is Force10Eth, address is 00:01:e8:02:e0:b3
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/13 is down, line protocol is down
+Description: "SC08 - TouchTable"
+Hardware is Force10Eth, address is 00:01:e8:02:e0:b4
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/14 is down, line protocol is down
+Description: "SC08 - TouchTable"
+Hardware is Force10Eth, address is 00:01:e8:02:e0:b5
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/15 is up, line protocol is down
+Description: "SC08 - TouchTable"
+Hardware is Force10Eth, address is 00:01:e8:02:e0:b6
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/16 is up, line protocol is down
+Description: Eitjes
+Hardware is Force10Eth, address is 00:01:e8:02:e0:b7
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/17 is up, line protocol is down
+Description: Eitjes
+Hardware is Force10Eth, address is 00:01:e8:02:e0:b8
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/18 is up, line protocol is down
+Description: Eitjes
+Hardware is Force10Eth, address is 00:01:e8:02:e0:b9
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/19 is up, line protocol is down
+Description: Eitjes
+Hardware is Force10Eth, address is 00:01:e8:02:e0:ba
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/20 is up, line protocol is down
+Description: Eitjes
+Hardware is Force10Eth, address is 00:01:e8:02:e0:bb
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/21 is up, line protocol is down
+Description: kwek.admin.uva.netherlight.nl
+Hardware is Force10Eth, address is 00:01:e8:02:e0:bc
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/22 is up, line protocol is down
+Description: Eitjes
+Hardware is Force10Eth, address is 00:01:e8:02:e0:bd
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 1/23 is up, line protocol is down
+Description: Eitjes
+Hardware is Force10Eth, address is 00:01:e8:02:e0:be
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+TenGigabitEthernet 3/0 is up, line protocol is down
+Description: SC10 DiViNE 48coredell
+Hardware is Force10Eth, address is 00:01:e8:02:e0:d7
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+        
+TenGigabitEthernet 3/1 is up, line protocol is up
+Description: ==> Speculaas #12 (Houdini Te 3/2)
+Hardware is Force10Eth, address is 00:01:e8:02:e0:d8
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     1772326909 packets input, 2520385462341 bytes
+     Input 1768790157 IP Packets, 1769276587 Vlans 0 MPLS
+     6416416 64-byte pkts, 8130850 over 64-byte pkts, 19391917 over 127-byte pkts
+     31541566 over 255-byte pkts, 100533323 over 511-byte pkts, 1606312837 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     4985874658 packets output, 5472912862771 bytes, 0 underruns
+     Output 3984125388 Multicasts, 157218470 Broadcasts, 844530800 Unicasts
+     4800877952 IP Packets, 4978270949 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          4 packets/sec
+Time since last interface status change: 1w0d2h
+        
+
+TenGigabitEthernet 4/0 is down, line protocol is down
+Description: TDM3.Amsterdam1 (HDXc) Po 501/4
+Hardware is Force10Eth, address is 00:01:e8:02:e0:ef
+Encapsulation WAN PHY, Framing is SONET, AIS-shut is enabled
+ Scramble-ATM is enabled, Down-when-looped is enabled
+ Loopback is disabled, Clock source is internal, Speed is Oc192
+ CRC is 32-bits, Flag C2 is 0x1a, Flag J0 is 0xcc, Flag S1S0 is 0x0
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 9952 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+TenGigabitEthernet 4/1 is down, line protocol is down
+Description: ==> Speculaas #15 --> HDXc 501/4
+Hardware is Force10Eth, address is 00:01:e8:02:e0:f0
+Encapsulation WAN PHY, Framing is SONET, AIS-shut is enabled
+ Scramble-ATM is enabled, Down-when-looped is enabled
+ Loopback is disabled, Clock source is internal, Speed is Oc192
+ CRC is 32-bits, Flag C2 is 0x1a, Flag J0 is 0xcc, Flag S1S0 is 0x0
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 9952 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 5/0 is up, line protocol is up
+Description: autogole 1
+Hardware is Force10Eth, address is 00:01:e8:02:e1:07
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     766596747278 packets input, 49062192256863 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     766596720747 64-byte pkts, 26527 over 64-byte pkts, 16 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 13352 runts, 0 giants, 0 throttles
+     64009 CRC, 0 IP Checksum, 0 overrun, 77361 discarded
+     309687589320 packets output, 19820005716352 bytes, 0 underruns
+     Output 309245 Multicasts, 309687280078 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 606.65Mbits/sec,    1242425 packets/sec
+     Output 246.25Mbits/sec,     504315 packets/sec
+Time since last interface status change: 1w0d2h
+
+
+GigabitEthernet 5/1 is up, line protocol is up
+Description: autogole2 keep shut otherwise stp loop
+Hardware is Force10Eth, address is 00:01:e8:02:e1:08
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     766681380593 packets input, 49067608546579 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     766681375594 64-byte pkts, 5008 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 7911 runts, 0 giants, 0 throttles
+     10580 CRC, 0 IP Checksum, 0 overrun, 18491 discarded
+     309545799292 packets output, 19810931154496 bytes, 0 underruns
+     Output 309193 Multicasts, 309545490101 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 606.73Mbits/sec,    1242578 packets/sec
+     Output 246.17Mbits/sec,     504163 packets/sec
+Time since last interface status change: 1w0d2h
+
+
+GigabitEthernet 5/2 is up, line protocol is up
+Description: Speculaas #51
+Hardware is Force10Eth, address is 00:01:e8:02:e1:09
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     308187 packets input, 19723968 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     308187 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     619496318292 packets output, 39647764370368 bytes, 0 underruns
+     Output 614786 Multicasts, 619495703511 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 492.42Mbits/sec,    1008478 packets/sec
+Time since last interface status change: 1w0d2h
+
+
+GigabitEthernet 5/3 is up, line protocol is up
+Description: Speculaas #52
+Hardware is Force10Eth, address is 00:01:e8:02:e1:0a
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     308170 packets input, 19722880 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     308170 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     619491767619 packets output, 39647473127360 bytes, 0 underruns
+     Output 614754 Multicasts, 619491152870 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 492.42Mbits/sec,    1008478 packets/sec
+Time since last interface status change: 1w0d2h
+
+
+GigabitEthernet 5/4 is up, line protocol is up
+Description: Speculaas #53
+Hardware is Force10Eth, address is 00:01:e8:02:e1:0b
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     307451 packets input, 19676864 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     307451 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     619155369200 packets output, 39625943628480 bytes, 0 underruns
+     Output 613296 Multicasts, 619154755909 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 492.42Mbits/sec,    1008478 packets/sec
+Time since last interface status change: 1w0d2h
+
+
+GigabitEthernet 5/5 is up, line protocol is down
+Description: Speculaas #54
+Hardware is Force10Eth, address is 00:01:e8:02:e1:0c
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 5/6 is up, line protocol is down
+Description: NIKHEF GRID Tristan
+Hardware is Force10Eth, address is 00:01:e8:02:e1:0d
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 5/7 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:02:e1:0e
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 5/8 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:02:e1:0f
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 5/9 is up, line protocol is down
+Description: Speculaas #58
+Hardware is Force10Eth, address is 00:01:e8:02:e1:10
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 5/10 is up, line protocol is down
+Description: Speculaas #59
+Hardware is Force10Eth, address is 00:01:e8:02:e1:11
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 5/11 is up, line protocol is down
+Description: Speculaas #60
+Hardware is Force10Eth, address is 00:01:e8:02:e1:12
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 5/12 is up, line protocol is down
+Description: Speculaas #29
+Hardware is Force10Eth, address is 00:01:e8:02:e1:13
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 5/13 is up, line protocol is down
+Description: Speculaas #30
+Hardware is Force10Eth, address is 00:01:e8:02:e1:14
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 5/14 is up, line protocol is down
+Description: "Mihai NPU IXDP2850 link0 to SC08"
+Hardware is Force10Eth, address is 00:01:e8:02:e1:15
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+        
+GigabitEthernet 5/15 is down, line protocol is down
+Description: 2008Q1-Mihai-NPU
+Hardware is Force10Eth, address is 00:01:e8:02:e1:16
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+        
+
+GigabitEthernet 5/16 is up, line protocol is down
+Description: "Mihai NPU IXDP2850 link2"
+Hardware is Force10Eth, address is 00:01:e8:02:e1:17
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 5/17 is up, line protocol is down
+Description: 2008Q1-Mihai-NPU
+Hardware is Force10Eth, address is 00:01:e8:02:e1:18
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 5/18 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:02:e1:19
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 5/19 is up, line protocol is down
+Description: "HPDMnet SARA (SC08)"
+Hardware is Force10Eth, address is 00:01:e8:02:e1:1a
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 5/20 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:02:e1:1b
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 5/21 is up, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:02:e1:1c
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 5/22 is up, line protocol is down
+Description: HPDMnet to Baby:e1/g48
+Hardware is Force10Eth, address is 00:01:e8:02:e1:1d
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+GigabitEthernet 5/23 is up, line protocol is down
+Description: link to NIKHEF via AG11-he34-5
+Hardware is Force10Eth, address is 00:01:e8:02:e1:1e
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+TenGigabitEthernet 6/0 is up, line protocol is up
+Description: SW1.Amsterdam1.Netherlight.net
+Hardware is Force10Eth, address is 00:01:e8:02:e1:1f
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     4851328890 packets input, 5463824002290 bytes
+     Input 4800892081 IP Packets, 4843706835 Vlans 0 MPLS
+     8002238 64-byte pkts, 865948483 over 64-byte pkts, 31844430 over 127-byte pkts
+     34111375 over 255-byte pkts, 802801 over 511-byte pkts, 3910619563 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 58 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 58 discarded
+     1769054458 packets output, 2520171462973 bytes, 0 underruns
+     Output 1331 Multicasts, 135826 Broadcasts, 1768917301 Unicasts
+     1768781794 IP Packets, 1769054458 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          5 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 1w1d11h
+
+
+TenGigabitEthernet 6/1 is up, line protocol is down
+Description: "cgdaemon eth3"
+Hardware is Force10Eth, address is 00:01:e8:02:e1:20
+Internet address is not set
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 25w1d5h
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Rate info (interval 5 minutes):
+     Input 00.00Mbits/sec,          0 packets/sec
+     Output 00.00Mbits/sec,          0 packets/sec
+Time since last interface status change: 25w1d1h
+
+
+ManagementEthernet 0/0 is up, line protocol is up
+Hardware is Force10Eth, address is 00:01:e8:02:d4:1e
+Internet address is 195.169.124.4/26
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 100 Mbit, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+    Input 106563308 packets, 3535591155 bytes, 62708331 multicast
+    Received 7 errors, 0 discarded 
+    Output 43809943 packets, 3947605499 bytes, 19299 multicast
+    Output 0 errors, 0 invalid protocol
+Time since last interface status change: 25w1d1h
+
+
+ManagementEthernet 1/0 is down, line protocol is not present
+Hardware is Force10Eth, address is 00:01:e8:02:e0:8d
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Queueing strategy: fifo
+Time since last interface status change: 25w1d1h
+
+
+Vlan 1 is down, line protocol is down
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d2h
+
+
+Vlan 3 is down, line protocol is down
+Vlan alias name is: Default VLAN
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 1000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     103736110127 packets input, 89285246528 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 25w1d1h
+
+
+Vlan 4 is up, line protocol is up
+Description: "Netherlight normal MTU sized vlan"
+Address is 00:01:e8:02:e1:e0
+Internet address is 145.146.98.2/23
+MTU 1500 bytes, IP MTU 1482 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w1d11h
+
+
+Vlan 7 is up, line protocol is up
+Vlan alias name is: NetherLight 145.146.100.0 /26
+Description: Eitjes
+Address is 00:01:e8:02:e1:e0
+Internet address is 145.146.100.2/26
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     2362774534 packets input, 48380230152 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 25w1d1h
+        
+
+Vlan 8 is up, line protocol is up
+Vlan alias name is: NetherLight 145.146.100.64 /26
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 9180 bytes, IP MTU 9162 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     2657604 packets input, 170086656 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w1d11h
+
+
+Vlan 9 is up, line protocol is up
+Vlan alias name is: Netherlight 145.146.100.128 /26
+Description: "SARA eBio TDP [LEGACY]"
+Address is 00:01:e8:02:e1:e0
+Internet address is 145.146.100.189/26
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     7410396 packets input, 533548512 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w1d11h
+
+
+Vlan 10 is down, line protocol is down
+Vlan alias name is: Netherlight 145.146.100.196 /26
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     1690394 packets input, 108185216 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 25w1d1h
+
+
+Vlan 21 is up, line protocol is up
+Vlan alias name is: Random purpose vlan
+Description: "UCSD - StarLight - UvA CineGrid compressed streaming infra"
+Address is 00:01:e8:02:e1:e0
+Internet address is 67.58.61.238/29
+MTU 9252 bytes, IP MTU 9234 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     260250665 packets input, 9304960187 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 25w1d1h
+
+
+Vlan 94 is up, line protocol is up
+Vlan alias name is: HPDMnet (4K CineGrid)
+Description: SC08: HPDMnet - CineGrid
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w1d11h
+
+
+Vlan 666 is down, line protocol is down
+Vlan alias name is: Interpret
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 25w1d1h
+
+
+Vlan 719 is down, line protocol is down
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 25w1d1h
+
+
+Vlan 1714 is up, line protocol is down
+Vlan alias name is: AMS-IRNC-CHI-I2100GE-SC10
+Address is 00:01:e8:02:e1:e0
+Internet address is 172.17.14.31/24
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 25w1d1h
+
+
+Vlan 1715 is down, line protocol is down
+Vlan alias name is: AMS-IRNC-CHI-I2100GE-SC10-1
+Address is 00:01:e8:02:e1:e0
+Internet address is 172.17.15.31/24
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 25w1d1h
+
+
+Vlan 1716 is down, line protocol is down
+Vlan alias name is: AMS-IRNC-CHI-I2100GE-SC10-2
+Address is 00:01:e8:02:e1:e0
+Internet address is 172.17.16.31/24
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 25w1d1h
+
+
+Vlan 1717 is down, line protocol is down
+Vlan alias name is: AMS-IRNC-CHI-I2100GE-SC10-3
+Address is 00:01:e8:02:e1:e0
+Internet address is 172.17.17.31/24
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 25w1d1h
+
+
+Vlan 1718 is down, line protocol is down
+Vlan alias name is: AMS-IRNC-CHI-I2100GE-SC10-4
+Address is 00:01:e8:02:e1:e0
+Internet address is 172.17.18.31/24
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 25w1d1h
+
+
+Vlan 1719 is down, line protocol is down
+Vlan alias name is: AMS-IRNC-CHI-I2100GE-SC10-5
+Address is 00:01:e8:02:e1:e0
+Internet address is 172.17.19.31/24
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 25w1d1h
+        
+
+Vlan 1720 is down, line protocol is down
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 25w1d1h
+
+
+Vlan 1721 is down, line protocol is down
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 25w1d1h
+
+
+Vlan 1722 is down, line protocol is down
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 25w1d1h
+
+
+Vlan 1779 is down, line protocol is down
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 19w0d7h
+
+
+Vlan 1784 is up, line protocol is down
+Description: autoGOLE
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d1h
+
+
+Vlan 1785 is up, line protocol is down
+Description: autoGOLE
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d1h
+        
+
+Vlan 1786 is up, line protocol is down
+Description: autoGOLE
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d1h
+
+
+Vlan 1787 is up, line protocol is down
+Description: autoGOLE
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d1h
+
+
+Vlan 1788 is up, line protocol is down
+Description: autoGOLE
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d1h
+
+
+Vlan 1789 is up, line protocol is down
+Description: autoGOLE
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d1h
+
+
+Vlan 1790 is up, line protocol is down
+Description: autoGOLE
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d1h
+
+
+Vlan 1791 is up, line protocol is down
+Description: autoGOLE
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d1h
+
+
+Vlan 1792 is up, line protocol is down
+Description: autoGOLE
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d1h
+
+
+Vlan 1793 is up, line protocol is down
+Description: autoGOLE
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d1h
+
+
+Vlan 1794 is up, line protocol is down
+Description: autoGOLE
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d1h
+
+
+Vlan 1795 is up, line protocol is down
+Description: autoGOLE
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d1h
+
+
+Vlan 1796 is up, line protocol is down
+Description: autoGOLE
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d1h
+
+
+Vlan 1797 is up, line protocol is down
+Description: autoGOLE
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d1h
+        
+
+Vlan 1798 is up, line protocol is down
+Description: autoGOLE
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d1h
+
+
+Vlan 1799 is up, line protocol is up
+Description: autoGOLE
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 19w0d6h
+
+
+Vlan 1800 is up, line protocol is up
+Vlan alias name is: AutoGOLE PSNC
+Description: autoGOLE
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 19w0d6h
+
+
+Vlan 1977 is down, line protocol is down
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 19w0d7h
+
+
+Vlan 2100 is down, line protocol is down
+Address is 00:01:e8:02:e1:e0
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 25w1d1h
+
+
+Vlan 2200 is up, line protocol is up
+Vlan alias name is: HPDMnet
+Description: HPDMnet
+Address is 00:01:e8:02:e1:e0
+Internet address is 10.0.1.42/24
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     3970525371 packets input, 227504166201 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 25w1d1h
+
+
+Vlan 3439 is up, line protocol is up
+Vlan alias name is: CineGrid 9 sept UvA-Zwijger
+Description: "CineGrid 9 sept UvA-Zwijger"
+Address is 00:01:e8:02:e1:e0
+Internet address is 10.40.0.2/24
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     0 packets input, 0 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w1d4h
+
+
+Vlan 3840 is up, line protocol is up
+Description: "eyr cinegrid"
+Address is 00:01:e8:02:e1:e0
+Internet address is 195.169.155.149/28
+MTU 9200 bytes, IP MTU 9182 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     17466 packets input, 4714755 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d2h
+
+
+Vlan 4000 is up, line protocol is up
+Vlan alias name is: CineGrid Storage 4K-HD vLAN
+Description: "CineGrid klooivlan"
+Address is 00:01:e8:02:e1:e0
+Internet address is 192.168.57.80/24
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+     234052 packets input, 14979466 bytes
+     Input 0 IP Packets, 0 Vlans 0 MPLS
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     Received 0 input symbol errors, 0 runts, 0 giants, 0 throttles
+     0 CRC, 0 IP Checksum, 0 overrun, 0 discarded
+     0 packets output, 0 bytes, 0 underruns
+     Output 0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 IP Packets, 0 Vlans, 0 MPLS
+     0 throttles, 0 discarded
+Time since last interface status change: 1w0d2h
+
+
+Force10#

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+  xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+  xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:util="http://www.springframework.org/schema/util"
+  xmlns:security="http://www.springframework.org/schema/security"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+       http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
+       http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.4.xsd"
+  default-lazy-init="false">
+
+  
+  <!-- -->
+  <!-- (Encrypted) PropertyPlaceholderConfigurer -->
+  <!-- -->
+  <bean
+    class="org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer">
+    <constructor-arg>
+      <bean class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+        <property name="config">
+          <bean
+            class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
+            <property name="providerName" value="BC" />
+            <property name="algorithm" value="PBEWITHSHA256AND128BITAES-CBC-BC" />
+            <property name="passwordEnvName" value="OPENDRAC_ENCRYPTION_PASSWORD" />
+          </bean>
+        </property>
+      </bean>
+    </constructor-arg>
+
+    <!-- <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"> -->
+    <property name="ignoreResourceNotFound" value="true" />
+    <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+    <property name="locations">
+      <list>
+        <!-- -->
+        <!-- Db settings -->
+        <!-- -->
+        <value>classpath:env/opendrac-database-prod.xml</value>
+        <value>classpath:env/opendrac-database-test.xml</value>
+        <value>classpath:env/opendrac-database-dev.xml</value>
+
+        <!-- -->
+        <!-- Reporting settings -->
+        <!-- -->
+        <value>classpath:env/opendrac-reporting-prod.xml</value>
+        <value>classpath:env/opendrac-reporting-test.xml</value>
+        <value>classpath:env/opendrac-reporting-dev.xml</value>
+      </list>
+    </property>
+  </bean>
+
+</beans>

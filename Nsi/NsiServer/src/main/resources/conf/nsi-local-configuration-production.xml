@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:configurationList
+        xmlns:tns="http://schemas.opendrac.org/nsi/2012/07/localConfiguration"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <configuration>
+        <nsaIdentifier>urn:ogf:network:surfnet.nl:2012:drac.surfnet.nl</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:surfnet.nl:2012:production</nsNetwork>
+        <requesterEndpoint>https://drac.surfnet.nl:8443/nsi-v1/ConnectionServiceRequester</requesterEndpoint>
+        <providerEndpoint>https://drac.surfnet.nl:8443/nsi-v1/ConnectionServiceProvider</providerEndpoint>
+        <nrmConfiguration>
+            <nrmType>OpenDRAC</nrmType>
+            <serviceType>VCAT</serviceType>
+            <defaultProtection>Unprotected</defaultProtection>
+            <stpPrefix>urn:ogf:network:surfnet.nl:2012:</stpPrefix>
+            <portPrefix>urn:ogf:network:surfnet.nl:2012:</portPrefix>
+            <authorization>
+                <userName>nsidemo</userName>
+                <password>RioPlug-Fest2011!</password>
+                <billingGroup>NsiUserGroup</billingGroup>
+                <userGroup>NsiUserGroup</userGroup>
+                <resourceGroup>NsiResourceGroup</resourceGroup>
+            </authorization>
+        </nrmConfiguration>
+    </configuration>
+
+</tns:configurationList>

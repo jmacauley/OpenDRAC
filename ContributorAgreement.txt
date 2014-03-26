@@ -1,0 +1,49 @@
+====
+    <pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>
+====
+
+We welcome contributions to DRAC. 
+
+Contributions are accepted on the following basis:
+
+The Contributor will remain the copyright owner of the contributed 
+material for the full term of copyright. The Contributor grants a 
+non-exclusive license in such copyright throughout the world to 
+use the Contribution, licensed under the terms of the GNU 
+GENERAL PUBLIC LICENSE version 3.0 or later.
+
+The Contributor warrants and undertakes that the contributed 
+material is original; that it does not infringe any copyright, 
+is not defamatory or otherwise actionable matter; that all 
+statements in the contributed material purporting to be facts 
+are to the best of his/her knowledge and belief true.
+
+The Contributor will not object to any reasonable or necessary 
+changes to the contributed material.
+

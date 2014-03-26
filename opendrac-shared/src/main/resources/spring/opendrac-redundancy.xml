@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+  xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+  xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:util="http://www.springframework.org/schema/util"
+  xmlns:security="http://www.springframework.org/schema/security"
+  xmlns:task="http://www.springframework.org/schema/task"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+       http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
+       http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.4.xsd
+       http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.1.xsd">
+
+  <context:component-scan base-package="org.opendrac.redundancy" />
+
+  <task:annotation-driven />
+
+  <!-- <util:list id="hostsPortsMapping2" list-class="java.util.ArrayList"> 
+    <value>${server1}, ${server1Port1}</value> <value>${server1}, ${server1Port2}</value> 
+    <value>${server2}, ${server1Port1}</value> <value>${server2}, ${server1Port2}</value> 
+    </util:list> -->
+
+  <util:properties id="redundancyProperties"
+    location="classpath:env/opendrac-redundancy-default.xml" />
+
+  <task:scheduled-tasks scheduler="scheduler">
+    <task:scheduled ref="controllerWatchDog" method="heartbeat"
+      fixed-delay="${frequency}" />
+  </task:scheduled-tasks>
+
+  <task:scheduler id="scheduler" pool-size="10" />
+
+  <bean
+    class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="properties" ref="redundancyProperties" />
+  </bean>
+
+  <bean id="controllerHostPortMapping" class="java.util.ArrayList">
+    <constructor-arg>
+      <list>
+        <value>${controller1}, ${controller1Port1}</value>
+      </list>
+    </constructor-arg>
+  </bean>
+
+</beans>

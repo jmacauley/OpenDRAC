@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+  <!-- ============================== -->
+  <!-- Append messages to the console -->
+  <!-- ============================== -->
+  <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d %-5p [%t] (%C:%L) - %m%n" />
+    </layout>
+  </appender>
+
+
+  <!-- ============================== -->
+  <!-- Append messages to log file -->
+  <!-- ============================== -->
+  <appender name="FILE" class="org.apache.log4j.DailyRollingFileAppender">
+    <param name="encoding" value="UTF-8" />
+    <param name="File" value="logs/opendrac.err.log" />
+    <param name="DatePattern" value="'.'yyyy-MM-dd" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d %-5p [%t] (%C:%L) - %m%n" />
+    </layout>
+    <filter class="org.apache.log4j.varia.LevelRangeFilter">
+      <param name="levelMin" value="WARN" />
+      <param name="levelMax" value="ERROR" />
+    </filter>
+  </appender>
+
+  <!-- ============================== -->
+  <!-- Append messages to log file -->
+  <!-- ============================== -->
+  <appender name="ERR_FILE" class="org.apache.log4j.DailyRollingFileAppender">
+    <param name="encoding" value="UTF-8" />
+    <param name="File" value="logs/opendrac.log" />
+    <param name="DatePattern" value="'.'yyyy-MM-dd" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d %-5p [%t] (%C:%L) - %m%n" />
+    </layout>
+  </appender>
+
+  <!-- ======================= -->
+  <!-- Append messages to SMTP -->
+  <!-- ======================= -->
+  <!-- <appender name="SMTP_LOG" class="org.opendrac.mail.FilteredSMTPAppender">
+    <param name="BufferSize" value="512" />
+    <param name="SMTPHost" value="localhost" />
+    <param name="SMTPPort" value="2500" />
+    <param name="From" value="root@localhost" />
+    <param name="To" value="adminA@server.com,adminB@server.com" />
+    <param name="Subject" value="OpenDRAC - Unit Test Mail Notifications" />
+    <param name="EvaluatorClass" value="org.opendrac.mail.LogsForMailTriggeringEventEvaluator"/>
+    <param name="BufferSize" value="1"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d %-5p [%t] (%C:%L) - %m%n" />
+    </layout>
+    <filter class="org.opendrac.mail.LogsForMailFilter"/>
+  </appender> -->
+<!--   <appender name="SNMP_LOG" class="org.apache.log4j.ext.SNMPTrapAppender">
+    <param name="ImplementationClassName" value="org.apache.log4j.ext.JoeSNMPTrapSender" />
+    <param name="ManagementHost" value="localhost" />
+    <param name="ManagementHostTrapListenPort" value="1600" />
+    <param name="EnterpriseOID" value="1.3.6.1.4.1.1076.20.50.10.1" />
+    <param name="LocalIPAddress" value="127.0.0.1" />
+    <param name="LocalTrapSendPort" value="0" />
+    <param name="GenericTrapType" value="6" />
+    <param name="SpecificTrapType" value="12345678" />
+    <param name="CommunityString" value="public" />
+    <param name="ForwardStackTraceWithTrap" value="true" />
+    <param name="Threshold" value="DEBUG" />
+    <param name="ApplicationTrapOID" value="1.3.6.1.4.1.1076.20.50.10.1" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d %-5p [%t] (%C:%L) - %m%n" />
+    </layout>
+  </appender>
+
+-->
+
+
+  <!-- ================ -->
+  <!-- Limit categories -->
+  <!-- ================ -->
+  <logger name="com.mchange.v2">
+    <level value="INFO" />
+  </logger>
+
+  <logger name="org.springframework">
+    <level value="INFO" />
+  </logger>
+
+  <logger name="org.apache">
+    <level value="INFO" />
+  </logger>
+
+  <logger name="org.opendrac">
+    <level value="DEBUG" />
+    <!-- <appender-ref ref="SMTP_LOG" />
+    <appender-ref ref="SNMP_LOG" /> -->
+  </logger>
+
+  <logger name="com.nortel">
+    <level value="DEBUG" />
+  </logger>
+
+
+  <!-- ======================= -->
+  <!-- Setup the Root logger -->
+  <!-- ======================= -->
+  <root>
+    <level value="DEBUG" />
+    <appender-ref ref="CONSOLE" />
+    <!-- <appender-ref ref="SMTP_LOG" /> -->
+   <!--  <appender-ref ref="SNMP_LOG" /> -->
+  </root>
+</log4j:configuration>

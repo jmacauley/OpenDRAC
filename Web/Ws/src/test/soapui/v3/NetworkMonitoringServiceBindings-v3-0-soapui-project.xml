@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="NetworkMonitoringServiceBindings_v3.0" resourceRoot="" soapui-version="4.5.1" abortOnError="false" runType="SEQUENTIAL" activeEnvironment="Default" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="NetworkMonitoringServiceSOAPBinding" type="wsdl" bindingName="{http://www.opendrac.org/ws/NetworkMonitoringService_v3.0}NetworkMonitoringServiceSOAPBinding" soapVersion="1_1" anonymous="optional" definition="file:/home/darryl/dracbuild/Web/Wsdl/src/main/wsdl/NetworkMonitoringServiceBindings_v3.0.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/home/darryl/dracbuild/Web/Wsdl/src/main/wsdl/NetworkMonitoringServiceBindings_v3.0.wsdl"><con:part><con:url>file:/home/darryl/dracbuild/Web/Wsdl/src/main/wsdl/NetworkMonitoringServiceBindings_v3.0.wsdl</con:url><con:content><![CDATA[<!--<pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>-->
+<definitions targetNamespace="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaddr="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <import namespace="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0" location="./NetworkMonitoringServiceMessages_v3.0.wsdl"/>
+  <binding name="NetworkMonitoringServiceSOAPBinding" type="tns:NetworkMonitoringServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="queryEndpoints">
+      <soap:operation soapAction="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0/queryEndpoints" style="document"/>
+      <input>
+        <soap:header message="tns:Security" part="header" use="literal"/>
+        <soap:body parts="payload" use="literal"/>
+      </input>
+      <output>
+        <soap:body parts="payload" use="literal"/>
+      </output>
+      <fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="queryEndpoint">
+      <soap:operation soapAction="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0/queryEndpoint" style="document"/>
+      <input>
+        <soap:header message="tns:Security" part="header" use="literal"/>
+        <soap:body parts="payload" use="literal"/>
+      </input>
+      <output>
+        <soap:body parts="payload" use="literal"/>
+      </output>
+      <fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="NetworkMonitoringService_v3.0">
+    <documentation>NetworkMonitoringService allows clients to query information about the DRAC managed endpoints.</documentation>
+    <port name="NetworkMonitoringServiceSOAPport" binding="tns:NetworkMonitoringServiceSOAPBinding">
+      <soap:address location="https://localhost:8443/axis2/services/NetworkMonitoringService_v3.0"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:/home/darryl/dracbuild/Web/Wsdl/src/main/wsdl/NetworkMonitoringServiceMessages_v3.0.wsdl</con:url><con:content><![CDATA[<!--<pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>-->
+<definitions targetNamespace="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0" xmlns:t="http://www.opendrac.org/ws/NetworkMonitoringServiceTypes_v3.0" xmlns:ct="http://www.nortel.com/drac/2007/07/03/ws/ct/DracCommonTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaddr="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema targetNamespace="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0">
+      <xs:import namespace="http://www.opendrac.org/ws/NetworkMonitoringServiceTypes_v3.0" schemaLocation="./NetworkMonitoringServiceTypes_v3.0.xsd"/>
+      <xs:import namespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" schemaLocation="./Wssecurity_v3.0.xsd"/>
+    </xs:schema>
+  </types>
+  <message name="Security">
+    <part name="header" element="wsse:Security"/>
+  </message>
+  <message name="authenticationRequest">
+    <part name="payload" element="ct:AuthenticationRequest"/>
+  </message>
+  <message name="networkMonitoringServiceFault">
+    <part name="payload" element="ct:DracFault"/>
+  </message>
+  <message name="queryEndpointsRequest">
+    <part name="header" element="ct:Credentials"/>
+    <part name="payload" element="t:QueryEndpointsRequest"/>
+  </message>
+  <message name="queryEndpointsResponse">
+    <part name="payload" element="t:QueryEndpointsResponse"/>
+  </message>
+  <message name="queryEndpointRequest">
+    <part name="header" element="ct:Credentials"/>
+    <part name="payload" element="t:QueryEndpointRequest"/>
+  </message>
+  <message name="queryEndpointResponse">
+    <part name="payload" element="t:QueryEndpointResponse"/>
+  </message>
+  <message name="disconnectRequest">
+    <part name="header" element="ct:Credentials"/>
+  </message>
+  <message name="completionResponse">
+    <part name="payload" element="ct:CompletionResponse"/>
+  </message>
+  <portType name="NetworkMonitoringServicePortType">
+    <operation name="authenticate">
+      <documentation>The authenticate operation must be invoked as the first operation before invoking any other operations on this service.</documentation>
+      <input message="tns:authenticationRequest" wsaddr:Action="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0/authenticationRequest"/>
+      <output message="tns:completionResponse" wsaddr:Action="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0/completionResponse"/>
+      <fault name="fault" message="tns:networkMonitoringServiceFault"/>
+    </operation>
+    <operation name="queryEndpoints">
+      <documentation>For authorization purposes user id must be included in the SOAP message header.</documentation>
+      <input message="tns:queryEndpointsRequest" wsaddr:Action="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0/queryEndpointsRequest"/>
+      <output message="tns:queryEndpointsResponse" wsaddr:Action="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0/queryEndpointsResponse"/>
+      <fault name="fault" message="tns:networkMonitoringServiceFault"/>
+    </operation>
+    <operation name="queryEndpoint">
+      <documentation>For authorization purposes user id must be included in the SOAP message header.</documentation>
+      <input message="tns:queryEndpointRequest" wsaddr:Action="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0/queryEndpointRequest"/>
+      <output message="tns:queryEndpointResponse" wsaddr:Action="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0/queryEndpointResponse"/>
+      <fault name="fault" message="tns:networkMonitoringServiceFault"/>
+    </operation>
+    <operation name="disconnect">
+      <documentation>For authorization purposes user id must be included in the SOAP message header.</documentation>
+      <input message="tns:disconnectRequest" wsaddr:Action="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0/disconnectRequest"/>
+      <output message="tns:completionResponse" wsaddr:Action="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0/completionResponse"/>
+      <fault name="fault" message="tns:networkMonitoringServiceFault"/>
+    </operation>
+  </portType>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:/home/darryl/dracbuild/Web/Wsdl/src/main/wsdl/NetworkMonitoringServiceTypes_v3.0.xsd</con:url><con:content><![CDATA[<!--<pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>-->
+<xs:schema targetNamespace="http://www.opendrac.org/ws/NetworkMonitoringServiceTypes_v3.0" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.opendrac.org/ws/NetworkMonitoringServiceTypes_v3.0" xmlns:ct="http://www.nortel.com/drac/2007/07/03/ws/ct/DracCommonTypes">
+  <xs:import namespace="http://www.nortel.com/drac/2007/07/03/ws/ct/DracCommonTypes" schemaLocation="./DracCommonTypes_v2.0.0.xsd"/>
+  <xs:complexType name="EndpointT">
+    <xs:sequence>
+      <xs:element name="tna" type="xs:string" nillable="false"/>
+      <xs:element name="type" type="xs:string" nillable="false"/>
+      <xs:element name="speed" type="xs:int" nillable="true" minOccurs="0"/>
+      <xs:element name="mtu" type="xs:int" nillable="true" minOccurs="0"/>
+      <xs:element name="physicalAddress" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="status" type="xs:string" nillable="true"/>
+      <xs:element name="layer" type="ct:ValidLayerT" nillable="false"/>
+      <xs:element name="id" type="xs:string" nillable="false"/>
+      <xs:element name="cost" type="xs:int" nillable="true" minOccurs="0"/>
+      <xs:element name="metric" type="xs:int" nillable="true" minOccurs="0"/>
+      <xs:element name="srlg" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="constrain" type="xs:integer" nillable="true" minOccurs="0"/>
+      <xs:element name="channel" type="xs:int" nillable="true" minOccurs="0"/>
+      <xs:element name="signalingType" type="xs:string" nillable="true"/>
+      <xs:element name="passControlFrame" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="sts" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="vcat" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="autoNegotiation" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="autoNegotiationStatus" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="advertisedDuplex" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="flowControl" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="txConditioning" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="controlPauseTx" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="controlPauseRx" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="negotiatedDuplex" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="negotiatedSpeed" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="negotiatedPauseTx" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="negotiatedPauseRx" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="linkPartnerDuplex" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="linkPartnerSpeed" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="linkPartnerFlowControl" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="interfaceType" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="policing" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="encapsulationType" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="priorityMode" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="bandwidthThreshold" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="remainedBandwidth" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="bandwidthUtilization" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="lagId" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="vlanId" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="siteId" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="wavelength" type="xs:string" nillable="true" minOccurs="0"/>
+      <xs:element name="domain" type="xs:string" nillable="true" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ValidEndpointsQueryTypeT">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="QueryEndpointsByLayerAndUserGroupT"/>
+      <xs:enumeration value="QueryEndpointsByWavelengthT"/>
+      <xs:enumeration value="QueryEndpointsBySiteIdT"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="QueryEndpointsByLayerAndUserGroupT">
+    <xs:complexContent>
+      <xs:extension base="ct:QueryCriteriaT">
+        <xs:sequence>
+          <xs:element name="layer" type="ct:ValidLayerT" nillable="false"/>
+          <xs:element name="userGroup" type="xs:string" nillable="true"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="QueryEndpointsByWavelengthT">
+    <xs:complexContent>
+      <xs:extension base="ct:QueryCriteriaT">
+        <xs:sequence>
+          <xs:element name="wavelength" type="xs:string" nillable="false"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="QueryEndpointsBySiteIdT">
+    <xs:complexContent>
+      <xs:extension base="ct:QueryCriteriaT">
+        <xs:sequence>
+          <xs:element name="siteId" type="xs:string" nillable="false"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="QueryEndpointsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <!--<xs:element name="criteria" type="ct:QueryCriteriaT"/>-->
+        <xs:element name="type" type="tns:ValidEndpointsQueryTypeT" nillable="false" minOccurs="1"/>
+        <xs:element name="layer" type="ct:ValidLayerT" nillable="false" minOccurs="0"/>
+        <xs:element name="userGroup" type="xs:string" nillable="true" minOccurs="0"/>
+        <xs:element name="wavelength" type="xs:string" nillable="false" minOccurs="0"/>
+        <xs:element name="siteId" type="xs:string" nillable="false" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryEndpointsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="numOfElementsIncluded" type="xs:int" nillable="false"/>
+        <xs:element name="numOfElementsFound" type="xs:int" nillable="false"/>
+        <xs:element name="tna" type="xs:string" minOccurs="0" maxOccurs="500" nillable="true"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryEndpointRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="tna" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryEndpointResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="isFound" type="xs:boolean" nillable="false"/>
+        <xs:element name="endpoint" type="tns:EndpointT" minOccurs="0" nillable="true"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/home/darryl/dracbuild/Web/Wsdl/src/main/wsdl/DracCommonTypes_v2.0.0.xsd</con:url><con:content><![CDATA[<!--<pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>-->
+<xs:schema targetNamespace="http://www.nortel.com/drac/2007/07/03/ws/ct/DracCommonTypes" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ct="http://www.nortel.com/drac/2007/07/03/ws/ct/DracCommonTypes">
+  <xs:simpleType name="DateTimeWithTimezoneT">
+    <xs:annotation>
+      <xs:documentation>Time format for the DRAC WSDL interfaces : YYYY-MM-DDTHH:mm:ssTZD 
+               YYYY = four-digit year
+               MM   = two-digit month (01=January, etc.)
+               DD   = two-digit day of month (01 through 31)
+               HH   = two digits of hour (00 through 23) (am/pm NOT allowed)
+               mm  = two digits of minute (00 through 59)
+               ss     = two digits of second (00 through 59)
+               TZD  = time zone designator (+hh:mm or -hh:mm)
+               Examples :
+                2007-03-25T09:30:00-05:00
+                2007-05-22T23:30:00+04:00
+                2007-06-11T10:30:00Z</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime">
+      <xs:pattern value=".+T.+(Z|[+\-].+)"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WeekdayT">
+    <xs:annotation>
+      <xs:documentation>
+        The value identifies which days of a week the reservation should be made.
+          Value should be between 1 to 7, 1 being Sunday, and 7 being Saturday. 
+          For examle the following instance document describes a reservation request
+          for Mondays and Wednesdays (Monday is 2, Wed. is 4)
+        <weekday>2</weekday>
+        <weekday>4</weekday>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="7"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DracWsFaultT">
+    <xs:sequence>
+      <xs:element name="errorId" type="ct:DracWsErrorIdT" nillable="false"/>
+      <xs:element name="errorMsg" type="xs:string" nillable="false"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="DracWsErrorIdT">
+    <xs:restriction base="xs:short">
+      <xs:minInclusive value="4000"/>
+      <xs:maxInclusive value="4999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DracFault" type="ct:DracWsFaultT"/>
+  <xs:element name="Credentials" type="ct:CredentialsT" nillable="false"/>
+  <xs:complexType name="CredentialsT">
+    <xs:sequence>
+      <xs:element name="userId" type="xs:string" nillable="false"/>
+      <xs:element name="certificate" type="xs:string" nillable="false"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuthenticationRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="credentials" type="ct:CredentialsT" nillable="false"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="AlarmT">
+    <xs:sequence>
+      <xs:element name="alarmId" type="xs:string"/>
+      <xs:element name="alarmSourceId" type="xs:string"/>
+      <xs:element name="severity" type="xs:string"/>
+      <xs:element name="timeRaised" type="xs:dateTime"/>
+      <xs:element name="isCleared" type="xs:boolean"/>
+      <xs:element name="timeCleared" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="additionalInfo" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryCriteriaT" abstract="true">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:simpleType name="ValidLayerT">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="layer0"/>
+      <xs:enumeration value="layer1"/>
+      <xs:enumeration value="layer2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ValidCompletionTypeT">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CompletionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="ct:ValidCompletionTypeT" nillable="false"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/home/darryl/dracbuild/Web/Wsdl/src/main/wsdl/Wssecurity_v3.0.xsd</con:url><con:content><![CDATA[<!--<pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>-->
+<!--!!! Schema for WS Security Header-->
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+  <xsd:element name="Security" type="wsse:Security"/>
+  <xsd:complexType name="Security">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="UsernameToken" type="wsse:UsernameToken"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="UsernameToken">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="Username" type="xsd:string"/>
+      <xsd:element minOccurs="1" maxOccurs="1" name="Password" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://localhost:8443/axis2/services/NetworkMonitoringService_v3.0</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0/queryEndpoint" name="queryEndpoint" bindingOperationName="queryEndpoint" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:8443/axis2/services/NetworkMonitoringService_v3.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:net="http://www.opendrac.org/ws/NetworkMonitoringServiceTypes_v3.0">
+   <soapenv:Header>
+      <oas:Security>
+         <oas:UsernameToken>
+            <oas:Username>admin</oas:Username>
+            <oas:Password>myDrac</oas:Password>
+         </oas:UsernameToken>
+      </oas:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <net:QueryEndpointRequest>
+         <net:tna>Asd001A_OME1T_ETH-1-1-2</net:tna>
+      </net:QueryEndpointRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0/queryEndpoint"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0/queryEndpoints" name="queryEndpoints" bindingOperationName="queryEndpoints" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:8443/axis2/services/NetworkMonitoringService_v3.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:net="http://www.opendrac.org/ws/NetworkMonitoringServiceTypes_v3.0">
+   <soapenv:Header>
+      <oas:Security>
+         <oas:UsernameToken>
+            <oas:Username>admin</oas:Username>
+            <oas:Password>myDrac</oas:Password>
+         </oas:UsernameToken>
+      </oas:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <net:QueryEndpointsRequest>
+         <net:type>QueryEndpointsByLayerAndUserGroupT</net:type>
+         <!--Optional:-->
+         <net:layer>layer2</net:layer>
+         <!--Optional:-->
+         <net:userGroup>?</net:userGroup>
+         <!--Optional:-->
+         <net:wavelength>?</net:wavelength>
+         <!--Optional:-->
+         <net:siteId>?</net:siteId>
+      </net:QueryEndpointsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.opendrac.org/ws/NetworkMonitoringService_v3.0/queryEndpoints"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>

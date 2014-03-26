@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project basedir="." default="copy">
+	<target name="copy">
+		<property name="tomcat.staging.dir" location="../../Build/target/staging/opendrac/webapps/ROOT" />
+		<copy todir="${tomcat.staging.dir}" verbose="true">
+			<fileset dir="src/main/webapp" excludes="**/*.svn"/>
+		</copy>
+	</target>
+</project>

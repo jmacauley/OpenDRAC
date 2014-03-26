@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+
+    <pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>
+
+-->
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+  <description>
+    Validates JSP pages to prohibit use of scripting elements.
+  </description>
+  <tlib-version>1.1</tlib-version>
+  <short-name>scriptfree</short-name>
+  <uri>http://jakarta.apache.org/taglibs/standard/scriptfree</uri>
+
+  <validator>
+    <description>
+      Validates prohibitions against scripting elements.
+    </description>
+    <validator-class>
+    javax.servlet.jsp.jstl.tlv.ScriptFreeTLV
+    </validator-class>
+    <init-param>
+      <description>
+        Controls whether or not declarations are considered valid.
+      </description>
+      <param-name>allowDeclarations</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    <init-param>
+      <description>
+        Controls whether or not scriptlets are considered valid.
+      </description>
+      <param-name>allowScriptlets</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    <init-param>
+      <description>
+        Controls whether or not top-level expressions are considered valid.
+      </description>
+      <param-name>allowExpressions</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    <init-param>
+      <description>
+        Controls whether or not expressions used to supply request-time
+        attribute values are considered valid.
+      </description>
+      <param-name>allowRTExpressions</param-name>
+      <param-value>false</param-value>
+    </init-param>
+  </validator>
+</taglib>

@@ -1,0 +1,36 @@
+Detailed information about this module can be found in docs/Application.Manual-v0.3.doc
+
+Running:
+1) Edit config/opendrac.properties
+2) In the bin directory are two shell scripts, one for windows (.bat) and one for unix (.sh).
+   Both scripts allow for calling it from anywhere on the file system. 
+   Once the PATH variable from your OS is extended with the path to the script you can call it anywhere.
+
+opendrac.properties:
+- scheduleName: Specify a name that will be used to identify the schedule.
+- billingGroup: Specify the user group that is responsible for the creation of the light path.
+- startTime: Specify a start time in this date time format: yyyy-mm-ddThh:mm:ss 
+- endTime: Specify a end time in this date time format: yyyy-mm-ddThh:mm:ss
+- serviceDuration: Specify for how long the connection should last for.
+- rate Specify: the speed in Mb/s (e.g. 1000 for 1Gb/s)
+- sourceUserGroup: Specify the user group that the user belongs to at the source end point.
+- sourceUserResourceGroup: Specify a resource group that the user has at the source end point.
+- sourceEndpoint: Specify the source end point.
+- destionationUserGroup: Specify the user group that the user belongs to at the destination end point.
+
+Start and stop functionality;
+For the start functionality recreates the service that starts now and lasts for the period as defined in the config file. 
+It requires the following fields: sourceEndpoint, destinationEndpoint, rate, serviceDuration, scheduleName.
+
+The stop functionality terminates a service defined by name, user and source and target endpoints from config file.
+
+
+Simple mode in MS-Windows:
+For ease of use three .cmd files were made to automate three command line options.
+To put these into action the following steps should be taken:
+Copy the three files from the directory "contrib/microsoft" to the place where they should be started from, e.g. the desktop
+Go to the configuration screen to set the PATH variable:
+Add to the end of the current value: ";<path_to_automation_tool>\bin" (substitute the right path for the variable between angles).
+(Note: setting the PATH is also mentioned in item 2 of the paragraph "Running", see above)
+
+If this is done double clicking the .cmd file will open a dos-shell. Feedback from the executed command is displayed in that shell.

@@ -1,0 +1,388 @@
+<!--
+
+    <pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>
+
+-->
+
+<html>
+<head>
+<title></title>
+<style type="text/css">
+<!--
+h1 {
+	text-align: center;
+	font-family: Arial, Helvetica, Sans-Serif;
+}
+
+p {
+	text-indent: 20px;
+}
+-->
+</style>
+</head>
+
+<body bgcolor="#ffffcc" text="#000000">
+<h2>OpenDRAC CSRF Web Security Test Page</h2>
+
+<!-- General -->
+<form id="editServerSettings"
+	action="https://pcard0yn:8443/editServerSettings.do" method="post">
+<input type="hidden" name="confirmationTimeout" value="1000" /> <input
+	type="hidden" name="scheduleOffset" value="1000"/--></form>
+
+<!-- Schedule -->
+
+<form id="listSchedules"
+	action="https://pcard0yn:8443/schedule/listSchedulesResult.do"
+	method="post"><input type="hidden" name="group" value="all" />
+<input type="hidden" name="startdate" value="Friday, December 11, 2009" />
+<input type="hidden" name="enddate" value="Friday, December 18, 2009" />
+</form>
+
+<form id="queryScheduleAction"
+	action="https://pcard0yn:8443/schedule/queryScheduleAction.do"
+	method="post"><input type="hidden" name="selectedItems"
+	value="SERVICE-1262746987355" /> <input type="hidden" name="id"
+	value="SCHEDULE-1262746987354" /> <input type="hidden" name="name"
+	value="abc" /> <input type="hidden" name="command"
+	value="cancelServices" /></form>
+
+<form id="listSchedulesResult"
+	action="https://pcard0yn:8443/schedule/listSchedulesResult.do"
+	method="post"><input type="hidden" name="group" value="all" />
+<input type="hidden" name="startdate" value="Tuesday, January 5, 2010" />
+<input type="hidden" name="enddate" value="Wednesday, January 6, 2010" />
+<input type="hidden" name="group" value="all" /> <input type="hidden"
+	name="selectedItems" value="SCHEDULE-1262579063819" /> <input
+	type="hidden" name="selectedItems" value="SCHEDULE-1262650185813" /> <input
+	type="hidden" name="command" value="cancelAll" /></form>
+
+<form id="handleCreateSchedule"
+	action="https://pcard0yn:8443/schedule/handleCreateSchedule.do"
+	method="post"><input type="hidden" name="schName"
+	value="A CSRF attempt" /> <input type="hidden" name="scheduleType"
+	value="RESERVATION_AUTOMATIC" /> <input type="hidden"
+	name="billingGroup" value="SystemAdminGroup" /> <input type="hidden"
+	name="startdate" value="Tuesday, January 5, 2010" /> <input
+	type="hidden" name="startTime" value="2:00 AM" /> <input type="hidden"
+	name="enddate" value="Tuesday, January 3, 2040" /> <input
+	type="hidden" name="endTime" value="2:30 AM" /> <input type="hidden"
+	name="duration" value="30" /> <input type="hidden" name="srcGroup"
+	value="SystemAdminGroup" /> <input type="hidden" name="srcLayer"
+	value="layer1" /> <input type="hidden" name="srcTna"
+	value="OME0039_OC48-1-5-1" /> <input type="hidden" name="srcChannel"
+	value="-1" /> <input type="hidden" name="srcVlan" value="4096" /> <input
+	type="hidden" name="destGroup" value="SystemAdminGroup" /> <input
+	type="hidden" name="destLayer" value="layer1" /> <input type="hidden"
+	name="destTna" value="OME0237_OC48-1-5-1" /> <input type="hidden"
+	name="destChannel" value="-1" /> <input type="hidden" name="destVlan"
+	value="4096" /> <input type="hidden" name="rate" value="50" /> <input
+	type="hidden" name="protectionType" value="UNPROTECTED" /> <!-- etc -->
+</form>
+
+<form id="cancelCreate"
+	action="https://pcard0yn:8443/schedule/cancelCreate.do?tid=SCHEDULE-126282723304&name=abc"
+	method="post"></form>
+
+<form id="clearCreateProgress"
+	action="https://pcard0yn:8443/schedule/clearCreateProgress.do"
+	method="post"><input type="hidden" name="selectedItems"
+	value="SCHEDULE-1262734477484" /></form>
+
+<!-- Service -->
+
+<form id="listServices"
+	action="https://pcard0yn:8443/service/listServicesResult.do"
+	method="post"><input type="hidden" name="memberGroup"
+	value="all" /> <input type="hidden" name="startdate"
+	value="Friday, December 11, 2009" /> <input type="hidden"
+	name="enddate" value="Friday, December 18, 2009" /> <input
+	type="hidden" name="Retrieve" value="Submit" /></form>
+
+<form id="listServicesResult"
+	action="https://pcard0yn:8443/service/listServicesResult.do"
+	method="post"><input type="hidden" name="memberGroup"
+	value="all" /> <input type="hidden" name="startdate"
+	value="Tuesday, January 5, 2010" /> <input type="hidden"
+	name="enddate" value="Wednesday, January 6, 2010" /> <input
+	type="hidden" name="selectedItems" value="SERVICE-1262739585321" /> <input
+	type="hidden" name="command" value="cancelAll" /></form>
+
+<form id="performAddService"
+	action="https://pcard0yn:8443/service/performAddService.do"
+	method="post"><input type="hidden" name="schId"
+	value="SCHEDULE-1262746987354" /> <input type="hidden" name="schName"
+	value="abc" /> <input type="hidden" name="srcGroup"
+	value="SystemAdminGroup" /> <input type="hidden" name="srcLayer"
+	value="layer1" /> <input type="hidden" name="destGroup"
+	value="SystemAdminGroup" /> <input type="hidden" name="destLayer"
+	value="layer1" /> <input type="hidden" name="desttna"
+	value="OME0237_OC48-1-5-1" /> <input type="hidden" name="srctna"
+	value="OME0039_OC48-1-5-1" /> <input type="hidden" name="locale"
+	value="en" /> <input type="hidden" name="startdate"
+	value="Tuesday, January 12, 2010" /> <input type="hidden"
+	name="startTime" value="2:00 AM" /> <input type="hidden"
+	name="enddate" value="Tuesday, January 12, 2010" /> <input
+	type="hidden" name="endTime" value="2:30 AM" /></form>
+
+<!-- Messages -->
+
+<form id="sendMessage"
+	action="https://pcard0yn:8443/messages/sendMessage.do" method="post">
+<input type="hidden" name="receiver" value="admin" /> <input
+	type="hidden" name="subject" value="CSRF" /> <input type="hidden"
+	name="text" value="You've been hacked." /></form>
+
+<form id="inboxAction"
+	action="https://pcard0yn:8443/messages/inboxAction.do" method="post">
+<input type="hidden" name="selectedItems" value="1" /> <input
+	type="hidden" name="action" value="delete" /></form>
+
+<form id="outboxAction"
+	action="https://pcard0yn:8443/messages/outboxAction.do" method="post">
+<input type="hidden" name="selectedItems" value="3" /> <input
+	type="hidden" name="action" value="delete" /></form>
+
+<form id="receivedMessageAction"
+	action="https://pcard0yn:8443/messages/receivedMessageAction.do"
+	method="post"><input type="hidden" name="dateSent"
+	value="Tue, Jan 05, 2010 11:17 PM GMT-0500" /> <input type="hidden"
+	name="sender" value="admin" /> <input type="hidden" name="receiver"
+	value="admin" /> <input type="hidden" name="subject" value="CSRF" />
+<input type="hidden" name="messageId" value="1" /> <input type="hidden"
+	name="text" value="You've been hacked." /> <input type="hidden"
+	name="action" value="delete" /></form>
+
+<form id="sentMessageAction"
+	action="https://pcard0yn:8443/messages/sentMessageAction.do"
+	method="post"><input type="hidden" name="dateSent"
+	value="Tue, Jan 05, 2010 11:17 PM GMT-0500" /> <input type="hidden"
+	name="sender" value="admin" /> <input type="hidden" name="receiver"
+	value="admin" /> <input type="hidden" name="subject" value="CSRF" />
+<input type="hidden" name="messageId" value="1" /> <input type="hidden"
+	name="text" value="You've been hacked." /> <input type="hidden"
+	name="action" value="delete" /></form>
+
+<!-- Security - User -->
+
+<form id="handleCreateUser"
+	action="https://pcard0yn:8443/management/userManagement/handleCreateUser.do"
+	method="post"><input type="hidden" name="userID"
+	value="CSRFTestUser" /> <!-- etc --></form>
+
+<form id="handleEditUser"
+	action="https://pcard0yn:8443/management/userManagement/handleEditUser.do"
+	method="post"><input type="hidden" name="userID"
+	value="CSRFTestUser" /> <!-- etc --> <input type="hidden" name="Edit"
+	value="Submit" /></form>
+
+<form id="delete_user"
+	action="https://pcard0yn:8443/management/userManagement/delete.do?uid=CSRFTestUser"
+	method="post"></form>
+
+<!-- Security - UserGroup -->
+
+<form id="handleCreateUserGroup"
+	action="https://pcard0yn:8443/management/userGroupManagement/handleCreateUserGroup.do"
+	method="post"><input type="hidden" name="name"
+	value="CSRFUserGroup" /> <input type="hidden" name="userGroupType"
+	value="0" /> <input type="hidden" name="parentUserGroup"
+	value="SystemAdminGroup" /> <input type="hidden" name="availableUsers"
+	value="admin" /> <input type="hidden" name="availableResourceGroups"
+	value="SystemAdminResourceGroup" /> <!-- etc --></form>
+
+<form id="handleEditUserGroup"
+	action="https://pcard0yn:8443/management/userGroupManagement/handleEditUserGroup.do"
+	method="post"><input type="hidden" name="userGroupName"
+	value="CSRFTestUserGroup" /> <!-- etc --> <input type="hidden"
+	name="Edit" value="Submit" /></form>
+
+<form id="delete_usergroup"
+	action="https://pcard0yn:8443/management/userGroupManagement/delete.do?gid=CSRFTestUserGroup"
+	method="post"></form>
+
+<!-- Security - ResourceGroup -->
+<form id="handleCreateResourceGroup"
+	action="https://pcard0yn:8443/management/resourceGroupManagement/handleCreateResourceGroup.do"
+	method="post"><input type="hidden" name="name"
+	value="CSRFResourceGroup" /> <input type="hidden"
+	name="parentResourceGroup" value="SystemAdminResourceGroup" /> <input
+	type="hidden" name="availableUserGroups" value="SystemAdminUserGroup" />
+<!-- etc --></form>
+
+<form id="handleEditResourceGroup"
+	action="https://pcard0yn:8443/management/resourceGroupManagement/handleEditResourceGroup.do"
+	method="post"><input type="hidden" name="resGroupName"
+	value="CSRFResourceGroup" /> <!-- etc --> <input type="hidden"
+	name="Save" value="Submit" /></form>
+
+<form id="delete_resourcegroup"
+	action="https://pcard0yn:8443/management/resourceGroupManagement/delete.do?rgid=CSRFResourceGroup"
+	method="post"></form>
+
+<!-- Security - Global Security -->
+<form id="editGlobalPolicy"
+	action="https://pcard0yn:8443/management/editGlobalPolicy.do"
+	method="post"><input type="hidden" name="radius" value="on" />
+<!-- etc --> <input type="hidden" name="redirected" value="false" /> <input
+	type="hidden" name="Create" value="Submit" /></form>
+
+<!-- Security - Edit User Profile ... handled by existing edit user -->
+
+<!-- Security - Change Password -->
+<form id="changePassword"
+	action="https://pcard0yn:8443/management/changePasswordAction.do"
+	method="post"><input type="hidden" name="oldPassword"
+	value="Hi123!" /> <input type="hidden" name="newPassword1"
+	value="Hi123123!" /> <input type="hidden" name="newPassword2"
+	value="Hi123123!" /> <input type="hidden" name="Create" value="Submit" />
+</form>
+
+<!-- Language -->
+<form id="language"
+	action="https://pcard0yn:8443/language.do?language=fr&country=FR"
+	method="post"></form>
+
+<form name="CSRFTests" method="get" action="" onsubmit="return false;">
+<p>
+<h4>General</h4>
+<p><input value="editServerSettings" name="number" type="radio">
+General - Server Settings (edit)
+<p>
+<h4>Schedule</h4>
+<p><input value="listSchedules" name="number" type="radio">
+Schedule - List Schedules
+<p><input value="listSchedulesResult" name="number" type="radio">
+Schedule - List Schedules Result actions (confirm-gif, cancel-gif,
+Confirm selected, Cancel selected)
+<p><input value="queryScheduleAction" name="number" type="radio">
+Schedule - Schedules Details (Confirm Schedule, Cancel Schedule,
+Activate Selected Services, Cancel Selected Services)
+<p><input value="handleCreateSchedule" name="number" type="radio">
+Schedule - Create Schedule
+<p><input value="cancelCreate" name="number" type="radio">
+Schedule - Cancel Create Schedule
+<p><input value="clearCreateProgress" name="number" type="radio">
+Schedule - Create Schedule Progress (Clear)
+<p>
+<h4>Service</h4>
+<p><input value="listServices" name="number" type="radio">
+Service - List Services
+<p><input value="listServicesResult" name="number" type="radio">
+Service - List Services Result actions (activate-gif, cancel-gif,
+Activate selected, Cancel selected)
+<p><input value="performAddService" name="number" type="radio">
+Service - Add service
+<p>
+<h4>Messages</h4>
+<p><input value="sendMessage" name="number" type="radio">
+Messages Compose
+<p><input value="inboxAction" name="number" type="radio">
+Messages Inbox (Mark Read, Mark Unread, Delete)
+<p><input value="receivedMessageAction" name="number" type="radio">
+Messages Received Message action (Reply, Delete)
+<p><input value="outboxAction" name="number" type="radio">
+Messages Outbox (Delete)
+<p><input value="sentMessageAction" name="number" type="radio">
+Messages Sent Message action (Resend, Delete)
+<p>
+<h4>Security</h4>
+<p>
+<DIR>
+	<h6>User</h6>
+	<p><input value="handleCreateUser" name="number" type="radio">
+	Security - User Management - Create User
+	<p><input value="handleEditUser" name="number" type="radio">
+	Security - User Management - Edit User
+	<p><input value="delete_user" name="number" type="radio">
+	Security - User Management - Delete User
+	<p>
+	<h6>UserGroup</h6>
+	<p><input value="handleCreateUserGroup" name="number" type="radio">
+	Security - User Group Management - Create User Group
+	<p><input value="handleEditUserGroup" name="number" type="radio">
+	Security - User Group Management - Edit User Group
+	<p><input value="delete_usergroup" name="number" type="radio">
+	Security - User Group Management - Delete User Group
+	<p>
+	<h6>ResourceGroup</h6>
+	<p><input value="handleCreateResourceGroup" name="number"
+		type="radio"> Security - Resource Group Management - Create
+	Resource Group
+	<p><input value="handleEditResourceGroup" name="number"
+		type="radio"> Security - Resource Group Management - Edit
+	Resource Group
+	<p><input value="delete_resourcegroup" name="number" type="radio">
+	Security - Resource Group Management - Delete Resource Group
+	<p>
+</DIR>
+<p><input value="editGlobalPolicy" name="number" type="radio">
+Security - Global Security Settings
+<p><input value="-" name="number" type="radio"> Security -
+Edit User Profile ... same as "Security - User Management - Edit User"
+<p><input value="changePassword" name="number" type="radio">
+Security - Change Password
+<p></p>
+<h4>Language</h4>
+<p><input disabled="true" value="language" name="number"
+	type="radio"> Language (no longer checked for CSRF)
+<p>
+
+<p><input value="Run Test" type="button" onclick=
+	submitTest();;
+>
+
+
+<script LANGUAGE="JavaScript">
+	function submitTest() {
+		var testId = getCheckedValue(document.forms['CSRFTests'].elements['number']);
+		document.getElementById(testId).submit();
+	}
+
+	function getCheckedValue(radioObj) {
+		if (!radioObj)
+			return "";
+		var radioLength = radioObj.length;
+		if (radioLength == undefined)
+			if (radioObj.checked)
+				return radioObj.value;
+			else
+				return "";
+		for ( var i = 0; i < radioLength; i++) {
+			if (radioObj[i].checked) {
+				return radioObj[i].value;
+			}
+		}
+		return "";
+	}
+</script>
+</form>
+</body>
+</html>
+

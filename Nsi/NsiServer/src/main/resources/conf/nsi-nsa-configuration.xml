@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:nsaConfigurationList xmlns:tns="http://schemas.opendrac.org/nsi/2011/09/nsaConfiguration"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <nsaConfiguration>
+        <nsaIdentifier>urn:ogf:network:nsa:northernlight</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:nsnetwork:northernlight.ets</nsNetwork>
+        <connectedTo>urn:ogf:network:nsa:netherlight</connectedTo>
+        <authentication>
+            <userId>nsidemo</userId>
+            <password>RioPlug-Fest2011!</password>
+        </authentication>
+    </nsaConfiguration>
+
+    <nsaConfiguration>
+        <nsaIdentifier>urn:ogf:network:nsa:netherlight</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:nsnetwork:netherlight.ets</nsNetwork>
+        <nsNetwork>urn:ogf:network:nsnetwork:czechlight.ets</nsNetwork>
+        <connectedTo>urn:ogf:network:nsa:northernlight</connectedTo>
+        <connectedTo>urn:ogf:network:nsa:pionier</connectedTo>
+        <connectedTo>urn:ogf:network:nsa:starlight</connectedTo>
+        <connectedTo>urn:ogf:network:nsa:uva</connectedTo>
+        <authentication>
+            <userId>nsidemo</userId>
+            <password>RioPlug-Fest2011!</password>
+        </authentication>
+    </nsaConfiguration>
+
+    <nsaConfiguration>
+        <nsaIdentifier>urn:ogf:network:nsa:czechlight</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:nsnetwork:netherlight.ets</nsNetwork>
+        <nsNetwork>urn:ogf:network:nsnetwork:czechlight.ets</nsNetwork>
+        <connectedTo>urn:ogf:network:nsa:northernlight</connectedTo>
+        <connectedTo>urn:ogf:network:nsa:pionier</connectedTo>
+        <connectedTo>urn:ogf:network:nsa:starlight</connectedTo>
+        <connectedTo>urn:ogf:network:nsa:uva</connectedTo>
+        <authentication>
+            <userId>nsidemo</userId>
+            <password>RioPlug-Fest2011!</password>
+        </authentication>
+    </nsaConfiguration>
+
+    <nsaConfiguration>
+        <nsaIdentifier>urn:ogf:network:nsa:geant</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:nsnetwork:geant.ets</nsNetwork>
+        <connectedTo>urn:ogf:network:nsa:pionier</connectedTo>
+        <authentication>
+            <userId>nsidemo</userId>
+            <password>RioPlug-Fest2011!</password>
+        </authentication>
+    </nsaConfiguration>
+
+    <nsaConfiguration>
+        <nsaIdentifier>urn:ogf:network:nsa:pioneer</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:nsnetwork:pioneer.ets</nsNetwork>
+        <connectedTo>urn:ogf:network:nsa:geant</connectedTo>
+        <connectedTo>urn:ogf:network:nsa:netherlight</connectedTo>
+        <authentication>
+            <userId>nsidemo</userId>
+            <password>RioPlug-Fest2011!</password>
+        </authentication>
+    </nsaConfiguration>
+
+    <nsaConfiguration>
+        <nsaIdentifier>urn:ogf:network:nsa:uvalight</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:nsnetwork:uvalight.ets</nsNetwork>
+        <connectedTo>urn:ogf:network:nsa:netherlight</connectedTo>
+        <authentication>
+            <userId>nsidemo</userId>
+            <password>RioPlug-Fest2011!</password>
+        </authentication>
+    </nsaConfiguration>
+
+    <nsaConfiguration>
+        <nsaIdentifier>urn:ogf:network:nsa:esnet</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:nsnetwork:esnet.ets</nsNetwork>
+        <connectedTo>urn:ogf:network:nsa:starlight</connectedTo>
+        <authentication>
+            <userId>nsidemo</userId>
+            <password>RioPlug-Fest2011!</password>
+        </authentication>
+    </nsaConfiguration>
+
+    <nsaConfiguration>
+        <nsaIdentifier>urn:ogf:network:nsa:starlight</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:nsnetwork:starlight.ets</nsNetwork>
+        <connectedTo>urn:ogf:network:nsa:netherlight</connectedTo>
+        <connectedTo>urn:ogf:network:nsa:jgnx</connectedTo>
+        <connectedTo>urn:ogf:network:nsa:krlight</connectedTo>
+        <authentication>
+            <userId>nsidemo</userId>
+            <password>RioPlug-Fest2011!</password>
+        </authentication>
+    </nsaConfiguration>
+
+    <nsaConfiguration>
+        <nsaIdentifier>urn:ogf:network:nsa:krlight</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:nsnetwork:krlight.ets</nsNetwork>
+        <connectedTo>urn:ogf:network:nsa:starlight</connectedTo>
+        <authentication>
+            <userId>nsidemo</userId>
+            <password>RioPlug-Fest2011!</password>
+        </authentication>
+    </nsaConfiguration>
+
+    <nsaConfiguration>
+        <nsaIdentifier>urn:ogf:network:nsa:jgnx</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:nsnetwork:jgnx.ets</nsNetwork>
+        <connectedTo>urn:ogf:network:nsa:starlight</connectedTo>
+        <connectedTo>urn:ogf:network:nsa:aist</connectedTo>
+        <connectedTo>urn:ogf:network:nsa:kddi-labs</connectedTo>
+        <authentication>
+            <userId>nsidemo</userId>
+            <password>RioPlug-Fest2011!</password>
+        </authentication>
+    </nsaConfiguration>
+
+    <nsaConfiguration>
+        <nsaIdentifier>urn:ogf:network:nsa:aist</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:nsnetwork:aist.ets</nsNetwork>
+        <connectedTo>urn:ogf:network:nsa:jgnx</connectedTo>
+        <authentication>
+            <userId>nsidemo</userId>
+            <password>RioPlug-Fest2011!</password>
+        </authentication>
+    </nsaConfiguration>
+
+    <nsaConfiguration>
+        <nsaIdentifier>urn:ogf:network:nsa:kddi-labs</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:nsnetwork:kddi-labs.ets</nsNetwork>
+        <connectedTo>urn:ogf:network:nsa:jgnx</connectedTo>
+        <authentication>
+            <userId>nsidemo</userId>
+            <password>RioPlug-Fest2011!</password>
+        </authentication>
+    </nsaConfiguration>
+
+    <!-- Local NetherLight NSI Client. -->
+
+    <nsaConfiguration>
+        <nsaIdentifier>urn:ogf:network:nsa:ferb.surfnet.nl</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:nsnetwork:ferb.surfnet.nl</nsNetwork>
+        <connectedTo>urn:ogf:network:nsa:netherlight</connectedTo>
+        <authentication>
+            <userId>nsidemo</userId>
+            <password>RioPlug-Fest2011!</password>
+        </authentication>
+    </nsaConfiguration>
+
+    <nsaConfiguration>
+        <nsaIdentifier>urn:ogf:network:nsa:OpenNSA-querier</nsaIdentifier>
+        <nsNetwork>urn:ogf:network:nsnetwork:OpenNSA-querier</nsNetwork>
+        <authentication>
+            <userId>nsidemo</userId>
+            <password>RioPlug-Fest2011!</password>
+        </authentication>
+    </nsaConfiguration>
+
+</tns:nsaConfigurationList>

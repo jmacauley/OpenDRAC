@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    <pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>
+
+-->
+
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringService" xmlns:t="http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringServiceTypes" xmlns:ct="http://www.nortel.com/drac/2007/07/03/ws/ct/DracCommonTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaddr="http://www.w3.org/2006/05/addressing/wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringService">
+   <types>
+      <xs:schema targetNamespace="http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringService" xmlns:t="http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringServiceTypes" xmlns:ct="http://www.nortel.com/drac/2007/07/03/ws/ct/DracCommonTypes">
+         <xs:import namespace="http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringServiceTypes" schemaLocation="./SystemMonitoringServiceTypes_v2.0.0.xsd"/>
+      </xs:schema>
+   </types>
+   <message name="credentials">
+      <part name="header" element="ct:Credentials"/>
+   </message>
+   <message name="queryServersResponse">
+      <part name="payload" element="t:QueryServersResponse"/>
+   </message>
+   <message name="queryServersRequest">
+      <part name="header" element="ct:Credentials"/>
+   </message>
+   <message name="queryLogsRequest">
+      <part name="header" element="ct:Credentials"/>
+      <part name="payload" element="t:QueryLogsRequest"/>
+   </message>
+   <message name="queryLogsResponse">
+      <part name="payload" element="t:QueryLogsResponse"/>
+   </message>
+   <message name="completionResponse">
+      <part name="payload" element="ct:CompletionResponse"/>
+   </message>
+   <message name="disconnectRequest">
+      <part name="header" element="ct:Credentials"/>
+   </message>
+   <message name="authenticationRequest">
+      <part name="payload" element="ct:AuthenticationRequest"/>
+   </message>
+   <message name="systemMonitoringServiceFault">
+      <part name="payload" element="ct:DracFault"/>
+   </message>
+   <portType name="SystemMonitoringServicePortType">
+      <operation name="authenticate">
+         <documentation>
+         The authenticate operation must be invoked as the first operation before invoking any other operations on this service.
+      </documentation>
+         <input message="tns:authenticationRequest" wsaddr:Action="http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringService/authenticationRequest"/>
+         <output message="tns:completionResponse" wsaddr:Action="http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringService/completionResponse"/>
+         <fault name="fault" message="tns:systemMonitoringServiceFault"/>
+      </operation>
+      <operation name="queryServers">
+         <documentation>
+          For authorization purposes user id must be included in the SOAP message header.
+      </documentation>
+         <input message="tns:queryServersRequest" wsaddr:Action="http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringService/queryServersRequest"/>
+         <output message="tns:queryServersResponse" wsaddr:Action="http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringService/queryServersResponse"/>
+         <fault name="fault" message="tns:systemMonitoringServiceFault"/>
+      </operation>
+      <operation name="queryLogs">
+         <documentation>
+          For authorization purposes user id must be included in the SOAP message header.
+      </documentation>
+         <input message="tns:queryLogsRequest" wsaddr:Action="http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringService/queryLogsRequest"/>
+         <output message="tns:queryLogsResponse" wsaddr:Action="http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringService/queryLogsResponse"/>
+         <fault name="fault" message="tns:systemMonitoringServiceFault"/>
+      </operation>
+      <operation name="disconnect">
+         <documentation>
+          For authorization purposes user id must be included in the SOAP message header.
+      </documentation>
+         <input message="tns:disconnectRequest" wsaddr:Action="http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringService/disconnectRequest"/>
+         <output message="tns:completionResponse" wsaddr:Action="http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringService/completionResponse"/>
+         <fault name="fault" message="tns:systemMonitoringServiceFault"/>
+      </operation>
+   </portType>
+</definitions>

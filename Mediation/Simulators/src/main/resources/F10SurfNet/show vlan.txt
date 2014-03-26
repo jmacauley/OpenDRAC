@@ -1,0 +1,12 @@
+Codes: * - Default VLAN, G - GVRP VLANs, P - Primary, C - Community, I - Isolated
+Q: U - Untagged, T - Tagged
+   x - Dot1x untagged, X - Dot1x tagged
+   G - GVRP tagged, M - Vlan-stack
+
+    NUM    Status    Description                     Q Ports
+*   1      Inactive                                  
+    100    Active                                    U Gi 0/24
+    200    Active    cross connect dlp01 - dlp02     U Gi 0/21-22
+    201    Inactive  Wayne Pitman Test               T Gi 0/17
+                                                     U Gi 0/18-19
+Asd001A_F25S1T#

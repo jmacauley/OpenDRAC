@@ -1,0 +1,2187 @@
+TenGigabitEthernet 0/0 is up, line protocol is up
+Description: ----> [DRAC] USLHCnet - e600gva1
+Hardware is Force10Eth, address is 00:01:e8:74:53:71
+    Current address is 00:01:e8:74:53:71
+Pluggable media present, XFP type is 10GBASE-SR
+    Medium is LAN capable only, Wavelength is 854.00nm
+    XFP receive power reading is -1.9805dBm
+Interface index is 33882171
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     393107 packets, 30983272 bytes
+     7075 Vlans 
+     362360 64-byte pkts, 7001 over 64-byte pkts, 56 over 127-byte pkts
+     23677 over 255-byte pkts, 7 over 511-byte pkts, 6 over 1023-byte pkts
+     393037 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     22703 packets, 7219554 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     22703 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     22703 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 1w1d7h
+
+
+TenGigabitEthernet 0/1 is down, line protocol is down
+Description: ---> [DRAC]
+Hardware is Force10Eth, address is 00:01:e8:74:53:72
+    Current address is 00:01:e8:74:53:72
+Pluggable media not present
+Interface index is 34144315
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+TenGigabitEthernet 0/2 is up, line protocol is up
+Description: ---> loop R1000-S-RFTEC-2 ten 0/3
+Hardware is Force10Eth, address is 00:01:e8:74:53:73
+    Current address is 00:01:e8:74:53:73
+Pluggable media present, XFP type is 10GBASE-SR
+    Medium is MultiRate, Wavelength is 854.00nm
+    XFP receive power reading is -2.2410dBm
+Interface index is 34406459
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     397199 packets, 75087042 bytes
+     0 Vlans 
+     0 64-byte pkts, 1 over 64-byte pkts, 271016 over 127-byte pkts
+     126182 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     397199 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     782562 packets, 114233833 bytes, 0 underruns
+     0 64-byte pkts, 375069 over 64-byte pkts, 271015 over 127-byte pkts
+     136478 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     782562 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+TenGigabitEthernet 0/3 is up, line protocol is up
+Description: ---> loop R1000-S-RFTEC-2 ten 0/2
+Hardware is Force10Eth, address is 00:01:e8:74:53:74
+    Current address is 00:01:e8:74:53:74
+Pluggable media present, XFP type is 10GBASE-SR
+    Medium is MultiRate, Wavelength is 850.00nm
+    XFP receive power reading is -2.8142dBm
+Interface index is 34668603
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     782562 packets, 114233833 bytes
+     0 Vlans 
+     0 64-byte pkts, 375069 over 64-byte pkts, 271015 over 127-byte pkts
+     136478 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     782562 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     397199 packets, 75087042 bytes, 0 underruns
+     0 64-byte pkts, 1 over 64-byte pkts, 271016 over 127-byte pkts
+     126182 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     397199 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+TenGigabitEthernet 1/0 is up, line protocol is up
+Description: ---> R1000-S-RFTE6-1 (labo)
+Hardware is Force10Eth, address is 00:01:e8:74:53:d1
+    Current address is 00:01:e8:74:53:d1
+Pluggable media present, XFP type is 10GBASE-SR
+    Medium is MultiRate, Wavelength is 850.00nm
+    XFP receive power reading is -2.1510dBm
+Interface index is 67436603
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w4d8h
+Queueing strategy: fifo
+Input Statistics:
+     523319 packets, 111886094 bytes
+     0 Vlans 
+     115 64-byte pkts, 332075 over 64-byte pkts, 0 over 127-byte pkts
+     127723 over 255-byte pkts, 63406 over 511-byte pkts, 0 over 1023-byte pkts
+     127723 Multicasts, 56 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     519505 packets, 79973384 bytes, 0 underruns
+     123801 64-byte pkts, 332294 over 64-byte pkts, 0 over 127-byte pkts
+     4 over 255-byte pkts, 63406 over 511-byte pkts, 0 over 1023-byte pkts
+     123904 Multicasts, 67 Broadcasts, 395534 Unicasts
+     221 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w4d7h
+
+
+TenGigabitEthernet 1/1 is up, line protocol is down
+Description: ---> R1000-S-RFTEX-3
+Hardware is Force10Eth, address is 00:01:e8:74:53:d2
+    Current address is 00:01:e8:74:53:d2
+Pluggable media not present
+Interface index is 67698747
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+Flowcontrol rx off tx off
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w4d8h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w4d11h
+
+
+TenGigabitEthernet 1/2 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:53:d3
+    Current address is 00:01:e8:74:53:d3
+Pluggable media not present
+Interface index is 67960891
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w4d8h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+TenGigabitEthernet 1/3 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:53:d4
+    Current address is 00:01:e8:74:53:d4
+Pluggable media not present
+Interface index is 68223035
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w4d8h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+TenGigabitEthernet 5/0 is up, line protocol is up
+Port is mirroring traffic for Te 5/2 
+Description: ---> R1000-S-RFTE6-1 (labo)
+Hardware is Force10Eth, address is 00:01:e8:74:55:51
+    Current address is 00:01:e8:74:55:51
+Pluggable media present, XFP type is 10GBASE-LR
+    Medium is MultiRate, Wavelength is 1310.00nm
+    XFP receive power reading is -5.5799dBm
+Interface index is 201654331
+Internet address is not set
+LineSpeed 10000 Mbit
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w4d11h
+Queueing strategy: fifo
+Output Statistics:
+     1879571 packets, 168640654 bytes, 0 underruns
+     33044 64-byte pkts, 1841841 over 64-byte pkts, 2518 over 127-byte pkts
+     1987 over 255-byte pkts, 176 over 511-byte pkts, 5 over 1023-byte pkts
+     641871 Multicasts, 23 Broadcasts, 1237677 Unicasts
+     137716 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 11:00:10
+
+
+TenGigabitEthernet 5/1 is up, line protocol is up
+Description: ---> R1000-S-RFTEX-3
+Hardware is Force10Eth, address is 00:01:e8:74:55:52
+    Current address is 00:01:e8:74:55:52
+Pluggable media present, XFP type is 10GBASE-SR
+    Medium is MultiRate, Wavelength is 850.00nm
+    XFP receive power reading is -1.8842dBm
+Interface index is 201916475
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w4d11h
+Queueing strategy: fifo
+Input Statistics:
+     98591280913 packets, 9384739014070 bytes
+     829423 Vlans 
+     730881316 64-byte pkts, 96207107678 over 64-byte pkts, 9620 over 127-byte pkts
+     1653280199 over 255-byte pkts, 2096 over 511-byte pkts, 4 over 1023-byte pkts
+     97860399460 Multicasts, 730881316 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     957788 packets, 97028402 bytes, 0 underruns
+     124010 64-byte pkts, 810643 over 64-byte pkts, 10367 over 127-byte pkts
+     12572 over 255-byte pkts, 196 over 511-byte pkts, 0 over 1023-byte pkts
+     954507 Multicasts, 3 Broadcasts, 3278 Unicasts
+     831890 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w4d7h
+
+
+TenGigabitEthernet 5/2 is up, line protocol is down
+Description: ---> unknown 9/2
+Hardware is Force10Eth, address is 00:01:e8:74:55:53
+    Current address is 00:01:e8:74:55:53
+Pluggable media present, XFP type is 10GBASE-SR
+    Medium is LAN capable only, Wavelength is 854.00nm
+    No power
+Interface index is 202178619
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w4d11h
+Queueing strategy: fifo
+Input Statistics:
+     853925 packets, 76489222 bytes
+     362 Vlans 
+     112 64-byte pkts, 853298 over 64-byte pkts, 183 over 127-byte pkts
+     200 over 255-byte pkts, 131 over 511-byte pkts, 0 over 1023-byte pkts
+     235783 Multicasts, 0 Broadcasts
+     0 runts, 1 giants, 0 throttles
+     0 CRC, 0 overrun, 1 discarded
+Output Statistics:
+     858732 packets, 76874096 bytes, 0 underruns
+     786 64-byte pkts, 857490 over 64-byte pkts, 330 over 127-byte pkts
+     68 over 255-byte pkts, 55 over 511-byte pkts, 3 over 1023-byte pkts
+     241765 Multicasts, 0 Broadcasts, 616967 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 1d7h14m
+
+
+TenGigabitEthernet 5/3 is up, line protocol is down
+Description: ---> unknown 9/3
+Hardware is Force10Eth, address is 00:01:e8:74:55:54
+    Current address is 00:01:e8:74:55:54
+Pluggable media present, XFP type is 10GBASE-SR
+    Medium is MultiRate, Wavelength is 854.00nm
+    No power
+Interface index is 202440763
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w4d11h
+Queueing strategy: fifo
+Input Statistics:
+     23 packets, 1472 bytes
+     0 Vlans 
+     23 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     23 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     875 packets, 56000 bytes, 0 underruns
+     875 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     875 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 4w0d10h
+
+
+TenGigabitEthernet 6/0 is down, line protocol is not present
+Hardware is Force10Eth, address is 00:01:e8:74:55:b1
+    Current address is 00:01:e8:74:55:b1
+Interface index is 235208763
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w4d11h
+
+
+TenGigabitEthernet 6/1 is down, line protocol is not present
+Hardware is Force10Eth, address is 00:01:e8:74:55:b2
+    Current address is 00:01:e8:74:55:b2
+Interface index is 235470907
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w4d11h
+
+
+TenGigabitEthernet 6/2 is down, line protocol is not present
+Hardware is Force10Eth, address is 00:01:e8:74:55:b3
+    Current address is 00:01:e8:74:55:b3
+Interface index is 235733051
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w4d11h
+
+
+TenGigabitEthernet 6/3 is down, line protocol is not present
+Hardware is Force10Eth, address is 00:01:e8:74:55:b4
+    Current address is 00:01:e8:74:55:b4
+Interface index is 235995195
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w4d11h
+
+
+GigabitEthernet 7/0 is down, line protocol is down
+Description: ----> [DRAC] r1000-srv01
+Hardware is Force10Eth, address is 00:01:e8:74:56:11
+    Current address is 00:01:e8:74:56:11
+Interface index is 268746810
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/1 is down, line protocol is down
+Description: ----> [DRAC] r1000-srv02
+Hardware is Force10Eth, address is 00:01:e8:74:56:12
+    Current address is 00:01:e8:74:56:12
+Interface index is 269008954
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/2 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:13
+    Current address is 00:01:e8:74:56:13
+Interface index is 269271098
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/3 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:14
+    Current address is 00:01:e8:74:56:14
+Interface index is 269533242
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/4 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:15
+    Current address is 00:01:e8:74:56:15
+Interface index is 269795386
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/5 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:16
+    Current address is 00:01:e8:74:56:16
+Interface index is 270057530
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/6 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:17
+    Current address is 00:01:e8:74:56:17
+Interface index is 270319674
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/7 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:18
+    Current address is 00:01:e8:74:56:18
+Interface index is 270581818
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/8 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:19
+    Current address is 00:01:e8:74:56:19
+Interface index is 270843962
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/9 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:1a
+    Current address is 00:01:e8:74:56:1a
+Interface index is 271106106
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/10 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:1b
+    Current address is 00:01:e8:74:56:1b
+Interface index is 271368250
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/11 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:1c
+    Current address is 00:01:e8:74:56:1c
+Interface index is 271630394
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/12 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:1d
+    Current address is 00:01:e8:74:56:1d
+Interface index is 271892538
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/13 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:1e
+    Current address is 00:01:e8:74:56:1e
+Interface index is 272154682
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/14 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:1f
+    Current address is 00:01:e8:74:56:1f
+Interface index is 272416826
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/15 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:20
+    Current address is 00:01:e8:74:56:20
+Interface index is 272678970
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/16 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:21
+    Current address is 00:01:e8:74:56:21
+Interface index is 272941114
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/17 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:22
+    Current address is 00:01:e8:74:56:22
+Interface index is 273203258
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/18 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:23
+    Current address is 00:01:e8:74:56:23
+Interface index is 273465402
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/19 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:24
+    Current address is 00:01:e8:74:56:24
+Interface index is 273727546
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/20 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:25
+    Current address is 00:01:e8:74:56:25
+Interface index is 273989690
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/21 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:26
+    Current address is 00:01:e8:74:56:26
+Interface index is 274251834
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/22 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:27
+    Current address is 00:01:e8:74:56:27
+Interface index is 274513978
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/23 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:28
+    Current address is 00:01:e8:74:56:28
+Interface index is 274776122
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/24 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:29
+    Current address is 00:01:e8:74:56:29
+Interface index is 275038266
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/25 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:2a
+    Current address is 00:01:e8:74:56:2a
+Interface index is 275300410
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/26 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:2b
+    Current address is 00:01:e8:74:56:2b
+Interface index is 275562554
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/27 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:2c
+    Current address is 00:01:e8:74:56:2c
+Interface index is 275824698
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/28 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:2d
+    Current address is 00:01:e8:74:56:2d
+Interface index is 276086842
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/29 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:2e
+    Current address is 00:01:e8:74:56:2e
+Interface index is 276348986
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/30 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:2f
+    Current address is 00:01:e8:74:56:2f
+Interface index is 276611130
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/31 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:30
+    Current address is 00:01:e8:74:56:30
+Interface index is 276873274
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/32 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:31
+    Current address is 00:01:e8:74:56:31
+Interface index is 277135418
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/33 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:32
+    Current address is 00:01:e8:74:56:32
+Interface index is 277397562
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/34 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:33
+    Current address is 00:01:e8:74:56:33
+Interface index is 277659706
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/35 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:34
+    Current address is 00:01:e8:74:56:34
+Interface index is 277921850
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/36 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:35
+    Current address is 00:01:e8:74:56:35
+Interface index is 278183994
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/37 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:36
+    Current address is 00:01:e8:74:56:36
+Interface index is 278446138
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/38 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:37
+    Current address is 00:01:e8:74:56:37
+Interface index is 278708282
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/39 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:38
+    Current address is 00:01:e8:74:56:38
+Interface index is 278970426
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/40 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:39
+    Current address is 00:01:e8:74:56:39
+Interface index is 279232570
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/41 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:3a
+    Current address is 00:01:e8:74:56:3a
+Interface index is 279494714
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/42 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:3b
+    Current address is 00:01:e8:74:56:3b
+Interface index is 279756858
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/43 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:3c
+    Current address is 00:01:e8:74:56:3c
+Interface index is 280019002
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/44 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:3d
+    Current address is 00:01:e8:74:56:3d
+Interface index is 280281146
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/45 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:3e
+    Current address is 00:01:e8:74:56:3e
+Interface index is 280543290
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/46 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:3f
+    Current address is 00:01:e8:74:56:3f
+Interface index is 280805434
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+GigabitEthernet 7/47 is down, line protocol is down
+Hardware is Force10Eth, address is 00:01:e8:74:56:40
+    Current address is 00:01:e8:74:56:40
+Interface index is 281067578
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto, Mode auto
+Flowcontrol rx on tx on
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+     0 Vlans 
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts
+     0 runts, 0 giants, 0 throttles
+     0 CRC, 0 overrun, 0 discarded
+Output Statistics:
+     0 packets, 0 bytes, 0 underruns
+     0 64-byte pkts, 0 over 64-byte pkts, 0 over 127-byte pkts
+     0 over 255-byte pkts, 0 over 511-byte pkts, 0 over 1023-byte pkts
+     0 Multicasts, 0 Broadcasts, 0 Unicasts
+     0 Vlans, 0 throttles, 0 discarded, 0 collisions, 0 wreddrops
+Rate info (interval 299 seconds):
+     Input 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+     Output 00.00 Mbits/sec,          0 packets/sec, 0.00% of line-rate
+Time since last interface status change: 6w5d5h
+
+
+ManagementEthernet 0/0 is up, line protocol is up
+Hardware is Force10Eth, address is 00:01:e8:33:4c:15
+    Current address is 00:01:e8:33:4c:15
+Pluggable media not present
+Interface index is 503595208
+Internet address is not set
+Virtual-IP address is 137.138.56.53/16
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 100 Mbit, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+    Input 890273 packets, 64057850 bytes, 473306 multicast
+    Received 0 errors, 0 discarded 
+    Output 395851 packets, 61053370 bytes, 0 multicast
+    Output 0 errors, 0 invalid protocol
+Time since last interface status change: 6w5d5h
+
+
+ManagementEthernet 1/0 is up, line protocol is up
+Hardware is Force10Eth, address is 00:01:e8:54:11:ef
+    Current address is 00:01:e8:54:11:ef
+Interface index is 537149640
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 100 Mbit, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Queueing strategy: fifo
+Time since last interface status change: 6w5d5h
+
+
+Loopback 1 is up, line protocol is up
+Hardware is Loopback.
+Interface index is 1107722241
+Internet address is not set
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+  On processor 1:
+    Input 0 packets, 0 bytes, 0 multicast
+    Received 0 errors, 0 discarded 
+    Output 0 packets, 0 bytes, 0 multicast
+    Output 0 errors, 0 invalid protocol
+  On processor 2:
+    Input 0 packets, 0 bytes, 0 multicast
+    Received 0 errors, 0 discarded 
+    Output 0 packets, 0 bytes, 0 multicast
+    Output 0 errors, 0 invalid protocol
+  On processor 3:
+    Input 159 packets, 41976 bytes, 0 multicast
+    Received 0 errors, 0 discarded 
+    Output 159 packets, 41976 bytes, 0 multicast
+    Output 0 errors, 0 invalid protocol
+Time since last interface status change: 6w5d5h
+
+
+Vlan 1 is down, line protocol is down
+Address is 00:01:e8:74:58:b2, Current address is 00:01:e8:74:58:b2
+Interface index is 1107787777
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     464684 packets, 54973364 bytes
+Output Statistics:
+     3 packets, 204 bytes
+Time since last interface status change: 6w5d5h
+
+
+Vlan 3 is up, line protocol is up
+Address is 00:01:e8:74:58:b2, Current address is 00:01:e8:74:58:b2
+Interface index is 1107787779
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     782563 packets, 114233927 bytes
+Output Statistics:
+     385361 packets, 40687186 bytes
+Time since last interface status change: 6w5d5h
+
+
+Vlan 12 is up, line protocol is down
+Description: ---> R1000-S-RFTE6-1 ten 2/3
+Address is 00:01:e8:74:58:b2, Current address is 00:01:e8:74:58:b2
+Interface index is 1107787788
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 5w6d12h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+Output Statistics:
+     0 packets, 0 bytes
+Time since last interface status change: 3w6d7h
+
+
+Vlan 22 is up, line protocol is up
+Address is 00:01:e8:74:58:b2, Current address is 00:01:e8:74:58:b2
+Interface index is 1107787798
+Internet address is not set
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     397178 packets, 75083226 bytes
+Output Statistics:
+     385361 packets, 40687186 bytes
+Time since last interface status change: 6w5d4h
+
+
+Vlan 23 is up, line protocol is up
+Address is 00:01:e8:74:58:b2, Current address is 00:01:e8:74:58:b2
+Interface index is 1107787799
+Internet address is 10.0.23.2/24
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 10000 Mbit
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 6w5d5h
+Queueing strategy: fifo
+Input Statistics:
+     829424 packets, 88301146 bytes
+Output Statistics:
+     1661178 packets, 176673298 bytes
+Time since last interface status change: 6w4d7h
+
+
+Vlan 40 is up, line protocol is down
+Description: ---> Pixie
+Address is 00:01:e8:74:58:b2, Current address is 00:01:e8:74:58:b2
+Interface index is 1107787816
+Internet address is not set
+MTU 4000 bytes, IP MTU 3982 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 4w0d11h
+Queueing strategy: fifo
+Input Statistics:
+     853496 packets, 76324730 bytes
+Output Statistics:
+     1093197 packets, 104280298 bytes
+Time since last interface status change: 1d7h14m
+
+
+Vlan 50 is up, line protocol is down
+Address is 00:01:e8:74:58:b2, Current address is 00:01:e8:74:58:b2
+Interface index is 1107787826
+Internet address is not set
+MTU 4000 bytes, IP MTU 3982 bytes
+LineSpeed auto
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 3w6d7h
+Queueing strategy: fifo
+Input Statistics:
+     0 packets, 0 bytes
+Output Statistics:
+     0 packets, 0 bytes
+Time since last interface status change: 3w6d7h
+
+
+R1000-S-RFTEC-2#

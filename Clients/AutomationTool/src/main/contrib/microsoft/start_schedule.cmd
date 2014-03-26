@@ -1,0 +1,1 @@
+start automationtool --start

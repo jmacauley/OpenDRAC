@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="connection"
+    targetNamespace="http://fenius.glif.is/ws/connection/v1/service"
+    xmlns:i="http://fenius.glif.is/ws/connection/v1/interface"
+    xmlns:t="http://fenius.glif.is/ws/connection/v1/types"
+    xmlns:f="http://fenius.glif.is/ws/connection/v1/faults"
+    xmlns:svc="http://fenius.glif.is/ws/connection/v1/service"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+
+<!-- Schema definition -->
+  <wsdl:types>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+      <xs:import namespace="http://fenius.glif.is/ws/connection/v1/types"     schemaLocation="connection/types.xsd" />
+      <xs:import namespace="http://fenius.glif.is/ws/connection/v1/faults"    schemaLocation="connection/faults.xsd" />
+      <xs:import namespace="http://fenius.glif.is/ws/connection/v1/interface" schemaLocation="connection/interface.xsd" />
+    </xs:schema>
+  </wsdl:types>
+
+  <wsdl:message name="reserve">
+    <wsdl:part name="parameters" element="i:reserve">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reserveResponse">
+    <wsdl:part name="parameters" element="i:reserveResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="release">
+    <wsdl:part name="parameters" element="i:release">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="releaseResponse">
+    <wsdl:part name="parameters" element="i:releaseResponse">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="query">
+    <wsdl:part name="parameters" element="i:query">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryResponse">
+    <wsdl:part name="parameters" element="i:queryResponse">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="list">
+    <wsdl:part name="parameters" element="i:list">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listResponse">
+    <wsdl:part name="parameters" element="i:listResponse">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="isReservable">
+    <wsdl:part name="parameters" element="i:isReservable">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isReservableResponse">
+    <wsdl:part name="parameters" element="i:isReservableResponse">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="ExternalFault">
+    <wsdl:part name="ExternalFault" element="i:ExternalFault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="InternalFault">
+    <wsdl:part name="InternalFault" element="i:InternalFault">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:portType name="connectionService">
+    <wsdl:operation name="reserve">
+      <wsdl:input name="reserve" message="svc:reserve">
+    </wsdl:input>
+      <wsdl:output name="reserveResponse" message="svc:reserveResponse">
+    </wsdl:output>
+      <wsdl:fault name="ExternalFault" message="svc:ExternalFault">
+    </wsdl:fault>
+      <wsdl:fault name="InternalFault" message="svc:InternalFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="release">
+      <wsdl:input name="release" message="svc:release">
+    </wsdl:input>
+      <wsdl:output name="releaseResponse" message="svc:releaseResponse">
+    </wsdl:output>
+      <wsdl:fault name="ExternalFault" message="svc:ExternalFault">
+    </wsdl:fault>
+      <wsdl:fault name="InternalFault" message="svc:InternalFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="query">
+      <wsdl:input name="query" message="svc:query">
+    </wsdl:input>
+      <wsdl:output name="queryResponse" message="svc:queryResponse">
+    </wsdl:output>
+      <wsdl:fault name="ExternalFault" message="svc:ExternalFault">
+    </wsdl:fault>
+      <wsdl:fault name="InternalFault" message="svc:InternalFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="list">
+      <wsdl:input name="list" message="svc:list">
+    </wsdl:input>
+      <wsdl:output name="listResponse" message="svc:listResponse">
+    </wsdl:output>
+      <wsdl:fault name="ExternalFault" message="svc:ExternalFault">
+    </wsdl:fault>
+      <wsdl:fault name="InternalFault" message="svc:InternalFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isReservable">
+      <wsdl:input name="isReservable" message="svc:isReservable">
+    </wsdl:input>
+      <wsdl:output name="isReservableResponse" message="svc:isReservableResponse">
+    </wsdl:output>
+      <wsdl:fault name="ExternalFault" message="svc:ExternalFault">
+    </wsdl:fault>
+      <wsdl:fault name="InternalFault" message="svc:InternalFault">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+
+
+
+  <wsdl:binding name="connectionServiceServiceSoapBinding" type="svc:connectionService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="reserve">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="reserve">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="reserveResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ExternalFault">
+        <soap:fault name="ExternalFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InternalFault">
+        <soap:fault name="InternalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="query">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="query">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="queryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ExternalFault">
+        <soap:fault name="ExternalFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InternalFault">
+        <soap:fault name="InternalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="release">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="release">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="releaseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ExternalFault">
+        <soap:fault name="ExternalFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InternalFault">
+        <soap:fault name="InternalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="list">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="list">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ExternalFault">
+        <soap:fault name="ExternalFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InternalFault">
+        <soap:fault name="InternalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+
+  <wsdl:service name="connection">
+    <wsdl:port name="ConnectionServicePort" binding="svc:connectionServiceServiceSoapBinding">
+      <soap:address location="http://localhost:9090/ConnectionServicePort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,247 @@
+<serviceGroup>
+  <!-- <pre> The owner of the original code is Ciena Corporation. Portions 
+    created by the original owner are Copyright (C) 2004-2010 the original owner. 
+    All Rights Reserved. Portions created by other contributors are Copyright 
+    (C) the contributor. All Rights Reserved. Contributor(s): (Contributors insert 
+    name & email here) This file is part of DRAC (Dynamic Resource Allocation 
+    Controller). DRAC is free software: you can redistribute it and/or modify 
+    it under the terms of the GNU General Public License as published by the 
+    Free Software Foundation; either version 3 of the License, or (at your option) 
+    any later version. DRAC is distributed in the hope that it will be useful, 
+    but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY 
+    or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for 
+    more details. You should have received a copy of the GNU General Public License 
+    along with this program. If not, see <http://www.gnu.org/licenses/>. </pre> -->
+  <service name="SystemMonitoringService"
+    class="com.nortel.appcore.app.drac.server.ws.systemmonitoringservice.SystemMonitoringServiceLifecycle"
+    scope="application">
+    <description>
+      This service allows clients to monitor the status of the DRAC system.
+    </description>
+    <messageReceivers>
+      <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+        class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver" />
+    </messageReceivers>
+    <parameter name="ServiceClass" locked="false">com.nortel.appcore.app.drac.server.ws.systemmonitoringservice.SystemMonitoringService
+    </parameter>
+    <parameter name="useOriginalwsdl">true</parameter>
+    <parameter name="modifyUserWSDLPortAddress">false</parameter>
+    <operation name="authenticate" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringService/authenticate
+      </actionMapping>
+    </operation>
+    <operation name="queryServers" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringService/queryServers
+      </actionMapping>
+    </operation>
+    <operation name="queryLogs" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringService/queryLogs
+      </actionMapping>
+    </operation>
+    <operation name="disconnect" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringService/disconnect
+      </actionMapping>
+    </operation>
+  </service>
+
+  <service name="ResourceAllocationAndSchedulingService_v3.0"
+    class="org.opendrac.drac.server.ws.resallocandschedulingservice.ResourceAllocationServiceLifecycle_v3_0"
+    scope="application">
+    <description>
+      This service allows clients to create/delete/modify reservations and to
+      schedule these reservations.
+    </description>
+    <messageReceivers>
+      <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+        class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver" />
+    </messageReceivers>
+    <parameter name="ServiceClass" locked="false">org.opendrac.drac.server.ws.resallocandschedulingservice.ResourceAllocationAndSchedulingService_v3_0
+    </parameter>
+    <parameter name="useOriginalwsdl">true</parameter>
+    <parameter name="modifyUserWSDLPortAddress">false</parameter>
+
+    <operation name="createReservationSchedule" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/createReservationSchedule
+      </actionMapping>
+    </operation>
+    <operation name="cancelReservationSchedule" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/cancelReservationSchedule
+      </actionMapping>
+    </operation>
+    <operation name="addReservationOccurrence" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/addReservationOccurrence
+      </actionMapping>
+    </operation>
+    <operation name="cancelReservationOccurrence" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/cancelReservationOccurrence
+      </actionMapping>
+    </operation>
+    <operation name="queryReservationOccurrence" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/queryReservationOccurrence
+      </actionMapping>
+    </operation>
+    <operation name="queryReservationOccurrences" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/queryReservationOccurrences
+      </actionMapping>
+    </operation>
+    <operation name="queryReservationSchedule" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/queryReservationSchedule
+      </actionMapping>
+    </operation>
+    <operation name="queryReservationSchedules" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/queryReservationSchedules
+      </actionMapping>
+    </operation>
+    <operation name="queryServicesByScheduleId" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/queryServicesByScheduleId
+      </actionMapping>
+    </operation>
+    <operation name="queryActiveServiceByScheduleId" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/queryActiveServiceByScheduleId
+      </actionMapping>
+    </operation>
+    <operation name="resumeServiceById" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/resumeServiceById
+      </actionMapping>
+    </operation>
+    <operation name="terminateServiceById" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/terminateServiceById
+      </actionMapping>
+    </operation>
+    <operation name="queryPathAvailability" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/queryPathAvailability
+      </actionMapping>
+    </operation>
+    <operation name="queryReservationOccurrenceAlarms" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/queryReservationOccurrenceAlarms
+      </actionMapping>
+    </operation>
+    <operation name="disconnect" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/disconnect
+      </actionMapping>
+    </operation>
+    <operation name="confirmReservationSchedule" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/confirmReservationSchedule
+      </actionMapping>
+    </operation>
+    <operation name="activateReservationOccurrence" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/activateReservationOccurrence
+      </actionMapping>
+    </operation>
+    <operation name="queryReservationScheduleByNamePathUser"
+      mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/queryReservationScheduleByNamePathUser
+      </actionMapping>
+    </operation>
+    <operation name="extendCurrentServiceForSchedule" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/ResourceAllocationAndSchedulingService_v3.0/extendCurrentServiceForSchedule
+      </actionMapping>
+    </operation>
+
+    <module ref="rampart" />
+
+    <wsp:Policy wsu:Id="UsernameToken"
+      xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+      xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+      <wsp:ExactlyOne>
+        <wsp:All>
+          <sp:SupportingTokens
+            xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+            <wsp:Policy>
+              <sp:UsernameToken
+                sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" />
+            </wsp:Policy>
+          </sp:SupportingTokens>
+          <ramp:RampartConfig xmlns:ramp="http://ws.apache.org/rampart/policy">
+            <ramp:passwordCallbackClass>org.opendrac.drac.server.ws.handlers.PWCBHandler</ramp:passwordCallbackClass>
+          </ramp:RampartConfig>
+        </wsp:All>
+      </wsp:ExactlyOne>
+    </wsp:Policy>
+  </service>
+
+  <service name="SystemMonitoringService_v3.0"
+    class="org.opendrac.drac.server.ws.systemmonitoringservice.SystemMonitoringServiceLifecycle_v3_0"
+    scope="application">
+    <description>
+      This service allows clients to monitor the status of the DRAC system.
+    </description>
+    <messageReceivers>
+      <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+        class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver" />
+    </messageReceivers>
+    <parameter name="ServiceClass" locked="false">org.opendrac.drac.server.ws.systemmonitoringservice.SystemMonitoringService_v3_0
+    </parameter>
+    <parameter name="useOriginalwsdl">true</parameter>
+    <parameter name="modifyUserWSDLPortAddress">false</parameter>
+    <operation name="queryServers" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/SystemMonitoringService_v3.0/queryServers
+      </actionMapping>
+    </operation>
+    <operation name="queryLogs" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/SystemMonitoringService_v3.0/queryLogs
+      </actionMapping>
+    </operation>
+    <module ref="rampart" />
+    <wsp:Policy wsu:Id="UsernameToken"
+      xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+      xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+      <wsp:ExactlyOne>
+        <wsp:All>
+          <sp:SupportingTokens
+            xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+            <wsp:Policy>
+              <sp:UsernameToken
+                sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" />
+            </wsp:Policy>
+          </sp:SupportingTokens>
+          <ramp:RampartConfig xmlns:ramp="http://ws.apache.org/rampart/policy">
+            <ramp:passwordCallbackClass>org.opendrac.drac.server.ws.handlers.PWCBHandler</ramp:passwordCallbackClass>
+          </ramp:RampartConfig>
+        </wsp:All>
+      </wsp:ExactlyOne>
+    </wsp:Policy>
+  </service>
+  <service name="NetworkMonitoringService_v3.0"
+    class="org.opendrac.drac.server.ws.networkmonitoringservice.NetworkMonitoringServiceLifecycle_v3_0"
+    scope="application">
+    <description>
+      This service allows clients to monitor the status of network endpoints.
+    </description>
+    <messageReceivers>
+      <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+        class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver" />
+    </messageReceivers>
+    <parameter name="ServiceClass" locked="false">org.opendrac.drac.server.ws.networkmonitoringservice.NetworkMonitoringService_v3_0
+    </parameter>
+    <parameter name="useOriginalwsdl">true</parameter>
+    <parameter name="modifyUserWSDLPortAddress">false</parameter>
+    <operation name="queryEndpoint" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/NetworkMonitoringService_v3.0/queryEndpoint
+      </actionMapping>
+    </operation>
+    <operation name="queryEndpoints" mep="http://www.w3.org/2004/08/wsdl/in-out">
+      <actionMapping>http://www.opendrac.org/ws/NetworkMonitoringService_v3.0/queryEndpoints
+      </actionMapping>
+    </operation>
+    <module ref="rampart" />
+    <wsp:Policy wsu:Id="UsernameToken"
+      xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+      xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+      <wsp:ExactlyOne>
+        <wsp:All>
+          <sp:SupportingTokens
+            xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+            <wsp:Policy>
+              <sp:UsernameToken
+                sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" />
+            </wsp:Policy>
+          </sp:SupportingTokens>
+          <ramp:RampartConfig xmlns:ramp="http://ws.apache.org/rampart/policy">
+            <ramp:passwordCallbackClass>org.opendrac.drac.server.ws.handlers.PWCBHandler</ramp:passwordCallbackClass>
+          </ramp:RampartConfig>
+        </wsp:All>
+      </wsp:ExactlyOne>
+    </wsp:Policy>
+  </service>
+</serviceGroup>

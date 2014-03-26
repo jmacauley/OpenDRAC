@@ -1,0 +1,15 @@
+ManagementEthernet 0/0 is up, line protocol is up
+Hardware is Force10Eth, address is 00:01:e8:02:d4:1e
+Internet address is 195.169.124.4/26
+MTU 1554 bytes, IP MTU 1500 bytes
+LineSpeed 100 Mbit, Mode full duplex
+ARP type: ARPA, ARP Timeout 04:00:00
+Last clearing of "show interface" counters 00:00:00
+Queueing strategy: fifo
+    Input 106563308 packets, 3535591155 bytes, 62708331 multicast
+    Received 7 errors, 0 discarded 
+    Output 43809943 packets, 3947605499 bytes, 19299 multicast
+    Output 0 errors, 0 invalid protocol
+Time since last interface status change: 25w1d1h
+
+Force10#

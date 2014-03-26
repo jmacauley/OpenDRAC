@@ -1,0 +1,500 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+ <!-- <pre> The owner of the original code is Ciena Corporation. Portions 
+  created by the original owner are Copyright (C) 2004-2010 the original owner. 
+  All Rights Reserved. Portions created by other contributors are Copyright 
+  (C) the contributor. All Rights Reserved. Contributor(s): (Contributors insert 
+  name & email here) This file is part of DRAC (Dynamic Resource Allocation 
+  Controller). DRAC is free software: you can redistribute it and/or modify 
+  it under the terms of the GNU General Public License as published by the 
+  Free Software Foundation; either version 3 of the License, or (at your option) 
+  any later version. DRAC is distributed in the hope that it will be useful, 
+  but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY 
+  or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for 
+  more details. You should have received a copy of the GNU General Public License 
+  along with this program. If not, see <http://www.gnu.org/licenses />. </pre> -->
+
+ <modelVersion>4.0.0</modelVersion>
+
+ <artifactId>Build</artifactId>
+ <version>4.6.1-SNAPSHOT</version>
+
+ <name>Build/ - Final packaging and delivery</name>
+ <description>Build Packaging and delivery</description>
+ <packaging>jar</packaging>
+
+ <parent>
+  <groupId>org.opendrac</groupId>
+  <artifactId>opendrac</artifactId>
+  <version>4.6.1-SNAPSHOT</version>
+  <relativePath>../pom.xml</relativePath>
+ </parent>
+
+ <properties>
+  <build.env>test</build.env>
+ </properties>
+
+ <dependencies>
+
+  <!-- Server -->
+  <dependency>
+   <groupId>org.opendrac</groupId>
+   <artifactId>Lpcp</artifactId>
+  </dependency>
+
+  <dependency>
+   <groupId>org.opendrac</groupId>
+   <artifactId>NrbImpl</artifactId>
+  </dependency>
+
+  <!-- Mediation -->
+  <dependency>
+   <groupId>org.opendrac</groupId>
+   <artifactId>NeProxy</artifactId>
+  </dependency>
+
+  <!-- Web -->
+  <dependency>
+   <groupId>org.opendrac</groupId>
+   <artifactId>Jaas</artifactId>
+  </dependency>
+
+  <!-- <dependency> <groupId>org.opendrac</groupId> <artifactId>Fenius</artifactId> 
+   <type>war</type> </dependency> -->
+
+  <dependency>
+   <groupId>org.opendrac</groupId>
+   <artifactId>WebServer</artifactId>
+   <type>war</type>
+  </dependency>
+
+  <dependency>
+   <groupId>org.opendrac</groupId>
+   <artifactId>WsEngine</artifactId>
+   <type>war</type>
+  </dependency>
+
+  <!-- NsiServer -->
+  <dependency>
+   <groupId>org.opendrac</groupId>
+   <artifactId>NsiServer</artifactId>
+   <version>${project.version}</version>
+   <type>war</type>
+  </dependency>
+
+  <!-- Rest -->
+  <!-- <dependency> <groupId>org.opendrac</groupId> <artifactId>Rest</artifactId> 
+   <version>${project.version}</version> <type>war</type> </dependency> -->
+
+  <!-- Clients -->
+  <dependency>
+   <groupId>org.opendrac</groupId>
+   <artifactId>AdminConsole</artifactId>
+  </dependency>
+
+  <!-- Catalina / Tomcat -->
+  <dependency>
+   <groupId>org.apache.tomcat</groupId>
+   <artifactId>tomcat-catalina</artifactId>
+  </dependency>
+
+  <dependency>
+   <groupId>org.apache.tomcat</groupId>
+   <artifactId>tomcat-catalina-ha</artifactId>
+  </dependency>
+
+  <dependency>
+   <groupId>org.apache.tomcat.embed</groupId>
+   <artifactId>tomcat-embed-core</artifactId>
+  </dependency>
+
+  <dependency>
+   <groupId>org.apache.tomcat</groupId>
+   <artifactId>tomcat-jasper</artifactId>
+  </dependency>
+
+  <dependency>
+   <groupId>cglib</groupId>
+   <artifactId>cglib</artifactId>
+  </dependency>
+
+  <!-- lib/endorsed -->
+  <dependency>
+   <groupId>javax.xml</groupId>
+   <artifactId>jsr173</artifactId>
+  </dependency>
+
+  <dependency>
+   <groupId>org.glassfish.metro</groupId>
+   <artifactId>webservices-api</artifactId>
+  </dependency>
+
+
+
+ </dependencies>
+
+ <build>
+  <defaultGoal>install</defaultGoal>
+
+  <plugins>
+   <!-- Generating scripts -->
+   <plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>appassembler-maven-plugin</artifactId>
+    <version>1.2.2</version>
+    <executions>
+     <execution>
+      <phase>generate-resources</phase>
+      <goals>
+       <goal>assemble</goal>
+      </goals>
+     </execution>
+    </executions>
+    <configuration>
+     <assembleDirectory>${project.build.directory}/staging/opendrac</assembleDirectory>
+     <repositoryLayout>flat</repositoryLayout>
+     <repositoryName>lib</repositoryName>
+     <extraJvmArguments>
+      -Dcom.sun.management.jmxremote
+      -Djava.endorsed.dirs=$BASEDIR/lib/endorsed
+      -DprocName=OpenDRAC
+      -Xrunjdwp:transport=dt_socket,address=54321,server=y,suspend=n
+      -XX:+DisableAttachMechanism
+      -XX:+UseParNewGC
+      -XX:+CMSParallelRemarkEnabled
+      -XX:+UseConcMarkSweepGC
+      -XX:+CMSIncrementalMode
+      -XX:+CMSIncrementalPacing
+      -XX:CMSIncrementalDutyCycleMin=0
+      -XX:CMSIncrementalDutyCycle=10
+      -XX:ParallelGCThreads=2
+      -Xdebug
+      -server
+      -ms512M
+      -mx3072M
+      -XX:MaxPermSize=512M
+      -Dorg.opendrac.version=${project.version}
+     </extraJvmArguments>
+     <configurationDirectory>conf</configurationDirectory>
+     <platforms>
+      <platform>unix</platform>
+      <platform>windows</platform>
+     </platforms>
+     <binFileExtensions>
+      <unix>.sh</unix>
+     </binFileExtensions>
+     <programs>
+      <program>
+       <mainClass>org.opendrac.launcher.Launcher</mainClass>
+       <name>startup</name>
+      </program>
+     </programs>
+    </configuration>
+   </plugin>
+  </plugins>
+ </build>
+
+ <profiles>
+  <profile>
+   <id>dist</id>
+   <activation>
+    <activeByDefault>true</activeByDefault>
+   </activation>
+   <build>
+    <plugins>
+     <plugin>
+      <artifactId>maven-assembly-plugin</artifactId>
+      <executions>
+       <execution>
+        <id>assemble-libraries</id>
+        <phase>compile</phase>
+        <goals>
+         <goal>attached</goal>
+        </goals>
+        <configuration>
+         <finalName>libs</finalName>
+         <attach>false</attach>
+         <descriptors>
+          <descriptor>src/main/assembly/libDir.xml</descriptor>
+         </descriptors>
+        </configuration>
+       </execution>
+      </executions>
+     </plugin>
+     <plugin>
+      <artifactId>maven-antrun-plugin</artifactId>
+      <executions>
+       <execution>
+        <id>opendrac-prepare-package</id>
+        <phase>prepare-package</phase>
+        <configuration>
+         <target>
+          <property name="source" location="src/main/" />
+          <property name="staging.dir" location="target/staging/opendrac" />
+
+          <!-- Bin directory -->
+          <copy overwrite="true" todir="${staging.dir}/bin"
+           verbose="true" failonerror="true">
+           <fileset dir="${source}/resources/bin" />
+          </copy>
+
+          <copy overwrite="true" todir="${staging.dir}/conf"
+           verbose="true" failonerror="true">
+           <fileset dir="${source}/resources/conf" />
+          </copy>
+
+          <!-- <unwar src="target/libs-library_distribution/Rest.war" dest="${staging.dir}/webapps/opendrac-rest" 
+           /> -->
+
+          <!--WsEngine -->
+          <unwar src="target/libs-library_distribution/WsEngine.war"
+           dest="${staging.dir}/webapps/WsEngine" />
+
+          <!-- Fenius into feniusWS for URL compatibility with initial deployment. -->
+          <!-- <unwar src="target/libs-library_distribution/Fenius.war" dest="${staging.dir}/webapps/feniusWS" 
+           /> -->
+
+          <!-- NSIv1 into nsi-v1 -->
+          <unwar src="target/libs-library_distribution/NsiServer.war"
+           dest="${staging.dir}/webapps/nsi-v1" />
+
+          <delete>
+           <fileset dir="${staging.dir}/webapps/nsi-v1/WEB-INF/classes/env"
+            excludes="**/opendrac-*-${build.env}.xml, **/opendrac-*-default.xml" />
+          </delete>
+
+          <!-- Copy JAX-WS API jars to endorsed directory . -->
+          <move todir="${staging.dir}/lib/endorsed">
+           <fileset dir="${staging.dir}/lib" includes="jsr173*.jar" />
+           <fileset dir="${staging.dir}/lib" includes="webservices-api-*.jar" />
+          </move>
+
+          <!-- WebServer -->
+          <unwar src="target/libs-library_distribution/WebServer.war"
+           dest="${staging.dir}/webapps/WebServer" />
+
+          <copy
+           file="../Web/Wsdl/wsdlJar/target/wsdlJar-${project.version}-sdk_v3.tar.gz"
+           tofile="${staging.dir}/webapps/WebServer/downloads/OpenDracWebServicesClientSDK_v3.0.0.tar.gz"
+           verbose="true" failonerror="true" />
+
+          <copy todir="${staging.dir}/webapps/WebServer/downloads/"
+           verbose="true" failonerror="true">
+           <fileset dir="../Web/WebServer/src/main/resources/docs">
+            <include name="*.pdf" />
+           </fileset>
+          </copy>
+          <copy todir="${staging.dir}/webapps/WebServer/downloads/"
+           verbose="true" failonerror="true">
+           <fileset dir="../Clients/AdminConsole/src/main/resources/docs">
+            <include name="*.pdf" />
+           </fileset>
+          </copy>
+          <!-- create share init.d bin directory -->
+          <mkdir dir="${staging.dir}/share/scripts/init.d" />
+          <copy todir="${staging.dir}/share/scripts/init.d"
+           verbose="true" failonerror="true">
+           <fileset dir="${source}/resources/share/scripts/init.d" />
+          </copy>
+
+          <copy overwrite="true" todir="${staging.dir}/conf/env"
+           verbose="true" failonerror="true">
+           <fileset dir="../opendrac-shared/src/main/resources/env">
+            <include name="**/opendrac-*-default.xml" />
+            <include name="**/opendrac-*-${build.env}.xml" />
+           </fileset>
+          </copy>
+          <copy overwrite="true" todir="${staging.dir}/conf/spring"
+           verbose="true" failonerror="true">
+           <fileset dir="../opendrac-shared/src/main/resources/spring">
+            <include name="**/opendrac-common.xml" />
+           </fileset>
+          </copy>
+
+          <!-- Calling ant to stage the rest of our distribution -->
+          <ant antfile="build.xml" inheritAll="true" />
+
+          <!-- Remove spring and env configs from jars -->
+          <jar
+           destfile="${staging.dir}/lib/opendrac-shared-${project.version}.jar_">
+           <zipfileset
+            src="${staging.dir}/lib/opendrac-shared-${project.version}.jar"
+            excludes="env/*.xml,spring/*.xml" />
+          </jar>
+          <move
+           file="${staging.dir}/lib/opendrac-shared-${project.version}.jar_"
+           tofile="${staging.dir}/lib/opendrac-shared-${project.version}.jar" />
+          <copy
+           file="${staging.dir}/lib/opendrac-shared-${project.version}.jar"
+           tofile="${staging.dir}/webapps/WebServer/WEB-INF/lib/opendrac-shared-${project.version}.jar" />
+          <copy
+           file="${staging.dir}/lib/opendrac-shared-${project.version}.jar"
+           tofile="${staging.dir}/webapps/nsi-v1/WEB-INF/lib/opendrac-shared-${project.version}.jar" />
+
+          <move file="${staging.dir}/lib/AdminConsole-${project.version}.jar"
+           tofile="${staging.dir}/webapps/WebServer/downloads/AdminConsole-${project.version}.jar"
+           failonerror="true" />
+
+          <move todir="${staging.dir}/webapps/ROOT">
+           <fileset dir="${staging.dir}/webapps/WebServer" />
+          </move>
+
+          <move todir="${staging.dir}/webapps/axis2">
+           <fileset dir="${staging.dir}/webapps/WsEngine" />
+          </move>
+
+          <!-- Make scripts executable -->
+          <chmod dir="target/staging/opendrac/bin/" perm="+rwx"
+           includes="*.sh" />
+          <chmod dir="target/staging/opendrac/" perm="+rwx"
+           includes="*.sh" />
+          <chmod dir="target/staging/opendrac/share/opendrac-watchdog/bin"
+           perm="+rwx" includes="*.sh" failonerror="false" />
+
+
+          <!-- -->
+          <!-- START: Clean up -->
+          <!-- -->
+          <delete failonerror="false" verbose="true">
+           <fileset dir="${staging.dir}/lib">
+            <include name="colt-*.jar" />
+            <include name="concurrent-*.jar" />
+            <!-- <include name="h2-*.jar" /> -->
+            <include name="stax-api-*.jar" />
+            <include name="*.xml" />
+           </fileset>
+          </delete>
+          <delete dir="target/staging/client" />
+
+          <delete
+           file="target/staging/opendrac/share/opendrac-watchdog/lib/opendrac-shared-${project.version}.jar"
+           failonerror="true" verbose="true" />
+
+          <copy
+           file="${staging.dir}/lib/opendrac-shared-${project.version}.jar"
+           tofile="${staging.dir}/share/opendrac-watchdog/lib/opendrac-shared-${project.version}.jar"
+           failonerror="true" verbose="true" />
+
+          <!-- -->
+          <!-- STOP: Clean up -->
+          <!-- -->
+         </target>
+        </configuration>
+        <goals>
+         <goal>run</goal>
+        </goals>
+       </execution>
+      </executions>
+     </plugin>
+     <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <version>2.4</version>
+      <configuration>
+       <classesDirectory>target/staging</classesDirectory>
+      </configuration>
+     </plugin>
+    </plugins>
+   </build>
+  </profile>
+  <profile>
+   <id>jrebel</id>
+   <activation>
+    <activeByDefault>false</activeByDefault>
+   </activation>
+   <build>
+    <plugins>
+     <plugin>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>appassembler-maven-plugin</artifactId>
+      <version>1.2.2</version>
+      <executions>
+       <execution>
+        <phase>generate-resources</phase>
+        <goals>
+         <goal>assemble</goal>
+        </goals>
+       </execution>
+      </executions>
+      <configuration>
+       <assembleDirectory>${project.build.directory}/staging/opendrac</assembleDirectory>
+       <repositoryLayout>flat</repositoryLayout>
+       <repositoryName>lib</repositoryName>
+       <extraJvmArguments>
+        -Dcom.sun.management.jmxremote
+        -Djava.endorsed.dirs=$BASEDIR/lib/endorsed
+        -DprocName=OpenDRAC
+        -Xrunjdwp:transport=dt_socket,address=54321,server=y,suspend=n
+        -XX:+DisableAttachMechanism
+        -XX:+UseParNewGC
+        -XX:+CMSParallelRemarkEnabled
+        -XX:+UseConcMarkSweepGC
+        -XX:+CMSIncrementalMode
+        -XX:+CMSIncrementalPacing
+        -XX:CMSIncrementalDutyCycleMin=0
+        -XX:CMSIncrementalDutyCycle=10
+        -XX:ParallelGCThreads=2
+        -Xdebug
+        -server
+        -ms512M
+        -mx3072M
+        -XX:MaxPermSize=512M
+        -noverify
+        -Drebel.metro_plugin=true
+        -Drebel.log4j-plugin=false
+        -javaagent:${env.REBEL_HOME}/jrebel.jar
+        -Dorg.opendrac.version=${project.version}
+       </extraJvmArguments>
+       <configurationDirectory>conf</configurationDirectory>
+       <platforms>
+        <platform>unix</platform>
+        <platform>windows</platform>
+       </platforms>
+       <binFileExtensions>
+        <unix>.sh</unix>
+       </binFileExtensions>
+       <programs>
+        <program>
+         <mainClass>org.opendrac.launcher.Launcher</mainClass>
+         <name>startup</name>
+        </program>
+       </programs>
+      </configuration>
+     </plugin>
+    </plugins>
+   </build>
+  </profile>
+
+  <profile>
+   <id>prod</id>
+   <activation>
+    <activeByDefault>false</activeByDefault>
+   </activation>
+   <properties>
+    <build.env>prod</build.env>
+   </properties>
+  </profile>
+
+  <profile>
+   <id>test</id>
+   <activation>
+    <activeByDefault>false</activeByDefault>
+   </activation>
+   <properties>
+    <build.env>test</build.env>
+   </properties>
+  </profile>
+
+  <profile>
+   <id>dev</id>
+   <activation>
+    <activeByDefault>false</activeByDefault>
+   </activation>
+   <properties>
+    <build.env>dev</build.env>
+   </properties>
+  </profile>
+
+ </profiles>
+</project>

@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+
+    <pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>
+
+-->
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+  <formset>
+    <form name="/schedule/handleCreateSchedule">
+      <field property="rate" depends="required,integer,intGreaterThanZero">
+        <arg position="0" key="drac.schedule.rate"/>
+      </field>
+      <field property="srcTna" depends="required">
+        <arg0 key="drac.schedule.sourcePort"/>
+      </field>
+      <field property="destTna" depends="required,notEqual">
+        <arg0 key="drac.schedule.destPort"/>
+        <arg1 key="drac.schedule.sourcePort"/>
+        <var>
+            <var-name>secondProperty</var-name>
+            <var-value>srcTna</var-value>
+        </var>
+      </field>
+      <field property="startTime" depends="time">
+        <arg0 key="drac.schedule.starttime"/>
+      </field>
+      <field property="startdate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.startdate"/>
+      </field>
+      <field property="endTime" depends="time,afterStart,isFutureTime">
+        <arg0 key="drac.schedule.endtime"/>
+        <var>
+            <var-name>endTimeProperty</var-name>
+            <var-value>endTime</var-value>
+        </var>
+        <var>
+            <var-name>endDateProperty</var-name>
+            <var-value>enddate</var-value>
+        </var>
+        <var>
+            <var-name>startTimeProperty</var-name>
+            <var-value>startTime</var-value>
+        </var>
+        <var>
+            <var-name>startDateProperty</var-name>
+            <var-value>startdate</var-value>
+        </var>
+        <var>
+            <var-name>localeProperty</var-name>
+            <var-value>locale</var-value>
+        </var>
+      </field>
+      <field property="enddate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.enddate"/>
+      </field>
+    </form>
+    <form name="/schedule/handleCreateAdvancedSchedule">
+      <field property="schName" depends="required">
+        <arg0 key="drac.schedule.name"/>
+      </field>
+      <field property="billingGroup" depends="billingGroupCheck">
+        <var>
+            <var-name>srcGroupProp</var-name>
+            <var-value>srcGroup</var-value>
+        </var>
+        <var>
+            <var-name>destGroupProp</var-name>
+            <var-value>destGroup</var-value>
+        </var>
+
+      </field>
+      <field property="rate" depends="required,integer,intGreaterThanZero">
+        <arg position="0" key="drac.schedule.rate"/>
+      </field>
+      <field property="srcTna" depends="required">
+        <arg0 key="drac.schedule.sourcePort"/>
+      </field>
+      <field property="destTna" depends="required,notEqual">
+        <arg0 key="drac.schedule.destPort"/>
+        <arg1 key="drac.schedule.sourcePort"/>
+        <var>
+            <var-name>secondProperty</var-name>
+            <var-value>srcTna</var-value>
+        </var>
+      </field>
+      <field property="startTime" depends="time">
+        <arg0 key="drac.schedule.starttime"/>
+      </field>
+      <field property="startdate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.startdate"/>
+      </field>
+      <field property="endTime" depends="time,afterStart,isFutureTime">
+        <arg0 key="drac.schedule.endtime"/>
+        <var>
+            <var-name>endTimeProperty</var-name>
+            <var-value>endTime</var-value>
+        </var>
+        <var>
+            <var-name>endDateProperty</var-name>
+            <var-value>enddate</var-value>
+        </var>
+        <var>
+            <var-name>startTimeProperty</var-name>
+            <var-value>startTime</var-value>
+        </var>
+        <var>
+            <var-name>startDateProperty</var-name>
+            <var-value>startdate</var-value>
+        </var>
+        <var>
+            <var-name>localeProperty</var-name>
+            <var-value>locale</var-value>
+        </var>
+      </field>
+      <field property="enddate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.enddate"/>
+      </field>
+      <field property="monthlyDay" depends="dayInMonth">
+        <var>
+            <var-name>recurrenceProp</var-name>
+            <var-value>recurrence</var-value>
+        </var>
+        <var>
+            <var-name>frequencyProp</var-name>
+            <var-value>frequency</var-value>
+        </var>
+      </field>
+      <field property="yearlyDay" depends="dayInYear">
+        <var>
+            <var-name>recurrenceProp</var-name>
+            <var-value>recurrence</var-value>
+        </var>
+        <var>
+            <var-name>frequencyProp</var-name>
+            <var-value>frequency</var-value>
+        </var>
+        <var>
+            <var-name>monthProp</var-name>
+            <var-value>yearlyMonth</var-value>
+        </var>
+      </field>
+      <field property="recurrence" depends="weeklyPattern">
+        <var>
+            <var-name>frequencyProp</var-name>
+            <var-value>frequency</var-value>
+        </var>
+        <var>
+            <var-name>sunProp</var-name>
+            <var-value>weeklySun</var-value>
+        </var>
+        <var>
+            <var-name>monProp</var-name>
+            <var-value>weeklyMon</var-value>
+        </var>
+        <var>
+            <var-name>tueProp</var-name>
+            <var-value>weeklyTue</var-value>
+        </var>
+        <var>
+            <var-name>wedProp</var-name>
+            <var-value>weeklyWed</var-value>
+        </var>
+        <var>
+            <var-name>thuProp</var-name>
+            <var-value>weeklyThu</var-value>
+        </var>
+        <var>
+            <var-name>friProp</var-name>
+            <var-value>weeklyFri</var-value>
+        </var>
+        <var>
+            <var-name>satProp</var-name>
+            <var-value>weeklySat</var-value>
+        </var>
+      </field>
+      <field property="email" depends="email">
+        <arg0 key="drac.schedule.create.advanced.email"/>
+      </field>
+      <field property="metricValue" depends="positiveInt">
+        <arg0 key="drac.schedule.create.advanced.routing.cspf.metricValue"/>
+      </field>
+      <field property="srlg" depends="srlg">
+        <arg0 key="drac.schedule.create.advanced.srlg"/>
+      </field>
+    </form>
+    <form name="/service/performAddService">
+      <field property="startTime" depends="time">
+        <arg0 key="drac.schedule.starttime"/>
+      </field>
+      <field property="startdate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.startdate"/>
+      </field>
+      <field property="endTime" depends="time,afterStart,isFutureTime">
+        <arg0 key="drac.schedule.endtime"/>
+        <var>
+            <var-name>endTimeProperty</var-name>
+            <var-value>endTime</var-value>
+        </var>
+        <var>
+            <var-name>endDateProperty</var-name>
+            <var-value>enddate</var-value>
+        </var>
+        <var>
+            <var-name>startTimeProperty</var-name>
+            <var-value>startTime</var-value>
+        </var>
+        <var>
+            <var-name>startDateProperty</var-name>
+            <var-value>startdate</var-value>
+        </var>
+        <var>
+            <var-name>localeProperty</var-name>
+            <var-value>locale</var-value>
+        </var>
+      </field>
+      <field property="enddate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.enddate"/>
+      </field>
+      <field property="srlg" depends="srlg">
+        <arg0 key="drac.service.add.srlg"/>
+      </field>
+    </form>
+    <form name="/management/userManagement/handleCreateUser">
+      <field property="userID" depends="required,nameNotAll">
+        <arg0 key="drac.security.userManagement.userID"/>
+      </field>
+    </form>
+    <form name="/management/userGroupManagement/handleCreateUserGroup">
+      <field property="name" depends="required,nameNotAll">
+        <arg0 key="drac.security.userGroupManagement.create.name"/>
+      </field>
+    </form>
+    <form name="/management/resourceGroupManagement/handleCreateResourceGroup">
+      <field property="name" depends="required,nameNotAll">
+        <arg0 key="drac.security.resourceGroupManagement.create.name"/>
+      </field>
+    </form>
+    <form name="/management/editGlobalPolicy">
+        <field property="internal" depends="atLeastOne">
+            <var>
+                <var-name>aselectBox</var-name>
+                <var-value>aselect</var-value>
+            </var>
+            <var>
+                <var-name>radiusBox</var-name>
+                <var-value>radius</var-value>
+            </var>
+            <arg0 key="drac.security.globalPolicy.authType"/>
+        </field>
+        <field property="dormancy" depends="integer">
+            <arg position="0" key="drac.security.globalPolicy.dormancyPeriod"/>
+        </field>
+        <field property="inactivityPeriod" depends="integer">
+            <arg position="0" key="drac.security.globalPolicy.inactivity"/>    
+        </field>
+        <field property="lockoutPeriod" depends="integer">
+            <arg position="0" key="drac.security.globalPolicy.lockoutPeriod"/>    
+        </field>
+        <field property="invalidLogins" depends="integer">
+            <arg position="0" key="drac.security.globalPolicy.invalidLogins"/>    
+        </field>
+        <field property="passwordAging" depends="integer">
+            <arg position="0" key="drac.security.globalPolicy.passwordAging.label"/>    
+        </field>
+
+    </form>
+    <form name="/management/userManagement/handleEditUser">
+        <field property="dormantPeriod" depends="integer">
+            <arg position="0" key="drac.security.userManagement.create.dormantPeriod"/>
+        </field>        
+        <field property="inactivityPeriod" depends="integer">
+            <arg position="0" key="drac.security.userManagement.create.inactivityPeriod"/>
+        </field>
+        <field property="maxInvalidLoginAttempts" depends="integer">
+            <arg position="0" key="drac.security.userManagement.create.maxInvalidLoginAttempts"/>
+        </field>        
+        <field property="lockoutPeriod" depends="integer">
+            <arg position="0" key="drac.security.userManagement.create.lockoutPeriod"/>
+        </field>        
+        <field property="passwordAging" depends="integer">
+            <arg position="0" key="drac.security.userManagement.create.passwordAging"/>
+        </field>        
+         <field property="passwordExpirationNotification" depends="integer">
+            <arg position="0" key="drac.security.userManagement.create.passwordExpirationNotification"/>
+        </field>        
+        <field property="passwordHistorySize" depends="integer">
+            <arg position="0" key="drac.security.userManagement.create.passwordHistorySize"/>
+        </field>        
+    </form>
+    <form name="/editServerSettings">
+    	<field property="confirmationTimeout" depends="required,integer,intGreaterThanZero"> 	
+    		<arg position="0"  key="drac.general.serverSettings.confirmationTimeout"/>
+    	</field>
+     	<field property="scheduleOffset" depends="required,integer,intGreaterThanZero"> 	
+    		<arg position="0"  key="drac.general.serverSettings.scheduleOffset"/>
+    	</field>
+    </form>
+    <form name="/serverSettings">
+    	<field property="confirmationTimeout" depends="required,integer,intGreaterThanZero"> 	
+    		<arg position="0"  key="drac.general.serverSettings.confirmationTimeout"/>
+    	</field>
+     	<field property="scheduleOffset" depends="required,integer,intGreaterThanZero"> 	
+    		<arg position="0"  key="drac.general.serverSettings.scheduleOffset"/>
+    	</field>
+    </form>    
+    <form name="/queryAuditLogs">
+      <field property="startTime" depends="time">
+        <arg0 key="drac.schedule.starttime"/>
+      </field>
+      <field property="startdate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.startdate"/>
+      </field>
+      <field property="endTime" depends="time,afterStart,isFutureTime">
+        <arg0 key="drac.schedule.endtime"/>
+        <var>
+            <var-name>endTimeProperty</var-name>
+            <var-value>endTime</var-value>
+        </var>
+        <var>
+            <var-name>endDateProperty</var-name>
+            <var-value>enddate</var-value>
+        </var>
+        <var>
+            <var-name>startTimeProperty</var-name>
+            <var-value>startTime</var-value>
+        </var>
+        <var>
+            <var-name>startDateProperty</var-name>
+            <var-value>startdate</var-value>
+        </var>
+        <var>
+            <var-name>localeProperty</var-name>
+            <var-value>locale</var-value>
+        </var>
+      </field>
+      <field property="enddate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.enddate"/>
+      </field> 
+    </form>    
+    <form name="/viewLogs">
+      <field property="startTime" depends="time">
+        <arg0 key="drac.schedule.starttime"/>
+      </field>
+      <field property="startdate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.startdate"/>
+      </field>
+      <field property="endTime" depends="time,afterStart,isFutureTime">
+        <arg0 key="drac.schedule.endtime"/>
+        <var>
+            <var-name>endTimeProperty</var-name>
+            <var-value>endTime</var-value>
+        </var>
+        <var>
+            <var-name>endDateProperty</var-name>
+            <var-value>enddate</var-value>
+        </var>
+        <var>
+            <var-name>startTimeProperty</var-name>
+            <var-value>startTime</var-value>
+        </var>
+        <var>
+            <var-name>startDateProperty</var-name>
+            <var-value>startdate</var-value>
+        </var>
+        <var>
+            <var-name>localeProperty</var-name>
+            <var-value>locale</var-value>
+        </var>
+      </field>
+      <field property="enddate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.enddate"/>
+      </field> 
+    </form>       
+    
+    <form name="/reportingOverview">
+      <field property="startTime" depends="time">
+        <arg0 key="drac.schedule.starttime"/>
+      </field>
+      <field property="startdate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.startdate"/>
+      </field>
+      <field property="endTime" depends="time,afterStart,isFutureTime">
+        <arg0 key="drac.schedule.endtime"/>
+        <var>
+            <var-name>endTimeProperty</var-name>
+            <var-value>endTime</var-value>
+        </var>
+        <var>
+            <var-name>endDateProperty</var-name>
+            <var-value>enddate</var-value>
+        </var>
+        <var>
+            <var-name>startTimeProperty</var-name>
+            <var-value>startTime</var-value>
+        </var>
+        <var>
+            <var-name>startDateProperty</var-name>
+            <var-value>startdate</var-value>
+        </var>
+        <var>
+            <var-name>localeProperty</var-name>
+            <var-value>locale</var-value>
+        </var>
+      </field>
+      <field property="enddate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.enddate"/>
+      </field> 
+    </form>       
+    <form name="/reports">
+      <field property="startTime" depends="time">
+        <arg0 key="drac.schedule.starttime"/>
+      </field>
+      <field property="startdate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.startdate"/>
+      </field>
+      <field property="endTime" depends="time,afterStart">
+        <arg0 key="drac.schedule.endtime"/>
+        <var>
+            <var-name>endTimeProperty</var-name>
+            <var-value>endTime</var-value>
+        </var>
+        <var>
+            <var-name>endDateProperty</var-name>
+            <var-value>enddate</var-value>
+        </var>
+        <var>
+            <var-name>startTimeProperty</var-name>
+            <var-value>startTime</var-value>
+        </var>
+        <var>
+            <var-name>startDateProperty</var-name>
+            <var-value>startdate</var-value>
+        </var>
+        <var>
+            <var-name>localeProperty</var-name>
+            <var-value>locale</var-value>
+        </var>
+      </field>
+      <field property="enddate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.enddate"/>
+      </field> 
+    </form>      
+       
+    <form name="/downloadReport">
+      <field property="startTime" depends="time">
+        <arg0 key="drac.schedule.starttime"/>
+      </field>
+      <field property="startdate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.startdate"/>
+      </field>
+      <field property="endTime" depends="time,afterStart">
+        <arg0 key="drac.schedule.endtime"/>
+        <var>
+            <var-name>endTimeProperty</var-name>
+            <var-value>endTime</var-value>
+        </var>
+        <var>
+            <var-name>endDateProperty</var-name>
+            <var-value>enddate</var-value>
+        </var>
+        <var>
+            <var-name>startTimeProperty</var-name>
+            <var-value>startTime</var-value>
+        </var>
+        <var>
+            <var-name>startDateProperty</var-name>
+            <var-value>startdate</var-value>
+        </var>
+        <var>
+            <var-name>localeProperty</var-name>
+            <var-value>locale</var-value>
+        </var>
+      </field>
+      <field property="enddate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.enddate"/>
+      </field> 
+    </form>        
+  </formset>
+    
+  <formset>
+    <form name="/schedule/advancedSearchResults">
+      <field property="destTna" depends="notEqual">
+        <arg0 key="drac.schedule.destPort"/>
+        <arg1 key="drac.schedule.sourcePort"/>
+        <var>
+            <var-name>secondProperty</var-name>
+            <var-value>srcTna</var-value>
+        </var>
+      </field>
+      <field property="rate" depends="required,integer,intGreaterThanZero">
+        <arg position="0" key="drac.schedule.rate"/>
+      </field>      
+      <field property="duration" depends="required,integer,intGreaterThanZero">
+        <arg position="0" key="drac.schedule.advancedSearch.duration"/>
+      </field>      
+     </form>   
+   </formset>
+  <formset>
+    <form name="/schedule/listSchedulesResult">
+      <field property="startdate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.startdate"/>
+      </field>
+      <field property="enddate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.enddate"/>
+      </field>
+     </form>   
+    <form name="/service/listServicesResult">
+      <field property="startdate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.startdate"/>
+      </field>
+      <field property="enddate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.enddate"/>
+      </field>
+     </form>   
+     <form name="/messages/compose">
+     	<field property="receiver" depends="required,email">
+     		<arg position="0" key="drac.messages.compose.receiver"/>
+     	</field>
+     	<field property="subject" depends="required">
+     		<arg0 key="drac.messages.compose.subject"/>
+     	</field>
+     	<field property="text" depends="required">
+     		<arg position="0" key="drac.messages.compose.text"/>
+     	</field>
+     </form>
+     <form name="/messages/sendMessage">
+     	<field property="receiver" depends="required,email">
+     		<arg position="0" key="drac.messages.compose.receiver"/>
+     	</field>
+     	<field property="subject" depends="required">
+     		<arg0 key="drac.messages.compose.subject"/>
+     	</field>
+     	<field property="text" depends="required">
+     		<arg position="0" key="drac.messages.compose.text"/>
+     	</field>
+     </form>
+       <form name="/service/listAlarmsAction">
+      <field property="startTime" depends="time">
+        <arg0 key="drac.schedule.starttime"/>
+      </field>
+      <field property="startdate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.startdate"/>
+      </field>
+      <field property="endTime" depends="time,afterStart">
+        <arg0 key="drac.schedule.endtime"/>
+        <var>
+            <var-name>endTimeProperty</var-name>
+            <var-value>endTime</var-value>
+        </var>
+        <var>
+            <var-name>endDateProperty</var-name>
+            <var-value>enddate</var-value>
+        </var>
+        <var>
+            <var-name>startTimeProperty</var-name>
+            <var-value>startTime</var-value>
+        </var>
+        <var>
+            <var-name>startDateProperty</var-name>
+            <var-value>startdate</var-value>
+        </var>
+        <var>
+            <var-name>localeProperty</var-name>
+            <var-value>locale</var-value>
+        </var>
+      </field>
+      <field property="enddate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.enddate"/>
+      </field> 
+    </form>  
+    <form name="/service/listAlarms">
+      <field property="startTime" depends="time">
+        <arg0 key="drac.schedule.starttime"/>
+      </field>
+      <field property="startdate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.startdate"/>
+      </field>
+      <field property="endTime" depends="time,afterStart">
+        <arg0 key="drac.schedule.endtime"/>
+        <var>
+            <var-name>endTimeProperty</var-name>
+            <var-value>endTime</var-value>
+        </var>
+        <var>
+            <var-name>endDateProperty</var-name>
+            <var-value>enddate</var-value>
+        </var>
+        <var>
+            <var-name>startTimeProperty</var-name>
+            <var-value>startTime</var-value>
+        </var>
+        <var>
+            <var-name>startDateProperty</var-name>
+            <var-value>startdate</var-value>
+        </var>
+        <var>
+            <var-name>localeProperty</var-name>
+            <var-value>locale</var-value>
+        </var>
+      </field>
+      <field property="enddate" depends="date">
+        <var>
+            <var-name>datePattern</var-name>
+            <var-value>EEEE, MMMM dd, yyyy</var-value>
+        </var>
+        <arg0 key="drac.schedule.enddate"/>
+      </field> 
+    </form>     
+     
+   </formset>
+</form-validation>

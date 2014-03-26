@@ -1,0 +1,125 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <!-- <pre> The owner of the original code is Ciena Corporation. Portions 
+    created by the original owner are Copyright (C) 2004-2010 the original owner. 
+    All Rights Reserved. Portions created by other contributors are Copyright 
+    (C) the contributor. All Rights Reserved. Contributor(s): (Contributors insert 
+    name & email here) This file is part of DRAC (Dynamic Resource Allocation 
+    Controller). DRAC is free software: you can redistribute it and/or modify 
+    it under the terms of the GNU General Public License as published by the 
+    Free Software Foundation; either version 3 of the License, or (at your option) 
+    any later version. DRAC is distributed in the hope that it will be useful, 
+    but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY 
+    or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for 
+    more details. You should have received a copy of the GNU General Public License 
+    along with this program. If not, see <http://www.gnu.org/licenses />. </pre> -->
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.opendrac</groupId>
+  <artifactId>Simulators</artifactId>
+  <version>4.6.1-SNAPSHOT</version>
+  <name>Mediation/Simulators - Simulate TL1, SSH Cli Ne's</name>
+  <description>Tl1Simulator: Test NE simulator, simulates one or more SSH Cli/TL1 NEs, uses data files to respond to commands, simple but does the job for us.</description>
+  <packaging>jar</packaging>
+
+  <parent>
+    <groupId>org.opendrac</groupId>
+    <artifactId>Mediation</artifactId>
+    <version>4.6.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.opendrac</groupId>
+      <artifactId>Common</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sshd</groupId>
+      <artifactId>sshd-core</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <defaultGoal>install</defaultGoal>
+    <plugins>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>chmod</id>
+            <phase>process-resources</phase>
+            <configuration>
+              <target>
+                <!-- Make scripts executable -->
+                <chmod dir="target/appassembler/bin" perm="+rwx"
+                  includes="*.sh" />
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+          <execution>
+            <phase>package</phase>
+            <id>post-package</id>
+            <configuration>
+              <target>
+                <copy overwrite="true" todir="target/appassembler/lib"
+                  verbose="true" failonerror="true">
+                  <fileset dir="target" includes="*.jar" />
+                </copy>
+                <move file="target/appassembler" tofile="target/simulators"/>
+                <zip destfile="target/simulators-distribution-${project.version}.zip" 
+                  basedir="target"  includes="simulators/**"/>
+                <delete dir="target/appassembler"/>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>appassembler-maven-plugin</artifactId>
+        <version>1.2.2</version>
+        <executions>
+          <execution>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>assemble</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <repositoryLayout>flat</repositoryLayout>
+          <repositoryName>lib</repositoryName>
+          <extraJvmArguments>
+            -DprocName=OpenDRACSimulators
+            -server
+            -Dorg.opendrac.version=${project.version}
+          </extraJvmArguments>
+          <configurationDirectory>config</configurationDirectory>
+          <platforms>
+            <platform>unix</platform>
+            <platform>windows</platform>
+          </platforms>
+          <binFileExtensions>
+            <unix>.sh</unix>
+          </binFileExtensions>
+          <programs>
+            <program>
+              <mainClass>com.nortel.appcore.app.drac.tl1simulator.Tl1Simulator</mainClass>
+              <name>tl1simulator</name>
+            </program>
+            <program>
+              <mainClass>com.nortel.appcore.app.drac.sshclisimulator.SshCliSimulator</mainClass>
+              <name>sshCliSimulator</name>
+            </program>
+          </programs>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

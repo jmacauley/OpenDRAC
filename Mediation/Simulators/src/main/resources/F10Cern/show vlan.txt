@@ -1,0 +1,15 @@
+Codes: * - Default VLAN, G - GVRP VLANs, P - Primary, C - Community, I - Isolated
+Q: U - Untagged, T - Tagged
+   x - Dot1x untagged, X - Dot1x tagged
+   G - GVRP tagged, M - Vlan-stack
+
+    NUM    Status    Description                     Q Ports
+*   1      Active                                    U Te 0/0
+                                                     U Te 1/0-1
+    3      Active                                    U Te 0/3
+    12     Inactive  ---> R1000-S-RFTE6-1 ten 2/3    
+    22     Active                                    U Te 0/2
+    23     Active                                    T Te 5/1
+    40     Inactive  ---> Pixie                      U Te 5/2
+    50     Inactive                                  
+R1000-S-RFTEC-2#

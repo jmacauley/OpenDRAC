@@ -1,0 +1,420 @@
+/**
+ * <pre>
+ * The owner of the original code is Ciena Corporation.
+ *
+ * Portions created by the original owner are Copyright (C) 2004-2010
+ * the original owner. All Rights Reserved.
+ *
+ * Portions created by other contributors are Copyright (C) the contributor.
+ * All Rights Reserved.
+ *
+ * Contributor(s):
+ *   (Contributors insert name & email here)
+ *
+ * This file is part of DRAC (Dynamic Resource Allocation Controller).
+ *
+ * DRAC is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * DRAC is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+ * Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * </pre>
+ */
+
+/* This is the border line & background colour round the entire page */
+body {
+  PADDING-RIGHT: 0px;
+  PADDING-LEFT: 0px;
+  PADDING-BOTTOM: 0px;
+  MARGIN: 0px;
+  COLOR: #565555;
+  PADDING-TOP: 0px;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+  BACKGROUND-COLOR: #FFFFFF;
+  /* scrollbar-face-color: #DEE3E7;
+  scrollbar-highlight-color: #FFFFFF;
+  scrollbar-shadow-color: #DEE3E7;
+  scrollbar-3dlight-color: #D1D7DC;
+  scrollbar-arrow-color: #006699;
+  scrollbar-track-color: #EFEFEF;
+  scrollbar-darkshadow-color: #98AAB1; */
+}
+
+/* We do not want any borders around images. */
+img { border: 0px; }
+
+/* Header declarations. */
+h1 {
+  margin: 0px;
+  font-size: 22px;
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  line-height : 120%;
+  color : #000000;
+}
+
+h2 {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  line-height: 120%;
+}
+
+h3 {
+  margin: 0px;
+  font-size: 20px;
+  font-family: Verdana, serif;
+  line-height: 120%;
+}
+
+h4 {
+  margin: 0px;
+  font-size: 20px;
+}
+
+a:link {
+   color : #445588;
+}
+
+
+/* Default table specification. */
+td { font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 11px }
+
+th {
+  height: 16px;
+  color: #445588;
+  border-color: #FFFFFF;
+  border-style: solid;
+  font-size: 11px;
+  background-color: #CCCCCC;
+  white-space: nowrap;
+  border-width: 1px 1px 0px 1px;
+  background: url(/images/th_background2.gif);
+}
+
+tfoot {
+  height: 16px;
+  color: #445588;
+  border-color: #FFFFFF;
+  border-style: solid;
+  font-size: 11px;
+  background-color: #CCCCCC;
+  white-space: nowrap;
+  border-width: 1px 1px 0px 1px;
+  background: url(/images/th_background3.gif);
+}
+
+/* Text formats for page.  Use "gen" for most content. */
+.cat { height: 25px; border-color: #FFFFFF; border-style: solid; background-color: #EFEFEF; text-indent: 4px; border-width: 1px 1px 0px 1px; }
+.nav { margin: 0px; color: black; font-size: 11px; font-weight: bold; }
+.gen { margin: 1px 1px; font-size: 12px; }
+.genmed { margin: 1px 1px; font-size: 14px; }
+.gensmall { margin: 1px 1px; font-size: 10px; }
+.genbig { margin: 1px 1px; font-size: 16px; }
+
+/* Class defintion for button text. */
+.button {
+  text-decoration: none;
+  font-weight: normal;
+  color : #000000;
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+/* Context specific help formats. */
+.helpLink, a.helpLink, a.helpLink:link, a.helpLink:active, a.helpLink:visited {
+  text-decoration: none;
+  font-weight: normal;
+  color : #445588;
+  margin: 1px 1px;
+  font-size: 12px;
+}
+
+a.helpLink:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color : #000000;
+  margin: 1px 1px;
+  font-size: 12px;
+}
+
+/* Formats for the user status bar. */
+.userStatus, a.userStatus, a.userStatus:link, a.userStatus:active, a.userStatus:visited {
+  text-decoration: none;
+  font-weight: normal;
+  color : #445588;
+}
+
+a.userStatus:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color : #000000;
+}
+
+/* Context specific help formats. */
+.action, a.action, a.action:link, a.action:active, a.action:visited {
+  text-decoration: none;
+  font-weight: bold;
+  color : #445588;
+  margin: 1px 1px;
+  font-size: 10px;
+}
+
+a.action:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color : #000000;
+  margin: 1px 1px;
+  font-size: 10px;
+}
+
+/* Main page banner formating. */
+.banner {
+  vertical-align: middle;
+  background-color: #003399;
+  background: url(/images/surfnet_body_bck.gif) #000000 no-repeat;
+  height: 90px;
+  border: 0;
+  width: 100%;
+  padding-left: 35px;
+}
+
+/* Default spacer format. */
+.spacer {
+  vertical-align: middle;
+  background-color: #003399;
+  height: 5px;
+  border: 0;
+  width: 100%;
+}
+
+/* Server status bar format for bottom of header. */
+.server {
+  PADDING-TOP: 5px;
+  PADDING-RIGHT: 10px;
+  PADDING-LEFT: 10px;
+  PADDING-BOTTOM: 5px;
+  VERTICAL-ALIGN: middle;
+  COLOR: #000000;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  HEIGHT: 20px;
+  border: 0;
+  width: 100%;
+  background: url(/images/tb2_m.gif) repeat-x;
+}
+
+/* Over all page footer format. */
+.footer {
+  background-color: #d8d8d8;
+  height: 35px;
+  font-size: 10px;
+  color: grey; 
+  border: 0;
+  width: 100%
+}
+
+/* Background images for page title table. */
+.tbn{border-collapse:collapse;height:43px;width:100%}
+.tbnl{background: url('/images/tb1_l.gif') no-repeat;width:76px}
+.tbnbot{background: url('/images/tb1_m.gif') repeat-x;width:100%;font-size:11px;color:#445588}
+.tbnr{background: url('/images/tb1_r.gif') no-repeat;width:39px}
+.nav { margin: 0px; color: black; font-size: 11px; font-weight: bold; }
+
+/* Background images for main table and banner top. */
+.tbt{border-collapse:collapse;height:22px;width:100%}
+.tbtl{background: url('/images/tb2_l.gif') no-repeat;width:22px}
+.tbtbot{background: url('/images/tb2_m.gif') repeat-x;width:100%;font-size:11px;color:#445588}
+.tbtr{background: url('/images/tb2_r.gif') no-repeat;width:124px}
+.tbtrsm{background: url('/images/tb2_rsm.gif') no-repeat;width:40px}
+.tbtrr{background: url('/images/tb2_rr.gif') no-repeat;width:22px}
+
+/* Background images for main table and banner top. */
+.tbb{border-collapse:collapse;height:22px;width:100%}
+.tbbl{background: url('/images/tb3_l.gif') no-repeat;width:22px;}
+.tbbbot{background: url('/images/tb3_m.gif') repeat-x;;font-size:11px; color:#445588}
+.tbbr{background: url('/images/tb3_r.gif') no-repeat;width:22px;}
+
+/* Background images for tables */
+.tbl{border-collapse:collapse;height:4px;width:100%}
+.tbll{background: url('/images/tb4_l.gif') no-repeat;width:8px}
+.tblbot{background: url('/images/tb4_m.gif') repeat-x;width:100%}
+.tblr{background: url('/images/tb4_r.gif') no-repeat;width:8px}
+.tbl80{border-collapse:collapse;height:4px;width:80%}
+
+/* This is default table specification - trying to remove in place of "tbmain". */
+.forumline	{ background-color: #CFCFCF; border: 0px #006699 solid; }
+
+/* This is default table specification - trying to remove in place of "tbmain". */
+tfoot  { background-color: #e0e5f1; border: 0px #006699 solid; font-size:11px; }
+
+/* Formats for table contents containing DRAC data. */
+.tbmain {
+  background-color: #CFCFCF;
+  border: 0px #006699 solid;
+}
+
+/* Specific table header format when using <td> instead of <th>. */
+.rowth {
+  background-color: #CFCFCF;
+  padding: 4px;
+  vertical-align: middle;
+  text-align: center;
+  font-family: Verdana, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  border-color: #FFFFFF;
+  border-style: solid;
+  border-width: 1px 1px 0px 1px;
+}
+
+/* Table row formats. */
+.row1,
+.row1C,
+.row1E,
+.row1Left,
+.rowRead {
+  background-color: #F7F7F7;
+  padding: 4px;
+  font-family: Verdana, Helvetica, sans-serif;
+  font-size: 10px;
+  border-color: #FFFFFF;
+  border-style: solid;
+  border-width: 1px 1px 0px 1px;
+}
+
+.row2,
+.row2C,
+.row2E,
+.row2Left,
+.rowUnread {
+  background-color: #ECECEC;
+  padding: 4px;
+  font-family: Verdana, Helvetica, sans-serif;
+  font-size: 10px;
+  border-color: #FFFFFF;
+  border-style: solid;
+  border-width: 1px 1px 0px 1px;
+}
+
+.rowRead {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.rowUnread {
+  text-align:left;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Row formats for displaytag */
+.row1C {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.row2C {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.row1Left {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.row2Left {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.row1E {
+  color: red;
+  font-weight: bold;
+}
+
+.row2E {
+  color: red;
+  font-weight: bold;
+}
+
+
+/* New formats used for createSchedule.jsp. */
+/* Formats for table contents containing DRAC data. */
+.tbForm {
+  background-color: #CFCFCF;
+  border-color: #CFCFCF;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  width: 100%;
+}
+
+/* Table row formats. */
+.tbForm1 {
+  background-color: #F7F7F7;
+  padding: 4px;
+  font-family: Verdana, Helvetica, sans-serif;
+  font-size: 10px;
+  border-color: #F7F7F7;
+  border-style: solid;
+  border-width: 1px 1px 0px 1px;
+}
+
+.tbForm2 {
+  background-color: #ECECEC;
+  padding: 4px;
+  font-family: Verdana, Helvetica, sans-serif;
+  font-size: 10px;
+  border-color: #ECECEC;
+  border-style: solid;
+  border-width: 1px 1px 0px 1px;
+}
+
+.invalid {
+  background-color: #FFCCCC;
+}
+
+div.reports{
+	margin:0px 0px 10px 0px;
+}
+.reportForm{
+	margin-top:5px;
+}
+div.reportMetaData{
+	margin-top:25px;
+}
+div.reportFilterMetaDataLetf{
+	float:left;
+	width:440px;
+	padding-top:25px;
+
+}
+div.reportFilterMetaData{
+	float:left;
+	
+}
+div.clear{
+	clear:both;
+}
+
+
+div.dracLogo{
+	background-image: url('/images/surfnet_logo.gif') ;
+	background-repeat:no-repeat;
+	background-position:bottom left;
+	font-family: arial, sans-serif;
+    font-size: 40px;
+    font-weight:bold;
+    color:#000000;
+    padding: 0px 0px 0px 130px;
+    height: 55px;
+}

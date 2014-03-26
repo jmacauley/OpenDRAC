@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema  targetNamespace="http://fenius.glif.is/ws/connection/v1/interface"
+            xmlns:i="http://fenius.glif.is/ws/connection/v1/interface"
+            xmlns:t="http://fenius.glif.is/ws/connection/v1/types"
+            xmlns:f="http://fenius.glif.is/ws/connection/v1/faults"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="unqualified"
+            attributeFormDefault="unqualified" >
+
+    <xs:import namespace="http://fenius.glif.is/ws/connection/v1/types"  schemaLocation="types.xsd" />
+    <xs:import namespace="http://fenius.glif.is/ws/connection/v1/faults" schemaLocation="faults.xsd" />
+
+    <!-- elements -->
+    <xs:element name="reserve"          type="i:reserve" />
+    <xs:element name="reserveResponse"  type="i:reserveResponse" />
+    <xs:element name="release"          type="i:release" />
+    <xs:element name="releaseResponse"  type="i:releaseResponse"/>
+    <xs:element name="list"             type="i:list" />
+    <xs:element name="listResponse"     type="i:listResponse" />
+    <xs:element name="query"            type="i:query" />
+    <xs:element name="queryResponse"    type="i:queryResponse" />
+    <xs:element name="isReservable"             type="i:isReservable" />
+    <xs:element name="isReservableResponse"     type="i:isReservableResponse" />
+    <xs:element name="InternalFault"    type="f:InternalFault" />
+    <xs:element name="ExternalFault"    type="f:ExternalFault" />
+
+    <!-- message types -->
+    <xs:complexType name="reserve">
+        <xs:sequence>
+            <xs:element name="arg0"             type="i:reserveReq" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="reserveReq">
+        <xs:sequence>
+            <xs:element name="reservationParams"    type="t:reservable" />
+            <xs:element name="credentials"          type="t:credentials" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="reserveResponse">
+        <xs:sequence>
+            <xs:element name="return"           type="i:reserveResp" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="reserveResp">
+        <xs:sequence>
+            <xs:element name="reservation"      type="t:reservation"     minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <!-- message types -->
+    <xs:complexType name="isReservable">
+        <xs:sequence>
+            <xs:element name="arg0"             type="i:isReservableReq" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="isReservableReq">
+        <xs:sequence>
+            <xs:element name="reservationParams"    type="t:reservable" />
+            <xs:element name="credentials"          type="t:credentials" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="isReservableResponse">
+        <xs:sequence>
+            <xs:element name="return"           type="i:isReservableResp" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="isReservableResp">
+        <xs:sequence>
+            <xs:element name="result"           type="xs:boolean" />
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="release">
+        <xs:sequence>
+            <xs:element name="arg0"             type="i:releaseReq" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="releaseReq">
+        <xs:sequence>
+            <xs:element name="reservationId"    type="xs:string" />
+            <xs:element name="credentials"      type="t:credentials"     minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="releaseResponse">
+        <xs:sequence>
+            <xs:element name="return"           type="i:releaseResp" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="releaseResp">
+        <xs:sequence>
+            <xs:element name="reservationStatus"    type="t:reservationStatus"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="query">
+        <xs:sequence>
+            <xs:element name="arg0"             type="i:queryReq" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="queryReq">
+        <xs:sequence>
+            <xs:element name="reservationId"    type="xs:string" />
+            <xs:element name="credentials"      type="t:credentials"    minOccurs="0"   maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="queryResponse">
+        <xs:sequence>
+            <xs:element name="return"           type="i:queryResp" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="queryResp">
+        <xs:sequence>
+            <xs:element name="reservation"      type="t:reservation"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="list">
+        <xs:sequence>
+            <xs:element name="arg0"             type="i:listReq" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="listReq">
+        <xs:sequence>
+            <xs:element name="listFilter"       type="t:listFilter" />
+            <xs:element name="credentials"      type="t:credentials"    minOccurs="0"   maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="listResponse">
+        <xs:sequence>
+            <xs:element name="return"           type="i:listResp" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="listResp">
+        <xs:sequence>
+            <xs:element name="reservations"     type="t:reservation"    minOccurs="0"   maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

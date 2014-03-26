@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+    <comment>OpenDRAC NSI Configuration for Production Network</comment>
+
+    <!-- Local NSA configuration information. -->
+    <entry key="localConfigurationFile">conf/nsi-local-configuration-production.xml</entry>
+
+    <!-- NSA configuration information including peer NSA. -->
+    <entry key="nsaConfigurationFile">conf/nsi-nsa-configuration-production.xml</entry>
+
+    <!-- Global topology file for routing. -->
+    <entry key="topologyFile">conf/nsi-topology-surfnet-2012-07-03.xml</entry>
+
+    <!-- Individual actor pool size. -->
+    <entry key="actorPoolSize">10</entry>
+
+</properties>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project basedir="." default="stage.distribution.1of3">
+	<target name="stage.distribution.1of3">
+		<tstamp>
+			<format property="DSTAMP" pattern="MMMM-dd-yyyy" />
+			<format property="TSTAMP" pattern="HH:mm" />
+		</tstamp>
+		<property name="staging.dir" location="target/staging/opendrac" />
+
+		<mkdir dir="${staging.dir}/var/tmp" />
+		<mkdir dir="${staging.dir}/var/db" />
+
+		<!-- Copy legal, licenses, readme, etc, etc to docs dir -->
+		<copy overwrite="true" todir="${staging.dir}/docs">
+			<fileset dir="src/main/resources/legal">
+				<include name="*.txt" />
+			</fileset>
+		</copy>
+
+		<!-- Copy xml based log4j configs to root conf dir -->
+		<copy overwrite="true" todir="${staging.dir}/conf">
+			<fileset dir="src/main/resources">
+				<include name="log4j.*" />
+			</fileset>
+		</copy>
+
+		<!-- Move postinstall scripts to correct location -->
+		<move file="${staging.dir}/bin/postinstall.sh" tofile="${staging.dir}/postinstall.sh" />
+
+		<!-- Fix to get rid of old jaxp or spring-context will not work -->
+		<delete failonerror="true">
+			<fileset dir="${staging.dir}/webapps/WebServer/WEB-INF/lib" includes="crimson-*.jar" />
+		</delete>
+		<delete failonerror="true">
+			<fileset dir="${staging.dir}/webapps/WebServer/WEB-INF/lib" includes="gnujaxp-*.jar" />
+		</delete>
+
+		<!-- Keystore -->
+		<copy overwrite="true" file="src/main/resources/conf/templates/dot-keystore" todir="${staging.dir}/conf/templates" />
+
+		<antcall target="stage.distribution.2of3" />
+
+		<copy overwrite="true" file="../Clients/AutomationTool/target/OpenDRAC-AutomationTool.zip" todir="${staging.dir}/webapps/WebServer/downloads" />
+
+		<antcall target="stage.distribution.3of3" />
+
+		<copy overwrite="true" todir="${staging.dir}/share/opendrac-watchdog">
+			<fileset dir="../opendrac-shared/target/appassembler" />
+		</copy>
+
+		<copy overwrite="true" todir="${staging.dir}/share/opendrac-watchdog/conf/spring">
+			<fileset dir="../opendrac-shared/target/classes/spring" />
+		</copy>
+
+		<copy overwrite="true" todir="${staging.dir}/share/opendrac-watchdog/conf/env">
+			<fileset dir="../opendrac-shared/target/classes/env" excludes="*-dev.xml"/>
+		</copy>
+
+		<copy overwrite="true" todir="${staging.dir}/conf/spring">
+			<fileset dir="../opendrac-shared/target/classes/spring" />
+		</copy>
+
+		<copy overwrite="true" todir="${staging.dir}/conf">
+			<fileset dir="../Mediation/NeProxy/src/main/resources" includes="NeDescription.xm" />
+		</copy>
+
+		<copy overwrite="true" todir="${staging.dir}/share/opendrac-watchdog/conf/">
+			<fileset dir="../Server/Common/src/main/resources">
+				<include name="log4j.*" />
+			</fileset>
+		</copy>
+
+		<!-- Copy mysql configs to root conf dir -->
+		<copy overwrite="true" todir="${staging.dir}/share/sql/mysql/">
+			<fileset dir="../Server/Database/src/main/resources/sql/mysql/install/">
+				<include name="*.sql" />
+			</fileset>
+		</copy>
+
+	</target>
+
+	<available file="../Clients/AutomationTool/target/OpenDRAC-AutomationTool.zip" property="automationtool.present" />
+
+	<target name="stage.distribution.2of3" unless="automationtool.present">
+		<!-- AutomationTool package -->
+		<exec dir="." executable="mvn">
+			<arg line="-Dmaven.test.skip=true -f ../Clients/AutomationTool/pom.xml package" />
+		</exec>
+	</target>
+
+
+	<available file="../opendrac-shared/target/appassembler/bin/watchdog.sh" property="opendrac-shared.present" />
+
+	<target name="stage.distribution.3of3" unless="opendrac-shared.present">
+		<!-- opendrac-shared package -->
+		<exec dir="." executable="mvn">
+			<arg line="-Dmaven.test.skip=true -f ../opendrac-shared/pom.xml package" />
+		</exec>
+	</target>
+
+</project>

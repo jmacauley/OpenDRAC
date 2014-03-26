@@ -1,0 +1,64 @@
+
+Codes: * - Default VLAN, G - GVRP VLANs
+
+    NUM    Status    Q Ports
+    1      Inactive  
+*   3      Active    U Gi 0/1-2,4-11
+                     U Gi 1/0,2-10,12-15
+                     U Te 4/0-1
+                     U Gi 5/0-5,7-8,10-17,19,21,23
+    4      Active    T Te 6/0
+    7      Active    U Gi 1/16-23
+                     T Te 3/1
+                     T Gi 5/6
+                     T Te 6/0-1
+    8      Active    T Te 6/0
+    9      Active    T Te 6/0
+    10     Active    T Te 6/0
+    21     Active    U Gi 0/3
+                     T Te 3/1
+                     T Te 6/0-1
+    94     Active    T Te 6/0-1
+    666    Inactive  U Gi 0/12-21,23
+    719    Inactive  
+    1714   Inactive  
+    1715   Inactive  U Te 3/0
+    1716   Inactive  T Gi 1/11
+    1717   Inactive  
+    1718   Inactive  
+    1719   Inactive  
+    1720   Inactive  
+    1721   Inactive  
+    1722   Inactive  
+    1779   Inactive  T Gi 0/0
+    1784   Inactive  T Gi 0/0
+    1785   Inactive  T Gi 0/0
+    1786   Inactive  T Gi 0/0
+    1787   Inactive  T Gi 0/0
+    1788   Inactive  T Gi 0/0
+    1789   Inactive  T Gi 0/0
+    1790   Inactive  T Gi 0/0
+    1791   Inactive  T Gi 0/0
+    1792   Inactive  T Gi 0/0
+    1793   Inactive  T Gi 0/0
+    1794   Inactive  T Gi 0/0
+    1795   Inactive  T Gi 0/0
+    1796   Inactive  T Gi 0/0
+    1797   Inactive  T Gi 0/0
+    1798   Inactive  T Gi 0/0
+    1799   Active    T Gi 0/0
+                     T Gi 1/1
+                     T Te 6/0-1
+    1800   Active    T Gi 0/0
+                     T Te 6/0
+    1977   Inactive  
+    2100   Inactive  
+    2200   Active    U Gi 0/22
+                     T Te 3/1
+                     U Gi 5/22
+                     T Te 6/0-1
+    3439   Active    T Te 6/0-1
+    3840   Active    T Te 3/1
+    4000   Active    T Te 3/1
+                     T Gi 5/9
+Force10# 

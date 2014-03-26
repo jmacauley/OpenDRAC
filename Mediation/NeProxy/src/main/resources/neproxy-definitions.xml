@@ -1,0 +1,621 @@
+<?xml version="1.0"?>
+<!-- <pre> The owner of the original code is Ciena Corporation. Portions
+  created by the original owner are Copyright (C) 2004-2010 the original owner.
+  All Rights Reserved. Portions created by other contributors are Copyright
+  (C) the contributor. All Rights Reserved. Contributor(s): (Contributors insert
+  name & email here) This file is part of DRAC (Dynamic Resource Allocation
+  Controller). DRAC is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by the
+  Free Software Foundation; either version 3 of the License, or (at your option)
+  any later version. DRAC is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+  or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+  more details. You should have received a copy of the GNU General Public License
+  along with this program. If not, see <http://www.gnu.org/licenses/>. </pre> -->
+
+<proxy name="NeProxy">
+    <neTypeMapping>
+        <!-- The followings are CASE SENSITIVE -->
+        <!-- These are based on the NE type field returned by RTRV-NETYPE -->
+        <!-- for TL1 based NEs -->
+        <HDX>HDX</HDX>
+        <HDXC>HDX</HDXC>
+        <OCP>OME</OCP>
+        <CNE>OME</CNE>
+        <AMP>CPL</AMP>
+        <CHA>CPL</CHA>
+        <CCA>CPL</CCA>
+        <MERS8600>PP8600</MERS8600>
+        <GMPLS>GMPLS</GMPLS>
+        <!-- <ASTN>ASTN</ASTN> -->
+        <OBP>OMEBB</OBP>
+        <!-- <LOCALNE>LOCALNE</LOCALNE> -->
+        <FORCE10>FORCE10</FORCE10>
+        <!-- package name is the prefix java package name. -->
+        <packageName>com.nortel.appcore.app.drac.server.neproxy.command </packageName>
+        <!-- Once we have identified the general NE type using the above mappings -->
+        <!-- take the lower case type and prefix the release on it and look for
+      the -->
+        <!-- best match, this allows us to include release families. The code
+      to do this mapping -->
+        <!-- is in NetworkElement.java in the getNeType method. -->
+        <hdxREL>HDX</hdxREL>
+        <cplREL>CPL</cplREL>
+        <!-- map to something unique -->
+        <omeREL05>OME5</omeREL05>
+        <omeREL06>OME6</omeREL06>
+        <omeREL07>OME7</omeREL07>
+        <omeREL08>OME8</omeREL08>
+        <omeREL09>OME9</omeREL09>
+    </neTypeMapping>
+    <neInitDefinition>
+        <HDX>
+            <command key="ALW-MSG-BROADCAST" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.AllowBroadcast"> </command>
+            <command key="RTRV-LINE" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.hdx.GetFacility"> </command>
+            <command key="RTRV-CRS-ALL" order="3"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.hdx.GetXConnect"> </command>
+            <command key="RTRV-AD-ALL" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.hdx.GetAdjacency"> </command>
+            <command key="RTRV-FFP-ALL" order="5"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.hdx.GetProtection"
+            > </command>
+        </HDX>
+        <!-- <ASTN> <command key="ALW-MSG-BROADCAST" order="1" class="com.nortel.appcore.app.drac.server.neproxy.command.ome.AllowBroadcast">
+      </command> <command key="RTRV-LINE" order="2" class="com.nortel.appcore.app.drac.server.neproxy.command.astn.GetFacility">
+      </command> <command key="RTRV-CALL-ALL" order="3" class="com.nortel.appcore.app.drac.server.neproxy.command.astn.GetCall">
+      </command> </ASTN> -->
+        <OMEBB>
+            <command key="RTRV-OTM2" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.omebb.GetFacility">
+                <parm name="AID" value="OTM2-1-ALL" />
+            </command>
+            <command key="RTRV-OC192" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.omebb.GetFacility">
+                <parm name="AID" value="OC192-1-ALL" />
+            </command>
+            <command key="RTRV-OC48" order="3"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.omebb.GetFacility">
+                <parm name="AID" value="OC48-1-ALL" />
+            </command>
+        </OMEBB>
+        <!-- <LOCALNE> <command key="RTRV-FAC" order="1" class="com.nortel.appcore.app.drac.server.neproxy.command.localne.GetFacility">
+      </command> </LOCALNE> -->
+        <OME>
+            <command key="ALW-MSG-BROADCAST" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.AllowBroadcast">
+                <parm name="AID" value="ALL" />
+            </command>
+            <command key="RTRV-OC3" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.GetFacility">
+                <parm name="AID" value="OC3-1-ALL" />
+            </command>
+            <command key="RTRV-OC12" order="3"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.GetFacility">
+                <parm name="AID" value="OC12-1-ALL" />
+            </command>
+            <command key="RTRV-OC48" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.GetFacility">
+                <parm name="AID" value="OC48-1-ALL" />
+            </command>
+            <command key="RTRV-OC192" order="5"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.GetFacility">
+                <parm name="AID" value="OC192-1-ALL" />
+            </command>
+            <command key="RTRV-WAN" order="6"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.GetWANFacility">
+                <parm name="AID" value="WAN-1-ALL" />
+            </command>
+            <command key="RTRV-CRS-ALL" order="7"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.GetXConnect">
+                <parm name="CKTID" value="ALL" />
+            </command>
+            <command key="RTRV-AD-ALL" order="8"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.GetAdjacency"> </command>
+            <command key="RTRV-FFP-OC192" order="9"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.GetProtection">
+                <parm name="WRKGAID" value="OC192-1-ALL" />
+            </command>
+        </OME>
+        <OME5>
+            <command key="ALW-MSG-BROADCAST" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.AllowBroadcast">
+                <parm name="AID" value="ALL" />
+            </command>
+            <command key="RTRV-OC3" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.GetFacility">
+                <parm name="AID" value="OC3-1-ALL" />
+            </command>
+            <command key="RTRV-OC12" order="3"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.GetFacility">
+                <parm name="AID" value="OC12-1-ALL" />
+            </command>
+            <command key="RTRV-OC48" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.GetFacility">
+                <parm name="AID" value="OC48-1-ALL" />
+            </command>
+            <command key="RTRV-OC192" order="5"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.GetFacility">
+                <parm name="AID" value="OC192-1-ALL" />
+            </command>
+            <command key="RTRV-EQPT" order="6"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.GetEquipment">
+                <parm name="AID" value="ALL" />
+            </command>
+            <command key="RTRV-WAN" order="7"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.GetWANFacility">
+                <parm name="AID" value="WAN-1-ALL" />
+            </command>
+            <command key="RTRV-ETH" order="8"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.GetETHFacility">
+                <parm name="AID" value="ETH-1-ALL" />
+            </command>
+            <command key="RTRV-VCS" order="9"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.GetVCS">
+                <parm name="AID" value="VCS-1-ALL" />
+            </command>
+            <command key="RTRV-VCE" order="10"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.GetVCEFacility">
+                <parm name="AID" value="VCE-1-ALL" />
+            </command>
+            <command key="RTRV-VCEMAP" order="11"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.GetVCEMAP">
+                <parm name="AID" value="VCEMAP-1-ALL" />
+            </command>
+            <command key="RTRV-CRS-ALL" order="12"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.GetXConnect">
+                <parm name="CKTID" value="ALL" />
+            </command>
+            <command key="RTRV-AD-ALL" order="13"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.GetAdjacency"> </command>
+            <command key="RTRV-FFP-OC192" order="14"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.GetProtection">
+                <parm name="WRKGAID" value="OC192-1-ALL" />
+            </command>
+        </OME5>
+        <OME6>
+            <command key="ALW-MSG-BROADCAST" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.AllowBroadcast">
+                <parm name="AID" value="ALL" />
+            </command>
+            <command key="RTRV-EQPT" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.GetEquipment">
+                <parm name="AID" value="ALL" />
+            </command>
+            <command key="RTRV-OC3" order="3"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.GetFacility">
+                <parm name="AID" value="OC3-1-ALL" />
+            </command>
+            <command key="RTRV-OC12" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.GetFacility">
+                <parm name="AID" value="OC12-1-ALL" />
+            </command>
+            <command key="RTRV-OC48" order="5"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.GetFacility">
+                <parm name="AID" value="OC48-1-ALL" />
+            </command>
+            <command key="RTRV-OC192" order="6"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.GetFacility">
+                <parm name="AID" value="OC192-1-ALL" />
+            </command>
+            <command key="RTRV-ALL-ETH-WAN" order="7"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.GetAllEthWanFacility"> </command>
+            <command key="RTRV-VCS" order="8"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.GetVCS">
+                <parm name="AID" value="VCS-1-ALL" />
+            </command>
+            <command key="RTRV-VCE" order="9"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.GetVCEFacility">
+                <parm name="AID" value="VCE-1-ALL" />
+            </command>
+            <command key="RTRV-VCEMAP" order="10"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.GetVCEMAP">
+                <parm name="AID" value="VCEMAP-1-ALL" />
+            </command>
+            <command key="RTRV-CRS-ALL" order="11"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.GetXConnect">
+                <parm name="CKTID" value="ALL" />
+            </command>
+            <command key="RTRV-AD-ALL" order="12"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.GetAdjacency"> </command>
+            <command key="RTRV-FFP-OC192" order="13"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.GetProtection">
+                <parm name="WRKGAID" value="OC192-1-ALL" />
+            </command>
+        </OME6>
+        <OME7>
+            <command key="ALW-MSG-BROADCAST" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.AllowBroadcast">
+                <parm name="AID" value="ALL" />
+            </command>
+            <command key="RTRV-EQPT" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.GetEquipment">
+                <parm name="AID" value="ALL" />
+            </command>
+            <command key="RTRV-OC3" order="3"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.GetFacility">
+                <parm name="AID" value="OC3-1-ALL" />
+            </command>
+            <command key="RTRV-OC12" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.GetFacility">
+                <parm name="AID" value="OC12-1-ALL" />
+            </command>
+            <command key="RTRV-OC48" order="5"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.GetFacility">
+                <parm name="AID" value="OC48-1-ALL" />
+            </command>
+            <command key="RTRV-OC192" order="6"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.GetFacility">
+                <parm name="AID" value="OC192-1-ALL" />
+            </command>
+            <command key="RTRV-ALL-ETH-WAN" order="7"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.GetAllEthWanFacility"> </command>
+            <command key="RTRV-VCS" order="8"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.GetVCS">
+                <parm name="AID" value="VCS-1-ALL" />
+            </command>
+            <command key="RTRV-VCE" order="9"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.GetVCEFacility">
+                <parm name="AID" value="VCE-1-ALL" />
+            </command>
+            <command key="RTRV-VCEMAP" order="10"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.GetVCEMAP">
+                <parm name="AID" value="VCEMAP-1-ALL" />
+            </command>
+            <command key="RTRV-CRS-ALL" order="11"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.GetXConnect">
+                <parm name="CKTID" value="ALL" />
+            </command>
+            <command key="RTRV-AD-ALL" order="12"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.GetAdjacency"> </command>
+            <command key="RTRV-FFP-OC192" order="13"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.GetProtection">
+                <parm name="WRKGAID" value="OC192-1-ALL" />
+            </command>
+        </OME7>
+        <OME8>
+            <command key="ALW-MSG-BROADCAST" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.AllowBroadcast">
+                <parm name="AID" value="ALL" />
+            </command>
+            <command key="RTRV-EQPT" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.GetEquipment">
+                <parm name="AID" value="ALL" />
+            </command>
+            <command key="RTRV-OC3" order="3"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.GetFacility">
+                <parm name="AID" value="OC3-1-ALL" />
+            </command>
+            <command key="RTRV-OC12" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.GetFacility">
+                <parm name="AID" value="OC12-1-ALL" />
+            </command>
+            <command key="RTRV-OC48" order="5"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.GetFacility">
+                <parm name="AID" value="OC48-1-ALL" />
+            </command>
+            <command key="RTRV-OC192" order="6"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.GetFacility">
+                <parm name="AID" value="OC192-1-ALL" />
+            </command>
+            <command key="RTRV-ALL-ETH-WAN" order="7"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.GetAllEthWanFacility">
+            </command>
+            <command key="RTRV-VCS" order="8"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.GetVCS">
+                <parm name="AID" value="VCS-1-ALL" />
+            </command>
+            <command key="RTRV-VCE" order="9"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.GetVCEFacility">
+                <parm name="AID" value="VCE-1-ALL" />
+            </command>
+            <command key="RTRV-VCEMAP" order="10"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.GetVCEMAP">
+                <parm name="AID" value="VCEMAP-1-ALL" />
+            </command>
+            <command key="RTRV-CRS-ALL" order="11"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.GetXConnect">
+                <parm name="CKTID" value="ALL" />
+            </command>
+            <command key="RTRV-AD-ALL" order="12"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.GetAdjacency">
+            </command>
+            <command key="RTRV-FFP-OC192" order="13"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.GetProtection">
+                <parm name="WRKGAID" value="OC192-1-ALL" />
+            </command>
+        </OME8>
+
+
+        <OME9>
+            <command key="ALW-MSG-BROADCAST" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.AllowBroadcast">
+                <parm name="AID" value="ALL" />
+            </command>
+            <command key="RTRV-EQPT" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.GetEquipment">
+                <parm name="AID" value="ALL" />
+            </command>
+            <command key="RTRV-OC3" order="3"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.GetFacility">
+                <parm name="AID" value="OC3-1-ALL" />
+            </command>
+            <command key="RTRV-OC12" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.GetFacility">
+                <parm name="AID" value="OC12-1-ALL" />
+            </command>
+            <command key="RTRV-OC48" order="5"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.GetFacility">
+                <parm name="AID" value="OC48-1-ALL" />
+            </command>
+            <command key="RTRV-OC192" order="6"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.GetFacility">
+                <parm name="AID" value="OC192-1-ALL" />
+            </command>
+            <command key="RTRV-ALL-ETH-WAN" order="7"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.GetAllEthWanFacility">
+            </command>
+            <command key="RTRV-VCS" order="8"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.GetVCS">
+                <parm name="AID" value="VCS-1-ALL" />
+            </command>
+            <command key="RTRV-VCE" order="9"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.GetVCEFacility">
+                <parm name="AID" value="VCE-1-ALL" />
+            </command>
+            <command key="RTRV-VCEMAP" order="10"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.GetVCEMAP">
+                <parm name="AID" value="VCEMAP-1-ALL" />
+            </command>
+            <command key="RTRV-CRS-ALL" order="11"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.GetXConnect">
+                <parm name="CKTID" value="ALL" />
+            </command>
+            <command key="RTRV-AD-ALL" order="12"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.GetAdjacency">
+            </command>
+            <command key="RTRV-FFP-OC192" order="13"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.GetProtection">
+                <parm name="WRKGAID" value="OC192-1-ALL" />
+            </command>
+        </OME9>
+
+
+
+
+        <CPL>
+            <command key="ALW-MSG-BROADCAST" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.AllowBroadcast">
+                <parm name="AID" value="ALL" />
+            </command>
+            <command key="RTRV-INVENTORY" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.cpl.GetInventory"> </command>
+            <command key="RTRV-ADJ-TX" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.cpl.GetFacility">
+                <parm name="AID" value="ALL" />
+            </command>
+            <command key="RTRV-ADJ-LINE" order="3"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.cpl.GetAdjacency">
+                <parm name="AID" value="ALL" />
+            </command>
+            <command key="RTRV-TOPO-SWT" order="3"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.cpl.GetXConnect">
+                <parm name="AID" value="ALL" />
+            </command>
+        </CPL>
+        <FORCE10>
+            <command key="SetTerminal" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.force10.SetTerminal"> </command>
+            <command key="ShowVersion" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.force10.ShowVersion"> </command>
+            <command key="ShowSystem" order="3"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.force10.ShowSystem"> </command>
+            <command key="ShowInterfaces" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.force10.ShowInterfaces"
+            > </command>
+        </FORCE10>
+    </neInitDefinition>
+    <neEvenHandlingDefinition>
+        <HDX>
+            <command key="REPT-LINE" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.hdx.ReptLine" />
+            <command key="REPT-CRS-PLD" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.hdx.ReptCrs" />
+            <command key="REPT-ALM" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.hdx.ReptAlarm" />
+            <command key="ED-FAC" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.ChangeFacility" />
+            <command key="ENT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.hdx.CreateConnection" />
+            <command key="DLT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.hdx.RemoveConnection" />
+            <command key="REPT-AD" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.hdx.ReptAdjacency" />
+        </HDX>
+        <OME>
+            <command key="REPT-DBCHG" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.ReptDbchg" />
+            <command key="REPT-ALM" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.ReptAlarm" />
+            <command key="REPT-AD" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.ReptAdjacency" />
+            <command key="ED-FAC" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.ChangeFacility" />
+            <command key="ENT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.CreateConnection" />
+            <command key="DLT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.RemoveConnection" />
+            <command key="RTRV-ALM" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome.GetAlarm" />
+            <command key="PREP-ADD-CONNECTIONS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.PrepCreateConnections" />
+            <command key="POST-DLT-CONNECTIONS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.PostRemoveConnections"
+             />
+        </OME>
+        <OME5>
+            <command key="REPT-DBCHG" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.ReptDbchg" />
+            <command key="REPT-ALM" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.ReptAlarm" />
+            <command key="REPT-AD" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.ReptAdjacency" />
+            <command key="ED-FAC" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.ChangeFacility" />
+            <command key="ENT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.CreateConnection" />
+            <command key="DLT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.RemoveConnection" />
+            <command key="RTRV-ALM" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome5.GetAlarm" />
+        </OME5>
+        <OME6>
+            <command key="REPT-DBCHG" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.ReptDbchg" />
+            <command key="REPT-ALM" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.ReptAlarm" />
+            <command key="REPT-AD" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.ReptAdjacency" />
+            <command key="ED-FAC" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.ChangeFacility" />
+            <command key="ENT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.CreateConnection" />
+            <command key="DLT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.RemoveConnection" />
+            <command key="RTRV-ALM" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.GetAlarm" />
+            <command key="PREP-ADD-CONNECTIONS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.PrepCreateConnections" />
+            <command key="POST-DLT-CONNECTIONS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome6.PostRemoveConnections"
+             />
+        </OME6>
+        <OME7>
+            <command key="REPT-DBCHG" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.ReptDbchg" />
+            <command key="REPT-ALM" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.ReptAlarm" />
+            <command key="REPT-AD" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.ReptAdjacency" />
+            <command key="ED-FAC" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.ChangeFacility" />
+            <command key="ENT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.CreateConnection" />
+            <command key="DLT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.RemoveConnection" />
+            <command key="RTRV-ALM" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.GetAlarm" />
+            <command key="PREP-ADD-CONNECTIONS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.PrepCreateConnections" />
+            <command key="POST-DLT-CONNECTIONS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome7.PostRemoveConnections"
+             />
+        </OME7>
+        <OME8>
+            <command key="REPT-DBCHG" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.ReptDbchg" />
+            <command key="REPT-ALM" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.ReptAlarm" />
+            <command key="REPT-PROTNSW" order="3"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.ReptProtnSw" />
+            <command key="REPT-AD" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.ReptAdjacency" />
+            <command key="ED-FAC" order="5"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.ChangeFacility" />
+            <command key="ENT-CRS" order="6"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.CreateConnection" />
+            <command key="DLT-CRS" order="7"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.RemoveConnection" />
+            <command key="RTRV-ALM" order="8"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.GetAlarm" />
+            <command key="PREP-ADD-CONNECTIONS" order="9"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.PrepCreateConnections" />
+            <command key="POST-DLT-CONNECTIONS" order="10"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome8.PostRemoveConnections" />
+        </OME8>
+
+        <OME9>
+            <command key="REPT-DBCHG" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.ReptDbchg" />
+            <command key="REPT-ALM" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.ReptAlarm" />
+            <command key="REPT-PROTNSW" order="3"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.ReptProtnSw" />
+            <command key="REPT-AD" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.ReptAdjacency" />
+            <command key="ED-FAC" order="5"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.ChangeFacility" />
+            <command key="ENT-CRS" order="6"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.CreateConnection" />
+            <command key="DLT-CRS" order="7"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.RemoveConnection" />
+            <command key="RTRV-ALM" order="8"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.GetAlarm" />
+            <command key="PREP-ADD-CONNECTIONS" order="9"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.PrepCreateConnections" />
+            <command key="POST-DLT-CONNECTIONS" order="10"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.ome9.PostRemoveConnections" />
+        </OME9>
+
+
+        <PP8600>
+            <command key="ENT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.pp8600.CreateConnection" />
+            <command key="DLT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.pp8600.RemoveConnection" />
+            <command key="ED-FAC" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.pp8600.ChangeFacility" />
+        </PP8600>
+        <GMPLS>
+            <command key="ENT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.gmpls.CreateConnection" />
+            <command key="DLT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.gmpls.RemoveConnection" />
+        </GMPLS>
+        <!-- <ASTN> <command key="ENT-CRS" order="4" class="com.nortel.appcore.app.drac.server.neproxy.command.astn.CreateConnection"
+      /> <command key="DLT-CRS" order="4" class="com.nortel.appcore.app.drac.server.neproxy.command.astn.RemoveConnection"
+      /> <command key="REPT-CALL" order="4" class="com.nortel.appcore.app.drac.server.neproxy.command.astn.ReptCall"
+      /> <command key="ED-FAC" order="4" class="com.nortel.appcore.app.drac.server.neproxy.command.ome.ChangeFacility"
+      /> </ASTN> -->
+        <OMEBB>
+            <command key="ENT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.omebb.CreateConnection" />
+            <command key="DLT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.omebb.RemoveConnection" />
+        </OMEBB>
+        <!-- <LOCALNE> <command key="ENT-CRS" order="4" class="com.nortel.appcore.app.drac.server.neproxy.command.localne.CreateConnection"
+      /> <command key="DLT-CRS" order="4" class="com.nortel.appcore.app.drac.server.neproxy.command.localne.RemoveConnection"
+      /> </LOCALNE> -->
+        <CPL>
+            <command key="ENT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.cpl.CreateConnection" />
+            <command key="DLT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.cpl.RemoveConnection" />
+            <command key="REPT-DBCHG" order="1"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.cpl.ReptDbchg" />
+            <command key="REPT-CRS-OCH" order="2"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.cpl.ReptCrs" />
+            <command key="ED-FAC" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.cpl.ChangeFacility" />
+            <command key="REPT-ALM" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.cpl.ReptAlarm" />
+            <command key="REPT-EVT" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.cpl.ReptEvent" />
+        </CPL>
+        <FORCE10>
+            <command key="ED-FAC" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.force10.ChangeFacility" />
+            <command key="ENT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.force10.CreateConnection" />
+            <command key="DLT-CRS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.force10.RemoveConnection" />
+            <command key="PREP-ADD-CONNECTIONS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.force10.PrepCreateConnections" />
+            <command key="POST-DLT-CONNECTIONS" order="4"
+                class="com.nortel.appcore.app.drac.server.neproxy.command.force10.PostRemoveConnections"
+             />
+        </FORCE10>
+    </neEvenHandlingDefinition>
+    <!-- <commandList /> -->
+</proxy>

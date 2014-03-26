@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="urn:SURFnet-er"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:SURFnet-er">
+	<types>
+		<xsd:schema targetNamespace="urn:SURFnet-er">
+			<xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+			<xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+			<xsd:complexType name="InsertReportInput">
+				<xsd:all>
+					<xsd:element name="Value" type="xsd:string" />
+					<xsd:element name="Unit" type="xsd:string" minOccurs="0" />
+					<xsd:element name="NormComp" type="xsd:string"
+						minOccurs="0" />
+
+					<xsd:element name="NormValue" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="Type" type="xsd:string" />
+					<xsd:element name="Instance" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="DepartmentList" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="Period" type="xsd:string" />
+					<xsd:element name="Organisation" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="IsKPI" type="xsd:boolean" />
+					<xsd:element name="IsHidden" type="xsd:boolean"
+						minOccurs="0" />
+					<xsd:element name="Remark" type="xsd:string" minOccurs="0" />
+
+				</xsd:all>
+			</xsd:complexType>
+	
+			<xsd:complexType name="UpdateReportInput">
+				<xsd:all>
+					<xsd:element name="Value" type="xsd:string" />
+					<xsd:element name="Unit" type="xsd:string" minOccurs="0" />
+					<xsd:element name="NormComp" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="NormValue" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="Type" type="xsd:string" />
+
+					<xsd:element name="Instance" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="DepartmentList" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="Period" type="xsd:string" />
+					<xsd:element name="Organisation" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="IsKPI" type="xsd:boolean" />
+					<xsd:element name="IsHidden" type="xsd:boolean"
+						minOccurs="0" />
+					<xsd:element name="Remark" type="xsd:string" minOccurs="0" />
+				</xsd:all>
+			</xsd:complexType>
+
+			<xsd:complexType name="DeleteReportInput">
+				<xsd:all>
+					<xsd:element name="Unit" type="xsd:string" minOccurs="0" />
+					<xsd:element name="Type" type="xsd:string" />
+					<xsd:element name="Instance" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="Period" type="xsd:string" />
+					<xsd:element name="Organisation" type="xsd:string"
+						minOccurs="0" />
+				</xsd:all>
+			</xsd:complexType>
+
+			<xsd:complexType name="ApproveReportInput">
+				<xsd:all>
+					<xsd:element name="Type" type="xsd:string" />
+					<xsd:element name="Instance" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="Period" type="xsd:string" />
+					<xsd:element name="Organisation" type="xsd:string"
+						minOccurs="0" />
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="RevokeReportInput">
+
+				<xsd:all>
+					<xsd:element name="Type" type="xsd:string" />
+					<xsd:element name="Instance" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="Period" type="xsd:string" />
+					<xsd:element name="Organisation" type="xsd:string"
+						minOccurs="0" />
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="PostponeReportInput">
+				<xsd:all>
+					<xsd:element name="Type" type="xsd:string" />
+					<xsd:element name="Instance" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="Period" type="xsd:string" />
+					<xsd:element name="Organisation" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="Date" type="xsd:string" />
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="RecoverReportInput">
+				<xsd:all>
+					<xsd:element name="Type" type="xsd:string" />
+					<xsd:element name="Instance" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="Period" type="xsd:string" />
+					<xsd:element name="Organisation" type="xsd:string"
+						minOccurs="0" />
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="InsertTypeInput">
+				<xsd:all>
+					<xsd:element name="Unit" type="xsd:string" minOccurs="0" />
+
+					<xsd:element name="NormComp" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="NormValue" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="Type" type="xsd:string" />
+					<xsd:element name="Instance" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="DepartmentList" type="xsd:string" />
+					<xsd:element name="IsKPI" type="xsd:boolean" />
+					<xsd:element name="IsHidden" type="xsd:boolean"
+						minOccurs="0" />
+					<xsd:element name="IsObsolete" type="xsd:boolean" />
+				</xsd:all>
+
+			</xsd:complexType>
+			<xsd:complexType name="UpdateTypeInput">
+				<xsd:all>
+					<xsd:element name="Unit" type="xsd:string" minOccurs="0" />
+					<xsd:element name="NormComp" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="NormValue" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="Type" type="xsd:string" />
+					<xsd:element name="Instance" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="DepartmentList" type="xsd:string" />
+
+					<xsd:element name="IsKPI" type="xsd:boolean" />
+					<xsd:element name="IsHidden" type="xsd:boolean"
+						minOccurs="0" />
+					<xsd:element name="IsObsolete" type="xsd:boolean" />
+				</xsd:all>
+			</xsd:complexType>
+			<xsd:complexType name="DeleteTypeInput">
+				<xsd:all>
+					<xsd:element name="Unit" type="xsd:string" minOccurs="0" />
+					<xsd:element name="Type" type="xsd:string" />
+
+					<xsd:element name="Instance" type="xsd:string"
+						minOccurs="0" />
+				</xsd:all>
+			</xsd:complexType>
+		</xsd:schema>
+	</types>
+	<message name="er_InsertReportRequest">		
+		<part name="Password" type="xsd:string" />
+		<part name="Username" type="xsd:string" />		
+		<part name="Parameters" type="tns:InsertReportInput" />
+	</message>
+	<message name="er_InsertReportResponse">
+		<part name="ReturnCode" type="xsd:int" />
+
+		<part name="ReturnText" type="xsd:string" />
+	</message>
+	<message name="er_UpdateReportRequest">
+		<part name="Username" type="xsd:string" />
+		<part name="Password" type="xsd:string" />
+		<part name="Parameters" type="tns:UpdateReportInput" />
+	</message>
+	<message name="er_UpdateReportResponse">
+		<part name="ReturnCode" type="xsd:int" />
+		<part name="ReturnText" type="xsd:string" />
+	</message>
+	<message name="er_DeleteReportRequest">
+		<part name="Username" type="xsd:string" />
+
+		<part name="Password" type="xsd:string" />
+		<part name="Parameters" type="tns:DeleteReportInput" />
+	</message>
+	<message name="er_DeleteReportResponse">
+		<part name="ReturnCode" type="xsd:int" />
+		<part name="ReturnText" type="xsd:string" />
+	</message>
+	<message name="er_ApproveReportRequest">
+		<part name="Username" type="xsd:string" />
+		<part name="Password" type="xsd:string" />
+		<part name="Parameters" type="tns:ApproveReportInput" />
+	</message>
+	<message name="er_ApproveReportResponse">
+
+		<part name="ReturnCode" type="xsd:int" />
+		<part name="ReturnText" type="xsd:string" />
+	</message>
+	<message name="er_RevokeReportRequest">
+		<part name="Username" type="xsd:string" />
+		<part name="Password" type="xsd:string" />
+		<part name="Parameters" type="tns:RevokeReportInput" />
+	</message>
+	<message name="er_RevokeReportResponse">
+		<part name="ReturnCode" type="xsd:int" />
+		<part name="ReturnText" type="xsd:string" />
+	</message>
+	<message name="er_PostponeReportRequest">
+
+		<part name="Username" type="xsd:string" />
+		<part name="Password" type="xsd:string" />
+		<part name="Parameters" type="tns:PostponeReportInput" />
+	</message>
+	<message name="er_PostponeReportResponse">
+		<part name="ReturnCode" type="xsd:int" />
+		<part name="ReturnText" type="xsd:string" />
+	</message>
+	<message name="er_RecoverReportRequest">
+		<part name="Username" type="xsd:string" />
+		<part name="Password" type="xsd:string" />
+		<part name="Parameters" type="tns:RecoverReportInput" />
+	</message>
+
+	<message name="er_RecoverReportResponse">
+		<part name="ReturnCode" type="xsd:int" />
+		<part name="ReturnText" type="xsd:string" />
+	</message>
+	<message name="er_InsertTypeRequest">
+		<part name="Username" type="xsd:string" />
+		<part name="Password" type="xsd:string" />
+		<part name="Parameters" type="tns:InsertTypeInput" />
+	</message>
+	<message name="er_InsertTypeResponse">
+		<part name="ReturnCode" type="xsd:int" />
+		<part name="ReturnText" type="xsd:string" />
+	</message>
+
+	<message name="er_UpdateTypeRequest">
+		<part name="Username" type="xsd:string" />
+		<part name="Password" type="xsd:string" />
+		<part name="Parameters" type="tns:UpdateTypeInput" />
+	</message>
+	<message name="er_UpdateTypeResponse">
+		<part name="ReturnCode" type="xsd:int" />
+		<part name="ReturnText" type="xsd:string" />
+	</message>
+	<message name="er_DeleteTypeRequest">
+		<part name="Username" type="xsd:string" />
+		<part name="Password" type="xsd:string" />
+
+		<part name="Parameters" type="tns:DeleteTypeInput" />
+	</message>
+	<message name="er_DeleteTypeResponse">
+		<part name="ReturnCode" type="xsd:int" />
+		<part name="ReturnText" type="xsd:string" />
+	</message>
+	<portType name="SURFnet-erPortType">
+		<operation name="er_InsertReport">
+			<documentation>Add reporting value.</documentation>
+			<input message="tns:er_InsertReportRequest" />
+			<output message="tns:er_InsertReportResponse" />
+
+		</operation>
+		<operation name="er_UpdateReport">
+			<documentation>Update a reporting value.</documentation>
+			<input message="tns:er_UpdateReportRequest" />
+			<output message="tns:er_UpdateReportResponse" />
+		</operation>
+		<operation name="er_DeleteReport">
+			<documentation>Delete a reporting value.</documentation>
+
+			<input message="tns:er_DeleteReportRequest" />
+			<output message="tns:er_DeleteReportResponse" />
+		</operation>
+		<operation name="er_ApproveReport">
+			<documentation>Approve a reporting value.</documentation>
+			<input message="tns:er_ApproveReportRequest" />
+			<output message="tns:er_ApproveReportResponse" />
+		</operation>
+
+		<operation name="er_RevokeReport">
+			<documentation>Revoke a reporting value.</documentation>
+			<input message="tns:er_RevokeReportRequest" />
+			<output message="tns:er_RevokeReportResponse" />
+		</operation>
+		<operation name="er_PostponeReport">
+			<documentation>Postpone a reporting value.</documentation>
+			<input message="tns:er_PostponeReportRequest" />
+
+			<output message="tns:er_PostponeReportResponse" />
+		</operation>
+		<operation name="er_RecoverReport">
+			<documentation>Recover a reporting value.</documentation>
+			<input message="tns:er_RecoverReportRequest" />
+			<output message="tns:er_RecoverReportResponse" />
+		</operation>
+		<operation name="er_InsertType">
+
+			<documentation>Add type value.</documentation>
+			<input message="tns:er_InsertTypeRequest" />
+			<output message="tns:er_InsertTypeResponse" />
+		</operation>
+		<operation name="er_UpdateType">
+			<documentation>Update a type value.</documentation>
+			<input message="tns:er_UpdateTypeRequest" />
+			<output message="tns:er_UpdateTypeResponse" />
+
+		</operation>
+		<operation name="er_DeleteType">
+			<documentation>Delete a type value.</documentation>
+			<input message="tns:er_DeleteTypeRequest" />
+			<output message="tns:er_DeleteTypeResponse" />
+		</operation>
+	</portType>
+	<binding name="SURFnet-erBinding" type="tns:SURFnet-erPortType">
+		<soap:binding style="rpc"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+
+		<operation name="er_InsertReport">
+			<soap:operation soapAction="urn:SURFnet-er#er_InsertReport"
+				style="rpc" />
+			<input>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+		<operation name="er_UpdateReport">
+			<soap:operation soapAction="urn:SURFnet-er#er_UpdateReport"
+				style="rpc" />
+			<input>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+
+		</operation>
+		<operation name="er_DeleteReport">
+			<soap:operation soapAction="urn:SURFnet-er#er_DeleteReport"
+				style="rpc" />
+			<input>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+		<operation name="er_ApproveReport">
+			<soap:operation soapAction="urn:SURFnet-er#er_ApproveReport"
+				style="rpc" />
+			<input>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+
+			<output>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+		<operation name="er_RevokeReport">
+			<soap:operation soapAction="urn:SURFnet-er#er_RevokeReport"
+				style="rpc" />
+			<input>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+		<operation name="er_PostponeReport">
+			<soap:operation soapAction="urn:SURFnet-er#er_PostponeReport"
+				style="rpc" />
+
+			<input>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+		<operation name="er_RecoverReport">
+			<soap:operation soapAction="urn:SURFnet-er#er_RecoverReport"
+				style="rpc" />
+			<input>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+		<operation name="er_InsertType">
+
+			<soap:operation soapAction="urn:SURFnet-er#er_InsertType"
+				style="rpc" />
+			<input>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+		<operation name="er_UpdateType">
+			<soap:operation soapAction="urn:SURFnet-er#er_UpdateType"
+				style="rpc" />
+			<input>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+
+		<operation name="er_DeleteType">
+			<soap:operation soapAction="urn:SURFnet-er#er_DeleteType"
+				style="rpc" />
+			<input>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:SURFnet-er"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+	</binding>
+	<service name="SURFnet-er">
+		<port name="SURFnet-erPort" binding="tns:SURFnet-erBinding">
+			<soap:address location="https://rapportage-test.surfnet.nl:9001/interface.php" />
+		</port>
+
+	</service>
+</definitions>

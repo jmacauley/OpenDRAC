@@ -1,0 +1,218 @@
+--  Manufacturing Info --
+Chassis Type  : E1200i    
+Chassis Mode  : TeraScale 
+Chassis Epoch : 10.4 micro-seconds
+Chassis MAC   : 00:01:e8:74:53:6e 
+Serial Number : TY000005491  
+Part Number   : 7520035405
+Vendor Id     : 04        
+Date Code     : 01402009  
+Country Code  : 01        
+Product Rev   : 01        
+
+--  Line card 0 --
+Status        : online 
+Next Boot     : online 
+Required Type : EXW4PF - 4-port 10GE LAN/WAN PHY line card with XFP optics (EF)
+Current Type  : EXW4PF - 4-port 10GE LAN/WAN PHY line card with XFP optics (EF)
+Hardware Rev  : Base  - 1.1  PP0 - 1.1  PP1 - 1.1
+Num Ports     : 4 
+Up Time       : 6 wk, 5 day, 5 hr, 35 min
+FTOS Version  : 8.3.1.1 
+Jumbo Capable : yes 
+
+--  Line card 1 --
+Status        : online 
+Next Boot     : online 
+Required Type : EXW4PF - 4-port 10GE LAN/WAN PHY line card with XFP optics (EF)
+Current Type  : EXW4PF - 4-port 10GE LAN/WAN PHY line card with XFP optics (EF)
+Hardware Rev  : Base  - 1.1  PP0 - 1.1  PP1 - 1.1
+Num Ports     : 4 
+Up Time       : 6 wk, 4 day, 8 hr, 51 min
+FTOS Version  : 8.3.1.1 
+Jumbo Capable : yes 
+
+--  Line card 2 --
+Status        : not present 
+
+--  Line card 3 --
+Status        : not present 
+
+--  Line card 4 --
+Status        : not present 
+
+--  Line card 5 --
+Status        : online 
+Next Boot     : online 
+Required Type : EXW4PF - 4-port 10GE LAN/WAN PHY line card with XFP optics (EF)
+Current Type  : EXW4PF - 4-port 10GE LAN/WAN PHY line card with XFP optics (EF)
+Hardware Rev  : Base  - 1.1  PP0 - 1.1  PP1 - 1.1
+Num Ports     : 4 
+Up Time       : 6 wk, 4 day, 11 hr, 12 min
+FTOS Version  : 8.3.1.1 
+Jumbo Capable : yes 
+
+--  Line card 6 --
+Status        : not present 
+Required Type : EXW4PF - 4-port 10GE LAN/WAN PHY line card with XFP optics (EF)
+
+--  Line card 7 --
+Status        : online 
+Next Boot     : online 
+Required Type : E48TF - 48-port 10/100/1000Base-T line card with RJ-45 interfaces (EF)
+Current Type  : E48TF - 48-port 10/100/1000Base-T line card with RJ-45 interfaces (EF)
+Hardware Rev  : Base  - 1.1  PP0 - 1.1  PP1 - 1.1
+Num Ports     : 48 
+Up Time       : 6 wk, 5 day, 5 hr, 35 min
+FTOS Version  : 8.3.1.1 
+Jumbo Capable : yes 
+
+--  Line card 8 --
+Status        : not present 
+
+--  Line card 9 --
+Status        : not present 
+
+--  Line card 10 --
+Status        : not present 
+
+--  Line card 11 --
+Status        : not present 
+
+--  Line card 12 --
+Status        : not present 
+
+--  Line card 13 --
+Status        : not present 
+
+-- RPM card 0 --
+Status        : active 
+Next Boot     : online 
+Card Type     : RPM - Route Processor Module (LC-EF-RPM)
+Hardware Rev  : 2.2i 
+Num Ports     : 1 
+Up Time       : 6 wk, 5 day, 5 hr, 36 min
+Last Restart  : reset by user 
+FTOS Version  : 8.3.1.1 
+Jumbo Capable : yes  
+
+-- RPM card 1 --
+Status        : standby 
+Next Boot     : online 
+Card Type     : RPM - Route Processor Module (LC-EF-RPM)
+Hardware Rev  : 2.2i 
+Num Ports     : 1 
+Up Time       : 6 wk, 5 day, 5 hr, 36 min
+Last Restart  : reset by user 
+FTOS Version  : 8.3.1.1 
+Jumbo Capable : yes  
+
+Switch Fabric State: up
+Switch Mode: SFM3
+
+-- SFM card 0 --
+Status        : active 
+Card Type     : SFM3 - Switch Fabric Module
+Up Time       : 6 wk, 5 day, 5 hr, 36 min
+
+-- SFM card 1 --
+Status        : active 
+Card Type     : SFM3 - Switch Fabric Module
+Up Time       : 6 wk, 5 day, 5 hr, 36 min
+
+-- SFM card 2 --
+Status        : active 
+Card Type     : SFM3 - Switch Fabric Module
+Up Time       : 6 wk, 5 day, 5 hr, 36 min
+
+-- SFM card 3 --
+Status        : active 
+Card Type     : SFM3 - Switch Fabric Module
+Up Time       : 6 wk, 5 day, 5 hr, 36 min
+
+-- SFM card 4 --
+Status        : active 
+Card Type     : SFM3 - Switch Fabric Module
+Up Time       : 6 wk, 5 day, 5 hr, 36 min
+
+-- SFM card 5 --
+Status        : active 
+Card Type     : SFM3 - Switch Fabric Module
+Up Time       : 6 wk, 5 day, 5 hr, 36 min
+
+-- SFM card 6 --
+Status        : active 
+Card Type     : SFM3 - Switch Fabric Module
+Up Time       : 6 wk, 5 day, 5 hr, 36 min
+
+-- SFM card 7 --
+Status        : active 
+Card Type     : SFM3 - Switch Fabric Module
+Up Time       : 6 wk, 5 day, 5 hr, 36 min
+
+-- SFM card 8 --
+Status        : active 
+Card Type     : SFM3 - Switch Fabric Module
+Up Time       : 6 wk, 5 day, 5 hr, 36 min
+
+--  Power Supply 0  --
+Status        : up
+Part Number   : 7520029700
+Serial Number : CD933107179  
+Revision      : 04
+Mfg Date      : 332009
+Mfg Name      : 09
+
+--  Power Supply 1  --
+Status        : up
+Part Number   : 7520029700
+Serial Number : CD910106007  
+Revision      : 04
+Mfg Date      : 102009
+Mfg Name      : 09
+
+--  Power Supply 2  --
+Status        : up
+Part Number   : 7520029700
+Serial Number : CD952107025  
+Revision      : 04
+Mfg Date      : 522009
+Mfg Name      : 09
+
+--  Power Supply 3  --
+Status        : up
+Part Number   : 7520029700
+Serial Number : CD933107189  
+Revision      : 04
+Mfg Date      : 332009
+Mfg Name      : 09
+
+--  Power Supply 4  --
+Status        : up
+Part Number   : 7520029700
+Serial Number : CD933107073  
+Revision      : 04
+Mfg Date      : 332009
+Mfg Name      : 09
+
+--  Power Supply 5  --
+Status        : up
+Part Number   : 7520029700
+Serial Number : CD933107121  
+Revision      : 04
+Mfg Date      : 332009
+Mfg Name      : 09
+
+--  Fan Status  --
+                                    ------------------ Fan No. -----------------
+Tray Status Temp   Speed PEM0 PEM1  1    2    3    4    5    6    7    8    9   
+--------------------------------------------------------------------------------
+ 0   up     < 60C  low   AC   AC    up   up   up   up   up   up   up   up   up  
+ 1   up     < 60C  low   AC   AC    up   up   up   up   up   up   up   up   up  
+
+ -- Note(FAN speed)  
+    - low  : 2280-2520 RPM  
+    - med  : 3040-3360 RPM  
+    - high : 3800-4200 RPM  
+
+R1000-S-RFTEC-2#

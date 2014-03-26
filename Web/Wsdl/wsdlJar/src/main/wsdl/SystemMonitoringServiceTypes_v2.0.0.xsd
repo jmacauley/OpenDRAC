@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    <pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>
+
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringServiceTypes"
+	xmlns:ct="http://www.nortel.com/drac/2007/07/03/ws/ct/DracCommonTypes"
+	targetNamespace="http://www.nortel.com/drac/2007/07/03/ws/SystemMonitoringServiceTypes"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import
+		namespace="http://www.nortel.com/drac/2007/07/03/ws/ct/DracCommonTypes"
+		schemaLocation="./DracCommonTypes_v2.0.0.xsd" />
+	<xs:complexType name="ServerConfigT">
+		<xs:sequence>
+			<xs:element name="activeServerDateTime" type="ct:DateTimeWithTimezoneT"
+				nillable="false" />
+			<xs:element name="localServer" type="tns:ServerT"
+				nillable="false" />
+			<xs:element name="remoteServer" type="tns:ServerT"
+				nillable="true" minOccurs="0" maxOccurs="1" />
+			<xs:element name="webService" type="tns:WebServiceT"
+				nillable="true" minOccurs="0" maxOccurs="20" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WebServiceT">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="targetEPR" type="xs:string" />
+			<xs:element name="version" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="QueryServersResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="serverConfig" type="tns:ServerConfigT"
+					nillable="false" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:simpleType name="ValidLogSeverityT">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Info" />
+			<xs:enumeration value="Warning" />
+			<xs:enumeration value="Minor" />
+			<xs:enumeration value="Major" />
+			<xs:enumeration value="Critical" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ValidLogCategoryT">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Na" />
+			<xs:enumeration value="Unknown" />
+			<xs:enumeration value="Authentication" />
+			<xs:enumeration value="Authorization" />
+			<xs:enumeration value="ReservationGroup" />
+			<xs:enumeration value="Reservation" />
+			<xs:enumeration value="Security" />
+			<xs:enumeration value="Ne" />
+			<xs:enumeration value="Endpoint" />
+			<xs:enumeration value="System" />
+		</xs:restriction>
+	</xs:simpleType>
+
+
+	<xs:simpleType name="ValidLogOperationTypeT">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Na" />
+			<xs:enumeration value="Unknown" />
+			<xs:enumeration value="Created" />
+			<xs:enumeration value="Modified" />
+			<xs:enumeration value="Deleted" />
+			<xs:enumeration value="Canceled" />
+			<xs:enumeration value="AlarmRaised" />
+			<xs:enumeration value="AlarmCleared" />
+			<xs:enumeration value="Managed" />
+			<xs:enumeration value="Unmanaged" />
+			<xs:enumeration value="Aligned" />
+			<xs:enumeration value="LoggedIn" />
+			<xs:enumeration value="LoggedOut" />
+			<xs:enumeration value="Executed" />
+			<xs:enumeration value="AccessCheck" />
+			<xs:enumeration value="Redundancy" />
+			<xs:enumeration value="Verified" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ValidLogResultT">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Na" />
+			<xs:enumeration value="Unknown" />
+			<xs:enumeration value="Failed" />
+			<xs:enumeration value="Success" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="LogT">
+		<xs:sequence>
+			<xs:element name="category" type="tns:ValidLogCategoryT"
+				nillable="false" />
+			<xs:element name="operationType" type="tns:ValidLogOperationTypeT"
+				nillable="false" />
+			<xs:element name="affectedResourceId" type="xs:string"
+				nillable="false" />
+			<xs:element name="result" type="tns:ValidLogResultT"
+				nillable="false" />
+			<xs:element name="severity" type="tns:ValidLogSeverityT"
+				nillable="false" />
+			<xs:element name="userId" type="xs:string" nillable="false" />
+			<xs:element name="ipAddress" type="xs:string" nillable="false" />
+			<xs:element name="billingGroup" type="xs:string" nillable="false" />
+			<xs:element name="occurrenceTime" type="xs:dateTime"
+				nillable="false" />
+			<xs:element name="description" type="xs:string" nillable="false" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="QueryLogsByDateTimeT">
+		<xs:complexContent>
+			<xs:extension base="ct:QueryCriteriaT">
+				<xs:sequence>
+					<xs:element name="startTime" type="xs:dateTime"
+						nillable="false" />
+					<xs:element name="endTime" type="xs:dateTime" nillable="false" />
+					<xs:element name="category" type="tns:ValidLogCategoryT"
+						nillable="true" />
+					<xs:element name="operationType" type="tns:ValidLogOperationTypeT"
+						nillable="true" />
+					<xs:element name="result" type="tns:ValidLogResultT"
+						nillable="true" />
+					<xs:element name="severity" type="tns:ValidLogSeverityT"
+						nillable="true" />
+					<xs:element name="affectedResourceId" type="xs:string"
+						nillable="true" />
+					<xs:element name="userId" type="xs:string" nillable="true" />
+					<xs:element name="ipAddress" type="xs:string" nillable="true" />
+					<xs:element name="billingGroup" type="xs:string"
+						nillable="true" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="QueryLogsRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="criteria" type="ct:QueryCriteriaT"
+					nillable="false" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QueryLogsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="numOfElementsIncluded" type="xs:int"
+					nillable="false" />
+				<xs:element name="numOfElementsFound" type="xs:int"
+					nillable="false" />
+				<xs:element name="log" type="tns:LogT" minOccurs="0"
+					maxOccurs="500" nillable="true" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ServerT">
+		<xs:sequence>
+			<xs:element name="state" type="xs:string" nillable="false" />
+			<xs:element name="mode" type="xs:string" nillable="false" />
+			<xs:element name="ipAddress" type="xs:string" nillable="false" />
+			<xs:element name="configurationType" type="xs:string"
+				nillable="false" />
+			<xs:element name="softwareVersion" type="xs:string"
+				nillable="false" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

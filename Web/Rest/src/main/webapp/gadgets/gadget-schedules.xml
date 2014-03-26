@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="OpenDRAC Schedules Gadget">
+    <Require feature="opensocial-0.9" />
+    <Require feature="views" />
+    <Require feature="opensocial-data" />
+    <Require feature="osapi" />
+    <Require feature="dynamic-height" />
+  </ModulePrefs>
+  <Content type="html">
+<![CDATA[
+ 
+  <script type="text/javascript">
+ 
+  function makeJSONRequest() {
+    var params = {};
+    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
+    var now = new Date();
+    var url = "http://dracproxy02.surfnet.nl:443/opendrac-rest/services/username/admin/password/292c2cdcb5f669a8/schedules?randomnumber=" + new Date().getTime();
+    gadgets.io.makeRequest(url, function(data) {
+        if (data.errors.length > 0) {
+            alert(data.errors[0]);
+        } else {
+            //var content = url + "<br>";
+            var content = "";
+	    content += '<table style="font-size: small;">';
+	    content += '<tr align="left"><th>Name</th><th align="left">Start Time</th><th align="left">Duration (min)</th></tr>';
+            for(i = 0; i < data.data.length; i++) {
+                var endTime = new Date(data.data[i].endTime);
+                if(endTime > now) {
+		  content += "<tr>";
+		  content += "<td>" + data.data[i].name + "</td>";
+		  content += "<td>" + new Date(data.data[i].startTime).toUTCString() + "</td>";
+		  content += "<td>" + data.data[i].duration / 60000 + "</td>";
+		  content += "</tr>";
+                }
+	    }
+	    content += "</table>";
+	    document.getElementById('content_div').innerHTML = content;
+            gadgets.window.adjustHeight();
+        }
+    }, params);
+    setTimeout(makeJSONRequest, 2 * 1000);
+  };
+
+  gadgets.util.registerOnLoadHandler(makeJSONRequest);
+
+ 
+  </script>
+
+  <div id="content_div"></div>
+  ]]>
+  </Content>
+</Module>

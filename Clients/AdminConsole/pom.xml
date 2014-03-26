@@ -1,0 +1,159 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <!-- <pre> The owner of the original code is Ciena Corporation. Portions 
+    created by the original owner are Copyright (C) 2004-2010 the original owner. 
+    All Rights Reserved. Portions created by other contributors are Copyright 
+    (C) the contributor. All Rights Reserved. Contributor(s): (Contributors insert 
+    name & email here) This file is part of DRAC (Dynamic Resource Allocation 
+    Controller). DRAC is free software: you can redistribute it and/or modify 
+    it under the terms of the GNU General Public License as published by the 
+    Free Software Foundation; either version 3 of the License, or (at your option) 
+    any later version. DRAC is distributed in the hope that it will be useful, 
+    but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY 
+    or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for 
+    more details. You should have received a copy of the GNU General Public License 
+    along with this program. If not, see <http://www.gnu.org/licenses />. </pre> -->
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.opendrac</groupId>
+  <artifactId>AdminConsole</artifactId>
+  <version>4.6.1-SNAPSHOT</version>
+  <name>Clients/AdminConsole - AdminConsole</name>
+  <description>AdminConsole: OpenDRAC swing administration GUI</description>
+  <packaging>jar</packaging>
+
+  <parent>
+    <groupId>org.opendrac</groupId>
+    <artifactId>Clients</artifactId>
+    <version>4.6.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.opendrac</groupId>
+      <artifactId>Common</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.opendrac</groupId>
+      <artifactId>Nrb</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.opendrac</groupId>
+      <artifactId>Security</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jdom</groupId>
+      <artifactId>jdom</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>net.sf.jung</groupId>
+      <artifactId>jung-algorithms</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>net.sf.jung</groupId>
+      <artifactId>jung-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>net.sf.jung</groupId>
+      <artifactId>jung-graph-impl</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>net.sf.jung</groupId>
+      <artifactId>jung-visualization</artifactId>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <defaultGoal>install</defaultGoal>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>2.0</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <createDependencyReducedPom>false</createDependencyReducedPom>
+              <artifactSet>
+                <excludes>
+                  <exclude>*:opendrac-shared</exclude>
+                  <exclude>org.opendrac*:Database</exclude>
+                </excludes>
+              </artifactSet>
+              <filters>
+                 <filter>
+                     <artifact>*:*</artifact>
+                     <excludes>
+                         <exclude>META-INF/*.SF</exclude>
+                         <exclude>META-INF/*.DSA</exclude>
+                         <exclude>META-INF/*.RSA</exclude>  
+					     <exclude>docs/*.docx</exclude>                                        
+                     </excludes>
+                 </filter>
+             </filters>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>false</addClasspath>
+              <mainClass>com.nortel.appcore.app.drac.client.lpcpadminconsole.OpenDracDesktop</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>opendrac_package</id>
+            <phase>prepare-package</phase>
+            <configuration>
+              <tasks>
+                <!-- Create a pretty time stamp -->
+                <tstamp>
+                  <format property="DSTAMP" pattern="MMMM-dd-yyyy" />
+                  <format property="TSTAMP" pattern="HH:mm" />
+                </tstamp>
+                <echo message="Generating release.ext" />
+                <echo file="target/classes/release.ext">
+<![CDATA[                
+PRODUCT_NAME=${project.groupId}
+PRODUCT_VERSION=${project.version}
+BUILD_DATE=${DSTAMP} ${TSTAMP}
+BUILDER=${user.name}
+]]>
+                </echo>
+              </tasks>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    <extensions>
+    </extensions>
+  </build>
+</project>

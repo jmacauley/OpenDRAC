@@ -1,0 +1,121 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.opendrac</groupId>
+  <artifactId>Fenius</artifactId>
+  <version>4.6.1-SNAPSHOT</version>
+  <name>Web/Fenius/ - OpenDRAC Fenius web service interface</name>
+  <description>OpenDRAC Fenius web service interface for the Fenius project</description>
+  <packaging>war</packaging>
+
+  <parent>
+    <groupId>org.opendrac</groupId>
+    <artifactId>Web</artifactId>
+    <version>4.6.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <dependencies>
+     <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.opendrac</groupId>
+      <artifactId>RequestHandler</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.opendrac</groupId>
+      <artifactId>Common</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.opendrac</groupId>
+      <artifactId>Nrb</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.opendrac</groupId>
+      <artifactId>Jaas</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.glassfish.metro</groupId>
+      <artifactId>webservices-rt</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.glassfish.metro</groupId>
+      <artifactId>webservices-extra</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.glassfish.metro</groupId>
+      <artifactId>webservices-extra-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.glassfish.metro</groupId>
+      <artifactId>webservices-tools</artifactId>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <defaultGoal>install</defaultGoal>
+
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jaxws-maven-plugin</artifactId>
+        <version>1.12</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>wsimport</goal>
+            </goals>
+            <configuration>
+              <verbose>true</verbose>
+              <keep>true</keep>
+              <xnocompile>true</xnocompile>
+              <wsdlDirectory>${basedir}/src/main/resources/wsdl/ConnectionService</wsdlDirectory>
+              <sourceDestDir>${project.build.directory}/generated-sources/jaxws/</sourceDestDir>
+              <destDir />
+              <wsdlLocation>WEB-INF/wsdl/ConnectionService/ConnectionService.wsdl</wsdlLocation>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>fenius_wsdl_package</id>
+            <phase>process-resources</phase>
+            <configuration>
+              <target>
+                <copy todir="${project.build.directory}/Fenius-${project.version}/WEB-INF/wsdl/ConnectionService" verbose="true" failonerror="true">
+                  <fileset dir="${basedir}/src/main/resources/wsdl/ConnectionService" />
+                </copy>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+  </build>
+</project>

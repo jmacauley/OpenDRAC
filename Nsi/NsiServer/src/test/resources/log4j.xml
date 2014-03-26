@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+  <!-- ============================== -->
+  <!-- Append messages to the console -->
+  <!-- ============================== -->
+  <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d %-5p [%t] (%C:%L) - %m%n" />
+    </layout>
+  </appender>
+
+  <!-- ================ -->
+  <!-- Limit categories -->
+  <!-- ================ -->
+  <logger name="com.mchange.v2">
+    <level value="INFO" />
+  </logger>
+
+  <logger name="org.springframework">
+    <level value="INFO" />
+  </logger>
+
+  <logger name="org.apache">
+    <level value="INFO" />
+  </logger>
+
+  <logger name="org.hibernate">
+    <level value="DEBUG" />
+  </logger>
+
+  <logger name="org.hibernate.tool.hbm2ddl">
+    <level value="DEBUG" />
+  </logger>
+
+  <logger name="org.hibernate.type.BasicTypeRegistry">
+    <level value="WARN" />
+  </logger>
+
+  <logger name="org.hibernate.id.factory">
+    <level value="INFO" />
+  </logger>
+
+  <logger name="org.hibernate.cfg">
+    <level value="INFO" />
+  </logger>
+
+  <logger name="org.hibernate.persister">
+    <level value="INFO" />
+  </logger>
+
+  <logger name="org.hibernate.loader">
+    <level value="INFO" />
+  </logger>
+
+  <logger name="org.hibernate.jdbc">
+    <level value="INFO" />
+  </logger>
+
+  <logger name="org.hibernate.engine">
+    <level value="INFO" />
+  </logger>
+
+  <logger name="org.hibernate.hql.ast">
+    <level value="INFO" />
+  </logger>
+
+  <logger name="org.hibernate.SQL">
+    <level value="TRACE" />
+  </logger>
+
+  <logger name="org.hibernate.type">
+    <level value="TRACE" />
+  </logger>
+
+  <logger name="org.opendrac">
+    <level value="DEBUG" />
+  </logger>
+
+  <logger name="com.nortel">
+    <level value="DEBUG" />
+  </logger>
+
+
+  <!-- ======================= -->
+  <!-- Setup the Root logger -->
+  <!-- ======================= -->
+  <root>
+    <level value="DEBUG" />
+    <appender-ref ref="CONSOLE" />
+  </root>
+</log4j:configuration>

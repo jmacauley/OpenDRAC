@@ -1,0 +1,184 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.opendrac</groupId>
+  <artifactId>NsiClient</artifactId>
+  <version>4.6.1-SNAPSHOT</version>
+  <name>NsiClient/ - OpenDRAC NSI Client Module</name>
+  <description>OpenDRAC OGF NSI protocol client implementation</description>
+  <packaging>jar</packaging>
+
+  <parent>
+    <groupId>org.opendrac</groupId>
+    <artifactId>Nsi</artifactId>
+    <version>4.6.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.opendrac</groupId>
+      <artifactId>NsiServer</artifactId>
+      <classifier>classes</classifier>
+      <version>4.6.1-SNAPSHOT</version>
+
+    </dependency>
+
+    <dependency>
+      <groupId>com.sun.xml.ws</groupId>
+      <artifactId>jaxws-rt</artifactId>
+      <version>2.2.8-promoted-b146</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <defaultGoal>install</defaultGoal>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>2.0</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+           <createDependencyReducedPom>false</createDependencyReducedPom>
+          <includes>
+            <include>WEB-INF</include>
+          </includes>
+          <artifactSet>
+            <excludes>
+              <exclude>aopalliance:aopalliance</exclude>
+              <exclude>colt:colt</exclude>
+              <exclude>com.google.protobuf:protobuf-java</exclude>
+              <exclude>com.h2database:h2</exclude>
+              <exclude>com.jcraft:jsch</exclude>
+              <exclude>com.sun.commons:beanutils</exclude>
+              <exclude>com.sun.commons:logging-api</exclude>
+              <exclude>com.sun.commons:modeler</exclude>
+              <!--<exclude>com.sun.org.apache.xml.internal:resolver</exclude>-->
+              <!--<exclude>com.sun.xml.bind:jaxb-impl</exclude>-->
+              <!--<exclude>com.sun.xml.messaging.saaj:saaj-impl</exclude>-->
+              <!-- <exclude>com.sun.xml.stream.buffer:streambuffer</exclude>-->
+              <!--<exclude>com.sun.xml.stream:sjsxp</exclude>-->
+              <!--<exclude>com.sun.xml.ws:jaxws-rt</exclude>-->
+              <exclude>commons-codec:commons-codec</exclude>
+              <exclude>commons-collections:commons-collections</exclude>
+              <exclude>commons-io:commons-io</exclude>
+              <exclude>commons-lang:commons-lang</exclude>
+              <exclude>commons-logging:commons-logging</exclude>
+              <exclude>concurrent:concurrent</exclude>
+              <exclude>javax.activation:activation</exclude>
+              <exclude>javax.mail:mail</exclude>
+              <exclude>javax.servlet:jstl</exclude>
+              <!--<exclude>javax.xml.bind:jaxb-api</exclude>-->
+              <exclude>javax.xml.soap:saaj-api</exclude>
+              <!--<exclude>javax.xml.stream:stax-api</exclude>-->
+              <!--<exclude>javax.xml.ws:jaxws-api</exclude>-->
+              <!-- <exclude>log4j:log4j</exclude> -->
+              <exclude>mysql:mysql-connector-java</exclude>
+              <exclude>net.databinder:dispatch-json_2.9.0</exclude>
+              <exclude>net.debasishg:sjson_2.9.0</exclude>
+              <exclude>net.sf.jung:jung-algorithms</exclude>
+              <exclude>net.sf.jung:jung-api</exclude>
+              <exclude>net.sf.jung:jung-graph-impl</exclude>
+              <exclude>net.sourceforge.collections:collections-generic</exclude>
+              <exclude>org.bouncycastle:bcprov-jdk16</exclude>
+              <exclude>org.codehaus.aspectwerkz:aspectwerkz</exclude>
+              <exclude>org.codehaus.jackson:jackson-core-asl</exclude>
+              <exclude>org.codehaus.jackson:jackson-mapper-asl</exclude>
+              <exclude>org.glassfish.metro:webservices-api</exclude>
+              <exclude>org.glassfish.metro:webservices-extra-api</exclude>
+              <exclude>org.glassfish.metro:webservices-extra</exclude>
+              <exclude>org.glassfish.metro:webservices-rt</exclude>
+              <exclude>org.glassfish.metro:webservices-tools</exclude>
+              <exclude>org.guiceyfruit:guice-all</exclude>
+              <exclude>org.jasypt:jasypt:jar</exclude>
+              <exclude>org.jboss.netty:netty</exclude>
+              <exclude>org.jdom:jdom</exclude>
+              <!--<exclude>org.jvnet.staxex:stax-ex</exclude>-->
+              <!--<exclude>org.jvnet:mimepull</exclude>-->
+              <exclude>org.multiverse:multiverse-alpha</exclude>
+              <exclude>org.objenesis:objenesis</exclude>
+              <exclude>org.opendrac:Common</exclude>
+              <exclude>org.opendrac:Database</exclude>
+              <exclude>org.opendrac:Jaas</exclude>
+              <exclude>org.opendrac:Lpcp</exclude>
+              <exclude>org.opendrac:NeProxy</exclude>
+              <exclude>org.opendrac:Nrb</exclude>
+              <exclude>org.opendrac:NrbImpl</exclude>
+              <!-- <exclude>org.opendrac:NsiServer</exclude> -->
+              <exclude>org.opendrac:RequestHandler</exclude>
+              <exclude>org.opendrac:Security</exclude>
+              <exclude>org.opendrac:opendrac-shared</exclude>
+              <exclude>org.scala-lang:scala-library</exclude>
+              <exclude>org.semanticweb:owlapi</exclude>
+              <!-- <exclude>org.slf4j:slf4j-api</exclude> -->
+              <!-- <exclude>org.slf4j:slf4j-log4j12</exclude> -->
+              <exclude>org.springframework:spring-aop</exclude>
+              <exclude>org.springframework:spring-asm</exclude>
+              <exclude>org.springframework:spring-beans</exclude>
+              <exclude>org.springframework:spring-context-support</exclude>
+              <exclude>org.springframework:spring-context</exclude>
+              <exclude>org.springframework:spring-core:jar</exclude>
+              <exclude>org.springframework:spring-expression</exclude>
+              <exclude>org.springframework:spring-jdbc</exclude>
+              <exclude>org.springframework:spring-tx</exclude>
+              <exclude>org.springframework:spring-web</exclude>
+              <exclude>org.springframework:spring-webmvc</exclude>
+              <exclude>se.scalablesolutions.akka:akka-actor</exclude>
+              <exclude>se.scalablesolutions.akka:akka-remote</exclude>
+              <exclude>se.scalablesolutions.akka:akka-slf4j</exclude>
+              <exclude>se.scalablesolutions.akka:akka-stm</exclude>
+              <exclude>se.scalablesolutions.akka:akka-typed-actor</exclude>
+              <exclude>taglibs:standard</exclude>
+              <exclude>voldemort.store.compress:h2-lzf</exclude>
+            </excludes>
+          </artifactSet>
+          <filters>
+            <filter>
+              <artifact>*:*</artifact>
+              <excludes>
+                <exclude>META-INF/*.SF</exclude>
+                <exclude>META-INF/*.DSA</exclude>
+                <exclude>META-INF/*.RSA</exclude>
+              </excludes>
+            </filter>
+          </filters>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>false</addClasspath>
+              <mainClass>org.opendrac.nsi.client.Main</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+
+  </build>
+</project>

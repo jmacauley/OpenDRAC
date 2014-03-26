@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:webapps/nsi-v1/WEB-INF/wsdl/nsi-v1/ogf_nsi_connection_provider_v1_0.wsdl" uri="webapps/nsi-v1/WEB-INF/wsdl/nsi-v1/ogf_nsi_connection_provider_v1_0.wsdl"/>
+    <system systemId="file:webapps/nsi-v1/WEB-INF/wsdl/nsi-v1/ogf_nsi_connection_interface_v1_0.wsdl" uri="webapps/nsi-v1/WEB-INF/wsdl/nsi-v1/ogf_nsi_connection_interface_v1_0.wsdl"/>
+    <system systemId="file:webapps/nsi-v1/WEB-INF/wsdl/nsi-v1/ogf_nsi_connection_types_v1_0.xsd" uri="webapps/nsi-v1/WEB-INF/wsdl/nsi-v1/ogf_nsi_connection_types_v1_0.xsd"/>
+    <system systemId="file:webapps/nsi-v1/WEB-INF/wsdl/nsi-v1/saml-schema-assertion-2.0.xsd" uri="webapps/nsi-v1/WEB-INF/wsdl/nsi-v1/saml-schema-assertion-2.0.xsd"/>
+    <system systemId="file:webapps/nsi-v1/WEB-INF/wsdl/nsi-v1/xmldsig-core-schema.xsd" uri="webapps/nsi-v1/WEB-INF/wsdl/nsi-v1/xmldsig-core-schema.xsd"/>
+    <system systemId="file:webapps/nsi-v1/WEB-INF/wsdl/nsi-v1/xenc-schema.xsd" uri="webapps/nsi-v1/WEB-INF/wsdl/nsi-v1/xenc-schema.xsd"/>
+</catalog>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : context.xml.xml
+    Created on : June 6, 2011, 12:16 PM
+    Author     : hacksaw
+    Description:
+        Purpose of the document follows.
+-->
+
+<Context antiJARLocking="true" path="/feniusWS"/>
+

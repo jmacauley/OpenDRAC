@@ -1,0 +1,118 @@
+/**
+ * <pre>
+ * The owner of the original code is Ciena Corporation.
+ *
+ * Portions created by the original owner are Copyright (C) 2004-2010
+ * the original owner. All Rights Reserved.
+ *
+ * Portions created by other contributors are Copyright (C) the contributor.
+ * All Rights Reserved.
+ *
+ * Contributor(s):
+ *   (Contributors insert name & email here)
+ *
+ * This file is part of DRAC (Dynamic Resource Allocation Controller).
+ *
+ * DRAC is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * DRAC is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+ * Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * </pre>
+ */
+
+/*
+
+bright: rgb(234,242,255);
+normal: rgb(120,172,255);
+dark:   rgb(0,66,174);
+
+*/
+
+
+
+
+.dynamic-tab-pane-control.tab-pane {
+    position:   relative;
+    width:      100%;
+}
+
+.dynamic-tab-pane-control .tab-row .tab {
+    font-family:    Verdana, Helvetica, Arial;
+    font-size:      10px;
+    cursor:         Default;
+    display:        inline;
+    margin:         1px -5px 1px 5px;
+    float:          left;
+    padding:        3px 6px 3px 6px;
+    background:     white;
+    border:         1px solid;
+    border-color:   rgb(204,204,204);
+    border-left:    0;
+    border-bottom:  0;
+    border-top:     0;
+    
+    /* cursor:          hand; */
+    cursor:         pointer;
+    
+    z-index:        1;
+    position:       relative;
+    top:            0;
+}
+
+.dynamic-tab-pane-control .tab-row .tab.selected {
+    border:         1px solid rgb(204,204,204);
+    border-bottom:  0;
+    z-index:        3;
+    padding:        2px 6px 5px 6px;
+    margin:         1px -6px -2px 0px;
+    top:            -2px;
+    background:     #F7F7F7;
+}
+
+.dynamic-tab-pane-control .tab-row .tab a {
+    font-family:        Verdana, Helvetica, Arial;
+    font-size:          10px;
+    color:              #5F5F5F;
+    text-decoration:    none;
+    /* cursor:          hand; */
+    cursor:         pointer;    
+}
+
+.dynamic-tab-pane-control .tab-row .hover a {
+    color:  black;
+}
+
+.dynamic-tab-pane-control .tab-row .tab.selected a {
+    font-weight:    bold;
+}
+
+.dynamic-tab-pane-control .tab-page {
+    clear:          both;
+    border:         1px solid rgb(204,204,204);
+    background:     #F7F7F7;
+    z-index:        2;
+    position:       relative;
+    top:            -2px;
+    color:          #5F5F5F;
+    font-family:    Verdana, Helvetica, Arial;
+    font-size:      10px;
+    padding:        4px;
+    border-style:   solid;
+    border-width:   1px 1px 1px 1px;
+}
+
+.dynamic-tab-pane-control .tab-row {
+    z-index:        1;
+    white-space:    nowrap;
+    background:     white;
+    height:         1.85em;
+    width:          100%;
+}

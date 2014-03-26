@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+  <!--  -->
+  <!-- JVM startup parameters (memory, endorsed, boot classpath, etc) are set in the --> 
+  <!-- Build/pom.xml, which will inject them into the generated bin/startup.{sh,bat} during the build process -->
+  <!--  --> 
+  
+  <!--  -->
+  <!-- Processes -->
+  <!--  -->
+  <class name="org.opendrac.launcher.RmiLauncher" enabled="true" init="start" destroy="stop" fork="false" />
+  <class name="org.opendrac.ioc.IocContainer" enabled="true" init="startWithDefaultConfig" destroy="close" fork="false" />
+  <class name="com.nortel.appcore.app.drac.server.neproxy.NeProxyLauncher" enabled="true" init="start" destroy="stop" fork="false"/>
+  <class name="com.nortel.appcore.app.drac.server.lpcp.LpcpLauncher" enabled="true" init="startup" destroy="shutdown" fork="true"/>
+  <class name="com.nortel.appcore.app.drac.server.nrb.impl.NrbLauncher" enabled="true" init="startup" destroy="shutdown" fork="true"/>
+  <class name="org.apache.catalina.startup.Bootstrap" enabled="true" init="start" destroy="stop" fork="true"/>
+  
+  <!--  -->
+  <!-- OpenDRAC Properties-->
+  <!--  -->
+  <property name="org.opendrac.common.error.handling.base" value="com.nortel.appcore.app.drac.common.resources.ErrorDescription" />
+  <property name="org.opendrac.controller.primary" value="IP_ADDRESS_PRIMARY" />
+  <property name="org.opendrac.controller.secondary" value="IP_ADDRESS_SECONDARY" />
+  <property name="org.opendrac.db.max.resultset" value="100" />
+  <property name="org.opendrac.logging.smtp.mailing.active" value="false" />
+  <property name="org.opendrac.logging.smtp.server" value="localhost" />
+  <property name="org.opendrac.logging.smtp.port" value="2500" />
+  <property name="org.opendrac.logging.smtp.from" value="root@localhost" />
+  <property name="org.opendrac.logging.smtp.to" value="adminA@server.com,adminB@server.com" />
+  <property name="org.opendrac.logging.snmp.server" value="localhost" />
+  <property name="org.opendrac.logging.snmp.port" value="1600" />
+  <property name="org.opendrac.lpcp.port" value="8090" />
+  <property name="org.opendrac.neproxy.definitions" value="neproxy-definitions.xml" />
+  <property name="org.opendrac.neproxy.port" value="8092" />
+  <property name="org.opendrac.nrb.port" value="8091" />
+  <property name="org.opendrac.proxy.heartbeat.delay" value="120" />
+  <property name="org.opendrac.proxy.heartbeat.skip" value="2" />
+  <property name="org.opendrac.proxy.heartbeat.speedup" value="false" />
+  <property name="org.opendrac.proxy.heartbeat.timeout" value="60" />
+  <property name="org.opendrac.proxy.terminal.id" value="TDEFAULT_PROXY" />
+  <property name="org.opendrac.reporting.monthly" value="false" />
+  <property name="org.opendrac.rmi.port" value="1099" />
+  <property name="org.opendrac.schedule.offset" value="30000" />
+  <property name="org.opendrac.webui.https" value="8443" />
+  <property name="org.opendrac.webui.http" value="8080" />
+  <property name="org.opendrac.webui.show.exceptions" value="true" />
+
+  
+  <!-- Settings for locking after bad logins; period in milliseconds -->
+  <property name="org.opendrac.failed.login.period.ip" value="300000" />
+  <property name="org.opendrac.failed.login.period.session" value="100000" />
+  <property name="org.opendrac.lockout.period.ip" value="300000" />
+  <property name="org.opendrac.lockout.period.session" value="300000" />
+  <property name="org.opendrac.max.failed.login.ip" value="300" />
+  <property name="org.opendrac.max.failed.login.session" value="20" /> 
+
+  <!--  -->
+  <!-- General / Catalina / Tomcat Properties-->
+  <!--  -->
+  <property name="catalina.base" value="." />
+  <property name="catalina.home" value="." />
+  <property name="file.encoding" value="UTF-8" />
+  <property name="java.awt.headless" value="true" />
+  <property name="java.io.tmpdir" value="./var/tmp" />
+  <property name="java.security.auth.login.config" value="./conf/jaas.config" />
+  <property name="org.apache.juli.formatter" value="org.apache.juli.OneLineFormatter"/>
+  <property name="tomcat.util.scan.DefaultJarScanner.jarsToSkip" value="*.jar"/>
+  
+ 
+</config>

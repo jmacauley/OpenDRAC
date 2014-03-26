@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="SystemMonitoringServiceBindings_v3.0" resourceRoot="" soapui-version="3.6.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="SystemMonitoringServiceSOAPBinding" type="wsdl" bindingName="{http://www.opendrac.org/ws/SystemMonitoringService_v3.0}SystemMonitoringServiceSOAPBinding" soapVersion="1_1" anonymous="optional" definition="file:/home/darryl/dracbuild/Web/Wsdl/src/main/wsdl/SystemMonitoringServiceBindings_v3.0.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/home/darryl/dracbuild/Web/Wsdl/src/main/wsdl/SystemMonitoringServiceBindings_v3.0.wsdl"><con:part><con:url>file:/home/darryl/dracbuild/Web/Wsdl/src/main/wsdl/SystemMonitoringServiceBindings_v3.0.wsdl</con:url><con:content><![CDATA[<!--<pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>-->
+<definitions targetNamespace="http://www.opendrac.org/ws/SystemMonitoringService_v3.0" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://www.opendrac.org/ws/SystemMonitoringService_v3.0" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaddr="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <import namespace="http://www.opendrac.org/ws/SystemMonitoringService_v3.0" location="./SystemMonitoringServiceMessages_v3.0.wsdl"/>
+  <binding name="SystemMonitoringServiceSOAPBinding" type="tns:SystemMonitoringServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="queryServers">
+      <soap:operation soapAction="http://www.opendrac.org/ws/SystemMonitoringService_v3.0/queryServers" style="document"/>
+      <input>
+        <soap:header message="tns:Security" part="header" use="literal"/>
+        <soap:body parts="" use="literal"/>
+      </input>
+      <output>
+        <soap:body parts="payload" use="literal"/>
+      </output>
+      <fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="queryLogs">
+      <soap:operation soapAction="http://www.opendrac.org/ws/SystemMonitoringService_v3.0/queryLogs" style="document"/>
+      <input>
+        <soap:header message="tns:Security" part="header" use="literal"/>
+        <soap:body parts="payload" use="literal"/>
+      </input>
+      <output>
+        <soap:body parts="payload" use="literal"/>
+      </output>
+      <fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="SystemMonitoringService_v3.0">
+    <documentation>SystemMonitoringService allows clients to query DRAC system information as system time or SW version. 
+      It also allows clients to retrieve DRAC system logs.</documentation>
+    <port name="SystemMonitoringServiceSOAPport" binding="tns:SystemMonitoringServiceSOAPBinding">
+      <soap:address location="https://localhost:8443/axis2/services/SystemMonitoringService_v3.0"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:/home/darryl/dracbuild/Web/Wsdl/src/main/wsdl/SystemMonitoringServiceMessages_v3.0.wsdl</con:url><con:content><![CDATA[<!--<pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>-->
+<definitions targetNamespace="http://www.opendrac.org/ws/SystemMonitoringService_v3.0" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://www.opendrac.org/ws/SystemMonitoringService_v3.0" xmlns:t="http://www.opendrac.org/ws/SystemMonitoringServiceTypes_v3.0" xmlns:ct="http://www.nortel.com/drac/2007/07/03/ws/ct/DracCommonTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaddr="http://www.w3.org/2006/05/addressing/wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+  <types>
+    <xs:schema targetNamespace="http://www.opendrac.org/ws/SystemMonitoringService_v3.0">
+      <xs:import namespace="http://www.opendrac.org/ws/SystemMonitoringServiceTypes_v3.0" schemaLocation="./SystemMonitoringServiceTypes_v3.0.xsd"/>
+      <xs:import namespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" schemaLocation="./Wssecurity_v3.0.xsd"/>
+    </xs:schema>
+  </types>
+  <message name="Security">
+    <part name="header" element="wsse:Security"/>
+  </message>
+  <message name="queryServersResponse">
+    <part name="payload" element="t:QueryServersResponse"/>
+  </message>
+  <message name="queryServersRequest">
+    <part name="header" element="ct:Credentials"/>
+  </message>
+  <message name="queryLogsRequest">
+    <part name="header" element="t:Security"/>
+    <part name="payload" element="t:QueryLogsRequest"/>
+  </message>
+  <message name="queryLogsResponse">
+    <part name="payload" element="t:QueryLogsResponse"/>
+  </message>
+  <message name="completionResponse">
+    <part name="payload" element="ct:CompletionResponse"/>
+  </message>
+  <message name="systemMonitoringServiceFault">
+    <part name="payload" element="ct:DracFault"/>
+  </message>
+  <portType name="SystemMonitoringServicePortType">
+    <operation name="authenticate">
+      <documentation>The authenticate operation must be invoked as the first operation before invoking any other operations on this service.</documentation>
+      <input message="tns:authenticationRequest" wsaddr:Action="http://www.opendrac.org/ws/SystemMonitoringService_v3.0/authenticationRequest"/>
+      <output message="tns:completionResponse" wsaddr:Action="http://www.opendrac.org/ws/SystemMonitoringService_v3.0/completionResponse"/>
+      <fault name="fault" message="tns:systemMonitoringServiceFault"/>
+    </operation>
+    <operation name="queryServers">
+      <documentation>For authorization purposes user id must be included in the SOAP message header.</documentation>
+      <input message="tns:queryServersRequest" wsaddr:Action="http://www.opendrac.org/ws/SystemMonitoringService_v3.0/queryServersRequest"/>
+      <output message="tns:queryServersResponse" wsaddr:Action="http://www.opendrac.org/ws/SystemMonitoringService_v3.0/queryServersResponse"/>
+      <fault name="fault" message="tns:systemMonitoringServiceFault"/>
+    </operation>
+    <operation name="queryLogs">
+      <documentation>For authorization purposes user id must be included in the SOAP message header.</documentation>
+      <input message="tns:queryLogsRequest" wsaddr:Action="http://www.opendrac.org/ws/SystemMonitoringService_v3.0/queryLogsRequest"/>
+      <output message="tns:queryLogsResponse" wsaddr:Action="http://www.opendrac.org/ws/SystemMonitoringService_v3.0/queryLogsResponse"/>
+      <fault name="fault" message="tns:systemMonitoringServiceFault"/>
+    </operation>
+    <operation name="disconnect">
+      <documentation>For authorization purposes user id must be included in the SOAP message header.</documentation>
+      <input message="tns:disconnectRequest" wsaddr:Action="http://www.opendrac.org/ws/SystemMonitoringService_v3.0/disconnectRequest"/>
+      <output message="tns:completionResponse" wsaddr:Action="http://www.opendrac.org/ws/SystemMonitoringService_v3.0/completionResponse"/>
+      <fault name="fault" message="tns:systemMonitoringServiceFault"/>
+    </operation>
+  </portType>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:/home/darryl/dracbuild/Web/Wsdl/src/main/wsdl/SystemMonitoringServiceTypes_v3.0.xsd</con:url><con:content><![CDATA[<!--<pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>-->
+<xs:schema targetNamespace="http://www.opendrac.org/ws/SystemMonitoringServiceTypes_v3.0" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.opendrac.org/ws/SystemMonitoringServiceTypes_v3.0" xmlns:ct="http://www.nortel.com/drac/2007/07/03/ws/ct/DracCommonTypes">
+  <xs:import namespace="http://www.nortel.com/drac/2007/07/03/ws/ct/DracCommonTypes" schemaLocation="./DracCommonTypes_v3.0.xsd"/>
+  <xs:complexType name="ServerConfigT">
+    <xs:sequence>
+      <xs:element name="activeServerDateTime" type="ct:DateTimeWithTimezoneT" nillable="false"/>
+      <xs:element name="localServer" type="tns:ServerT" nillable="false"/>
+      <xs:element name="remoteServer" type="tns:ServerT" nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="webService" type="tns:WebServiceT" nillable="true" minOccurs="0" maxOccurs="20"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WebServiceT">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="targetEPR" type="xs:string"/>
+      <xs:element name="version" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryServersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="serverConfig" type="tns:ServerConfigT" nillable="false"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="ValidLogSeverityT">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Info"/>
+      <xs:enumeration value="Warning"/>
+      <xs:enumeration value="Minor"/>
+      <xs:enumeration value="Major"/>
+      <xs:enumeration value="Critical"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ValidLogCategoryT">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Na"/>
+      <xs:enumeration value="Unknown"/>
+      <xs:enumeration value="Authentication"/>
+      <xs:enumeration value="Authorization"/>
+      <xs:enumeration value="ReservationGroup"/>
+      <xs:enumeration value="Reservation"/>
+      <xs:enumeration value="Security"/>
+      <xs:enumeration value="Ne"/>
+      <xs:enumeration value="Endpoint"/>
+      <xs:enumeration value="System"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ValidLogOperationTypeT">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Na"/>
+      <xs:enumeration value="Unknown"/>
+      <xs:enumeration value="Created"/>
+      <xs:enumeration value="Modified"/>
+      <xs:enumeration value="Deleted"/>
+      <xs:enumeration value="Canceled"/>
+      <xs:enumeration value="AlarmRaised"/>
+      <xs:enumeration value="AlarmCleared"/>
+      <xs:enumeration value="Managed"/>
+      <xs:enumeration value="Unmanaged"/>
+      <xs:enumeration value="Aligned"/>
+      <xs:enumeration value="LoggedIn"/>
+      <xs:enumeration value="LoggedOut"/>
+      <xs:enumeration value="Executed"/>
+      <xs:enumeration value="AccessCheck"/>
+      <xs:enumeration value="Redundancy"/>
+      <xs:enumeration value="Verified"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ValidLogResultT">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Na"/>
+      <xs:enumeration value="Unknown"/>
+      <xs:enumeration value="Failed"/>
+      <xs:enumeration value="Success"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="LogT">
+    <xs:sequence>
+      <xs:element name="category" type="tns:ValidLogCategoryT" nillable="false"/>
+      <xs:element name="operationType" type="tns:ValidLogOperationTypeT" nillable="false"/>
+      <xs:element name="affectedResourceId" type="xs:string" nillable="false"/>
+      <xs:element name="result" type="tns:ValidLogResultT" nillable="false"/>
+      <xs:element name="severity" type="tns:ValidLogSeverityT" nillable="false"/>
+      <xs:element name="userId" type="xs:string" nillable="false"/>
+      <xs:element name="ipAddress" type="xs:string" nillable="false"/>
+      <xs:element name="billingGroup" type="xs:string" nillable="false"/>
+      <xs:element name="occurrenceTime" type="xs:dateTime" nillable="false"/>
+      <xs:element name="description" type="xs:string" nillable="false"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryLogsByDateTimeT">
+    <xs:complexContent>
+      <xs:extension base="ct:QueryCriteriaT">
+        <xs:sequence>
+          <xs:annotation>
+            <xs:documentation>Time format for the DRAC WSDL interfaces : YYYY-MM-DDTHH:mm:ssTZD 
+               YYYY = four-digit year
+               MM   = two-digit month (01=January, etc.)
+               DD   = two-digit day of month (01 through 31)
+               HH   = two digits of hour (00 through 23) (am/pm NOT allowed)
+               mm  = two digits of minute (00 through 59)
+               ss     = two digits of second (00 through 59)
+               TZD  = time zone designator (+hh:mm or -hh:mm)
+               Examples :
+                2007-03-25T09:30:00-05:00
+                2007-05-22T23:30:00+04:00
+                2007-06-11T10:30:00Z</xs:documentation>
+          </xs:annotation>
+          <xs:element name="startTime" type="xs:dateTime" nillable="false" minOccurs="1" maxOccurs="1"/>
+          <xs:element name="endTime" type="xs:dateTime" nillable="false"/>
+          <xs:element name="category" type="tns:ValidLogCategoryT" nillable="true" minOccurs="0"/>
+          <xs:element name="operationType" type="tns:ValidLogOperationTypeT" nillable="true" minOccurs="0"/>
+          <xs:element name="result" type="tns:ValidLogResultT" nillable="true" minOccurs="0"/>
+          <xs:element name="severity" type="tns:ValidLogSeverityT" nillable="true" minOccurs="0"/>
+          <xs:element name="affectedResourceId" type="xs:string" nillable="true" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="userId" type="xs:string" nillable="true" minOccurs="0"/>
+          <xs:element name="ipAddress" type="xs:string" nillable="true" minOccurs="0"/>
+          <xs:element name="billingGroup" type="xs:string" nillable="true" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="QueryLogsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <!--<xs:element name="criteria" type="ct:QueryCriteriaT"
+					nillable="false" />-->
+        <xs:element name="criteria" type="tns:QueryLogsByDateTimeT" nillable="false"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryLogsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="numOfElementsIncluded" type="xs:int" nillable="false"/>
+        <xs:element name="numOfElementsFound" type="xs:int" nillable="false"/>
+        <xs:element name="log" type="tns:LogT" minOccurs="0" maxOccurs="500" nillable="true"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ServerT">
+    <xs:sequence>
+      <xs:element name="state" type="xs:string" nillable="false"/>
+      <xs:element name="mode" type="xs:string" nillable="false"/>
+      <xs:element name="ipAddress" type="xs:string" nillable="false"/>
+      <xs:element name="configurationType" type="xs:string" nillable="false"/>
+      <xs:element name="softwareVersion" type="xs:string" nillable="false"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/home/darryl/dracbuild/Web/Wsdl/src/main/wsdl/DracCommonTypes_v2.0.0.xsd</con:url><con:content><![CDATA[<!--<pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>-->
+<xs:schema targetNamespace="http://www.nortel.com/drac/2007/07/03/ws/ct/DracCommonTypes" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ct="http://www.nortel.com/drac/2007/07/03/ws/ct/DracCommonTypes">
+  <xs:simpleType name="DateTimeWithTimezoneT">
+    <xs:annotation>
+      <xs:documentation>Time format for the DRAC WSDL interfaces : YYYY-MM-DDTHH:mm:ssTZD 
+               YYYY = four-digit year
+               MM   = two-digit month (01=January, etc.)
+               DD   = two-digit day of month (01 through 31)
+               HH   = two digits of hour (00 through 23) (am/pm NOT allowed)
+               mm  = two digits of minute (00 through 59)
+               ss     = two digits of second (00 through 59)
+               TZD  = time zone designator (+hh:mm or -hh:mm)
+               Examples :
+                2007-03-25T09:30:00-05:00
+                2007-05-22T23:30:00+04:00
+                2007-06-11T10:30:00Z</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime">
+      <xs:pattern value=".+T.+(Z|[+\-].+)"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WeekdayT">
+    <xs:annotation>
+      <xs:documentation>
+        The value identifies which days of a week the reservation should be made.
+          Value should be between 1 to 7, 1 being Sunday, and 7 being Saturday. 
+          For examle the following instance document describes a reservation request
+          for Mondays and Wednesdays (Monday is 2, Wed. is 4)
+        <weekday>2</weekday>
+        <weekday>4</weekday>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="7"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DracWsFaultT">
+    <xs:sequence>
+      <xs:element name="errorId" type="ct:DracWsErrorIdT" nillable="false"/>
+      <xs:element name="errorMsg" type="xs:string" nillable="false"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="DracWsErrorIdT">
+    <xs:restriction base="xs:short">
+      <xs:minInclusive value="4000"/>
+      <xs:maxInclusive value="4999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DracFault" type="ct:DracWsFaultT"/>
+  <xs:element name="Credentials" type="ct:CredentialsT" nillable="false"/>
+  <xs:complexType name="CredentialsT">
+    <xs:sequence>
+      <xs:element name="userId" type="xs:string" nillable="false"/>
+      <xs:element name="certificate" type="xs:string" nillable="false"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuthenticationRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="credentials" type="ct:CredentialsT" nillable="false"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="AlarmT">
+    <xs:sequence>
+      <xs:element name="alarmId" type="xs:string"/>
+      <xs:element name="alarmSourceId" type="xs:string"/>
+      <xs:element name="severity" type="xs:string"/>
+      <xs:element name="timeRaised" type="xs:dateTime"/>
+      <xs:element name="isCleared" type="xs:boolean"/>
+      <xs:element name="timeCleared" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="additionalInfo" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryCriteriaT" abstract="true">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:simpleType name="ValidLayerT">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="layer0"/>
+      <xs:enumeration value="layer1"/>
+      <xs:enumeration value="layer2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ValidCompletionTypeT">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CompletionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="result" type="ct:ValidCompletionTypeT" nillable="false"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/home/darryl/dracbuild/Web/Wsdl/src/main/wsdl/Wssecurity_v3.0.xsd</con:url><con:content><![CDATA[<!--<pre>
+    The owner of the original code is Ciena Corporation.
+
+    Portions created by the original owner are Copyright (C) 2004-2010
+    the original owner. All Rights Reserved.
+
+    Portions created by other contributors are Copyright (C) the contributor.
+    All Rights Reserved.
+
+    Contributor(s):
+      (Contributors insert name & email here)
+
+    This file is part of DRAC (Dynamic Resource Allocation Controller).
+
+    DRAC is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    DRAC is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program.  If not, see <http://www.gnu.org/licenses/>.
+    </pre>-->
+<!--!!! Schema for WS Security Header-->
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+  <xsd:element name="Security" type="wsse:Security"/>
+  <xsd:complexType name="Security">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="UsernameToken" type="wsse:UsernameToken"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="UsernameToken">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="Username" type="xsd:string"/>
+      <xsd:element minOccurs="1" maxOccurs="1" name="Password" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://localhost:8443/axis2/services/SystemMonitoringService_v3.0</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://www.opendrac.org/ws/SystemMonitoringService_v3.0/queryLogs" name="queryLogs" bindingOperationName="queryLogs" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:8443/axis2/services/SystemMonitoringService_v3.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:sys="http://www.opendrac.org/ws/SystemMonitoringServiceTypes_v3.0">
+   <soapenv:Header>
+      <oas:Security>
+         <oas:UsernameToken>
+            <oas:Username>admin</oas:Username>
+            <oas:Password>myDrac</oas:Password>
+         </oas:UsernameToken>
+      </oas:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <sys:QueryLogsRequest>
+         <sys:criteria>
+            <sys:startTime>2010-08-01T00:00:00Z</sys:startTime>
+            <sys:endTime>2014-08-31T00:00:00Z</sys:endTime>
+            <!--Optional:-->
+            <sys:category></sys:category>
+            <!--Optional:-->
+            <sys:operationType></sys:operationType>
+            <!--Optional:-->
+            <sys:result></sys:result>
+            <!--Optional:-->
+            <sys:severity></sys:severity>
+            <!--Optional:-->
+            <sys:affectedResourceId></sys:affectedResourceId>
+            <!--Optional:-->
+            <sys:userId></sys:userId>
+            <!--Optional:-->
+            <sys:ipAddress></sys:ipAddress>
+            <!--Optional:-->
+            <sys:billingGroup></sys:billingGroup>
+         </sys:criteria>
+      </sys:QueryLogsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.opendrac.org/ws/SystemMonitoringService_v3.0/queryLogs"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://www.opendrac.org/ws/SystemMonitoringService_v3.0/queryServers" name="queryServers" bindingOperationName="queryServers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:8443/axis2/services/SystemMonitoringService_v3.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+   <soapenv:Header>
+      <oas:Security>
+         <oas:UsernameToken>
+            <oas:Username>admin</oas:Username>
+            <oas:Password>myDrac</oas:Password>
+         </oas:UsernameToken>
+      </oas:Security>
+   </soapenv:Header>
+   <soapenv:Body/>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.opendrac.org/ws/SystemMonitoringService_v3.0/queryServers"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>
